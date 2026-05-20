@@ -61,7 +61,7 @@ const StudiaSagaDisplay: FC = () => {
             fontFamily: customStyle['--title-font-family'],
           }}
         >
-          Anam Cara
+          Studia Saga
         </h1>
       </div>
 

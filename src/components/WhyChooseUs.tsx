@@ -51,7 +51,7 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-[#BFA181] text-xs font-bold tracking-[0.3em] uppercase block mb-3">
-              Why Anam Cara Interiors
+              Why Studia Saga Interiors
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-stone-900">
               Luxury Should Feel <span className="italic font-light text-stone-500">Effortless</span>

@@ -164,7 +164,7 @@ const OurSaga = () => {
     // UPDATE: Sizes reduced to (3xl, 5xl, 6xl) for a cleaner, smaller look
     className="text-white text-3xl md:text-5xl lg:text-6xl mb-6 font-extralight tracking-[0.2em] uppercase"
   >
-    Our Anam Cara 
+    Our Studia Saga 
   </motion.h1>
   
   <motion.p 
@@ -190,7 +190,7 @@ const OurSaga = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground text-lg font-light leading-relaxed">
                   <p>
-                    Anam Cara Interiors is a residential interior design and turnkey execution studio dedicated to creating affordable luxury homes with soul, simplicity, and structure.
+                    Studia Saga Interiors is a residential interior design and turnkey execution studio dedicated to creating affordable luxury homes with soul, simplicity, and structure.
                   </p>
                   <p>
                     We believe great design is not about excess—it's about intent. Every space we create balances aesthetics, functionality, and long-term usability. Our work reflects thoughtful planning, calm neutral aesthetics, quality craftsmanship, honest pricing, and respect for timelines.

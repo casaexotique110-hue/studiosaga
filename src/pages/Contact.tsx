@@ -69,7 +69,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <p className="text-white/90 text-xs md:text-sm font-medium tracking-[0.3em] uppercase mb-4">
-              Anam Cara Interiors
+              Studia Saga Interiors
             </p>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6">
               Let's Begin Your Interior Journey
@@ -101,7 +101,7 @@ export default function Contact() {
               </h2>
 
               <p className="text-muted-foreground text-lg leading-relaxed font-light mb-12">
-                If you're looking for a calm, well-planned, and stress-free approach to interiors, Anam Cara Interiors offers turnkey solutions designed around affordable luxury and real living. Book a consultation and experience interiors done with clarity.
+                If you're looking for a calm, well-planned, and stress-free approach to interiors, Studia Saga Interiors offers turnkey solutions designed around affordable luxury and real living. Book a consultation and experience interiors done with clarity.
               </p>
 
               <div className="space-y-8">
@@ -208,7 +208,7 @@ export default function Contact() {
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Anam Cara Interiors Studio Location"
+          title="Studia Saga Interiors Studio Location"
         ></iframe>
       </section>
 

@@ -52,7 +52,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2 group">
             <img 
               src={logo} 
-              alt="Anam Cara Interiors" 
+              alt="Studia Saga Interiors" 
               className="h-12 md:h-16 w-auto object-contain transition-all duration-300"
             />
           </Link>
@@ -113,7 +113,7 @@ const Header = () => {
             to="/"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <img src={logo} alt="Anam Cara Interiors" className="h-10 w-auto" />
+            <img src={logo} alt="Studia Saga Interiors" className="h-10 w-auto" />
           </Link>
         </div>
 

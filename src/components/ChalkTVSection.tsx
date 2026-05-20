@@ -209,7 +209,7 @@ const ChalkTVSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
 
         <div className="flex flex-col sm:flex-row justify-between items-end mb-8 border-b pb-4">
-          <h2 className="text-5xl text-gray-900">Anam Cara</h2>
+          <h2 className="text-5xl text-gray-900">Studia Saga</h2>
 
           <div className="flex items-center space-x-6">
             <span className="text-sm text-gray-500 hidden sm:block font-medium">

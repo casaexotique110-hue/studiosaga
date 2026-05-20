@@ -15,7 +15,7 @@ const Footer = () => {
               <Link to="/">
                 <img 
                   src={logo} 
-                  alt="Anam Cara Interiors Logo" 
+                  alt="Studia Saga Interiors Logo" 
                   className="h-34 w-auto object-contain"                />
               </Link>
             </div>
@@ -95,7 +95,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm font-light text-muted-foreground">
-              © {new Date().getFullYear()} Anam Cara. All rights reserved.
+              © {new Date().getFullYear()} Studia Saga. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors">

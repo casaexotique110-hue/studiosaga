@@ -34,7 +34,7 @@ export function About() {
           >
             {/* Eyebrow Text */}
             <p className={`text-xs font-bold tracking-[0.2em] uppercase mb-4 ${goldColor}`}>
-              About Anam Cara Interiors
+              About Studia Saga Interiors
             </p>
 
             {/* Main Heading */}
@@ -52,7 +52,7 @@ export function About() {
 
             {/* Description Paragraph */}
             <p className="text-stone-600 leading-relaxed mb-8 text-base md:text-lg font-light">
-              Anam Cara Interiors is a residential interior design and turnkey execution studio dedicated to creating affordable luxury homes with soul, simplicity, and structure. We design interiors that are functional first, calm in aesthetic, honest in materials, and disciplined in execution.
+              Studia Saga Interiors is a residential interior design and turnkey execution studio dedicated to creating affordable luxury homes with soul, simplicity, and structure. We design interiors that are functional first, calm in aesthetic, honest in materials, and disciplined in execution.
             </p>
 
             {/* Feature List */}

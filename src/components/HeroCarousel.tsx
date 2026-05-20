@@ -14,7 +14,7 @@ const slides = [
     desktopImage: hero1,
     mobileImage: mobileHero1, // Using 55.jpg
     location: "GURUGRAM",
-    title: "Anam Cara HOME",
+    title: "Studia Saga HOME",
     category: "RESIDENTIAL",
   },
   {

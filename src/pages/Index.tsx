@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import StudiaSagaDisplay from "@/components/StudiaSagaDisplay";
+// import StudiaSagaDisplay from "@/components/StudiaSagaDisplay";
 import ClientSection from "@/components/clients";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ChalkTVSection from '@/components/ChalkTVSection'; 
@@ -28,7 +28,7 @@ const Index = () => {
 
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="mb-8 leading-relaxed">    
-              {/* Anam Cara Interiors - Curvy Signature Style */}
+              {/* Studia Saga Interiors - Curvy Signature Style */}
               <span 
                 className="text-2xl md:text-4xl text-foreground mr-3" 
                 style={{ 
@@ -38,7 +38,7 @@ const Index = () => {
                   transform: 'rotate(-2px)' 
                 }}
               >
-                Anam Cara Interiors
+                Studia Saga Interiors
               </span>
               
               <span className="text-base md:text-lg font-light tracking-wide text-muted-foreground">
@@ -50,7 +50,7 @@ const Index = () => {
             
             <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
               <p>
-                At Anam Cara Interiors, we design homes that feel calm, functional, and timeless. From concept to completion, we deliver end-to-end interior solutions with clarity, care, and cost transparency.
+                At Studia Saga Interiors, we design homes that feel calm, functional, and timeless. From concept to completion, we deliver end-to-end interior solutions with clarity, care, and cost transparency.
               </p>
               
               <p>
