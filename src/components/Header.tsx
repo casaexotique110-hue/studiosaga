@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 
 // --- IMPORT YOUR LOGO HERE ---
-import logo from "@/assets/logo.png"; 
+import logo from "@/assets/logo 2.png"; 
+// import logo from "../assets/footer/logo.png"; 
 
 import {
   NavigationMenu,
