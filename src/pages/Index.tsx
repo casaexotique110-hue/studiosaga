@@ -88,7 +88,7 @@ const Index = () => {
         <ChalkTVSection />
       </main>
 
-      <StudiaSagaDisplay />
+      {/* <StudiaSagaDisplay /> */}
       <Footer />
     </div>
   );
