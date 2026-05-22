@@ -59,6 +59,32 @@ import Bathroom1 from "@/assets/bathroom-vanity/1.png";
 import Bathroom2 from "@/assets/bathroom-vanity/2.png";
 import Bathroom3 from "@/assets/bathroom-vanity/3.png";
 
+import KidsRoom1 from "@/assets/kids-room/1.png";
+import KidsRoom2 from "@/assets/kids-room/2.png";
+import KidsRoom3 from "@/assets/kids-room/3.png";
+
+
+
+import TvWallUnit1 from "@/assets/tv-wall-unit/1.png";
+import TvWallUnit2 from "@/assets/tv-wall-unit/2.png";
+import TvWallUnit3 from "@/assets/tv-wall-unit/3.png";
+
+
+import LivingRooms1 from "@/assets/living-rooms/1.png";
+import LivingRooms2 from "@/assets/living-rooms/2.png";
+import LivingRooms3 from "@/assets/living-rooms/3.png";
+
+
+import FalseCeiling1 from "@/assets/false-ceiling-and-lighting/1.png";
+import FalseCeiling2 from "@/assets/false-ceiling-and-lighting/2.png";
+import FalseCeiling3 from "@/assets/false-ceiling-and-lighting/3.png";
+
+
+
+
+// import Furniture1 from "@/assets/furniture/1.png";
+// import Furniture2 from "@/assets/furniture/2.png";
+// import Furniture3 from "@/assets/furniture/3.png";
 
 
 const services = [
@@ -88,9 +114,9 @@ const services = [
     description:
       "Precision-built modular systems balancing storage, style, and durability",
     images: [
-      serviceLiving,
-      serviceKitchen,
-      serviceFurniture,
+      LivingRooms1,
+      LivingRooms2,
+      LivingRooms3,
     ],
   },
   {
@@ -98,9 +124,9 @@ const services = [
     description:
       "Tailor-made furniture, paneling, lighting, and detail elements for unique spaces",
     images: [
-      serviceTvUnit,
-      serviceFurniture,
-      serviceLiving,
+      TvWallUnit1,
+      TvWallUnit2,
+      TvWallUnit3,
     ],
   },
   {
@@ -108,29 +134,36 @@ const services = [
     description:
       "Experience your home through detailed 3D visuals before execution begins",
     images: [
-      serviceCeiling,
-      serviceKitchen,
-      serviceLiving,
+      FalseCeiling1,
+      FalseCeiling2,
+      FalseCeiling3,
     ],
   },
+
+
+
   {
     title: "Kids Room Interiors",
     description:
       "Creating inviting spaces for family and gatherings that reflect your personal style",
     images: [
-      serviceKidsRoom,
-      serviceLiving,
-      serviceFurniture,
+      KidsRoom1,
+      KidsRoom2,
+      KidsRoom3,
     ],
   },
+
+
+
+
   {
     title: "Bathroom Vanity",
     description:
       "Calm, functional bedrooms designed for rest and daily comfort",
     images: [
-      serviceBathroom,
-      serviceKidsRoom,
-      serviceWardrobe,
+      Bathroom1,
+      Bathroom2,
+      Bathroom3,
     ],
   },
   {
@@ -153,16 +186,18 @@ const services = [
       office3,
     ],
   },
-  {
-    title: "Bathroom & Utility Design",
-    description:
-      "Practical layouts with adequate storage, durable materials, and good lighting",
-    images: [
-      Bathroom1,
-      Bathroom2,
-      Bathroom3,
-    ],
-  },
+
+
+  // {
+  //   title: "  Furniture & Custom Units ",
+  //   description:
+  //     "Practical layouts with adequate storage, durable materials, and good lighting",
+  //   images: [
+  //     Furniture1,
+  //     Furniture2,
+  //     Furniture3,
+  //   ],
+  // },
 ];
 
 function ServiceCard({
