@@ -6,17 +6,64 @@ import { useRef, useState } from "react";
 import serviceKitchen from "@/assets/service-kitchen.jpg";
 import serviceWardrobe from "@/assets/service-wardrobe.jpg";
 import serviceLiving from "@/assets/service-living.jpg";
+
 import serviceCeiling from "@/assets/service-ceiling.jpg";
 import serviceRenovation from "@/assets/service-renovation.jpg";
 import serviceOffice from "@/assets/service-office.jpg";
+
 import serviceFurniture from "@/assets/service-furniture.jpg";
 import serviceTvUnit from "@/assets/service-tv-unit.jpg";
 import serviceKidsRoom from "@/assets/service-kids-room.jpg";
+
+
 import serviceBathroom from "@/assets/service-bathroom.jpg";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import renovation1 from "@/assets/full-home-renovation/1.png";
+import renovation2 from "@/assets/full-home-renovation/2.png";
+import renovation3 from "@/assets/full-home-renovation/3.png";
+
+
+
+
+
+
+
+
+
+
+
+
+import office1 from "@/assets/office/1.png";
+import office2 from "@/assets/office/2.png";
+import office3 from "@/assets/office/3.png";
+
+
+
+
+
+
+import Bathroom1 from "@/assets/bathroom-vanity/1.png";
+import Bathroom2 from "@/assets/bathroom-vanity/2.png";
+import Bathroom3 from "@/assets/bathroom-vanity/3.png";
+
+
 
 const services = [
   {
-    title: "Residential Interior Design",
+    title: "Modular Kitchen ",
     description:
       "Personalized interiors for apartments, builder floors, and villas designed around your lifestyle",
     images: [
@@ -26,7 +73,7 @@ const services = [
     ],
   },
   {
-    title: "Turnkey Interior Solutions",
+    title: "Modular Wardrobe ",
     description:
       "End-to-end execution from design to final handover—one team, one contract, zero stress",
     images: [
@@ -37,7 +84,7 @@ const services = [
     ],
   },
   {
-    title: "Modular Kitchens & Wardrobes",
+    title: "Living Room Interiors",
     description:
       "Precision-built modular systems balancing storage, style, and durability",
     images: [
@@ -47,7 +94,7 @@ const services = [
     ],
   },
   {
-    title: "Custom Furniture & Finishes",
+    title: "Wall TV Units ",
     description:
       "Tailor-made furniture, paneling, lighting, and detail elements for unique spaces",
     images: [
@@ -57,7 +104,7 @@ const services = [
     ],
   },
   {
-    title: "3D Design & Visualization",
+    title: "False Ceiling & Lighting",
     description:
       "Experience your home through detailed 3D visuals before execution begins",
     images: [
@@ -67,7 +114,7 @@ const services = [
     ],
   },
   {
-    title: "Living Room Interiors",
+    title: "Kids Room Interiors",
     description:
       "Creating inviting spaces for family and gatherings that reflect your personal style",
     images: [
@@ -77,7 +124,7 @@ const services = [
     ],
   },
   {
-    title: "Bedroom Interiors",
+    title: "Bathroom Vanity",
     description:
       "Calm, functional bedrooms designed for rest and daily comfort",
     images: [
@@ -87,13 +134,13 @@ const services = [
     ],
   },
   {
-    title: "Complete Home Renovation",
+    title: "Full Home Renovation",
     description:
       "Full transformation handling everything from civil work to final styling",
     images: [
-      serviceRenovation,
-      serviceKitchen,
-      serviceLiving,
+      renovation1,
+      renovation2,
+      renovation3,
     ],
   },
   {
@@ -101,9 +148,9 @@ const services = [
     description:
       "Professional workspaces that inspire productivity while maintaining style",
     images: [
-      serviceOffice,
-      serviceFurniture,
-      serviceTvUnit,
+      office1,
+      office2,
+      office3,
     ],
   },
   {
@@ -111,9 +158,9 @@ const services = [
     description:
       "Practical layouts with adequate storage, durable materials, and good lighting",
     images: [
-      serviceFurniture,
-      serviceBathroom,
-      serviceKitchen,
+      Bathroom1,
+      Bathroom2,
+      Bathroom3,
     ],
   },
 ];
