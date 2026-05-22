@@ -80,11 +80,21 @@ import FalseCeiling2 from "@/assets/false-ceiling-and-lighting/2.png";
 import FalseCeiling3 from "@/assets/false-ceiling-and-lighting/3.png";
 
 
+import ModularKitchen1 from "@/assets/Modular-Kitchen/1.jpg";
+import ModularKitchen2 from "@/assets/Modular-Kitchen/2.jpg";
+import ModularKitchen3 from "@/assets/Modular-Kitchen/3.jpg";
+
+import Wardrobe1 from "@/assets/Modular-Wardrobe/1.jpg";
+import Wardrobe2 from "@/assets/Modular-Wardrobe/2.jpg";
+import Wardrobe3 from "@/assets/Modular-Wardrobe/3.jpg";
 
 
-// import Furniture1 from "@/assets/furniture/1.png";
-// import Furniture2 from "@/assets/furniture/2.png";
-// import Furniture3 from "@/assets/furniture/3.png";
+
+
+
+import Furniture1 from "@/assets/Furniture-Custom-Units/1.png";
+import Furniture2 from "@/assets/Furniture-Custom-Units/2.png";
+import Furniture3 from "@/assets/Furniture-Custom-Units/3.png";
 
 
 const services = [
@@ -93,9 +103,9 @@ const services = [
     description:
       "Personalized interiors for apartments, builder floors, and villas designed around your lifestyle",
     images: [
-      serviceKitchen,
-      serviceLiving,
-      serviceWardrobe,
+      ModularKitchen1,
+      ModularKitchen2,
+      ModularKitchen3,
     ],
   },
   {
@@ -103,9 +113,9 @@ const services = [
     description:
       "End-to-end execution from design to final handover—one team, one contract, zero stress",
     images: [
-      serviceWardrobe,
-      serviceCeiling,
-      serviceRenovation,
+      Wardrobe1,
+      Wardrobe2,
+      Wardrobe3,
       
     ],
   },
@@ -188,16 +198,16 @@ const services = [
   },
 
 
-  // {
-  //   title: "  Furniture & Custom Units ",
-  //   description:
-  //     "Practical layouts with adequate storage, durable materials, and good lighting",
-  //   images: [
-  //     Furniture1,
-  //     Furniture2,
-  //     Furniture3,
-  //   ],
-  // },
+  {
+    title: "  Furniture & Custom Units ",
+    description:
+      "Practical layouts with adequate storage, durable materials, and good lighting",
+    images: [
+      Furniture1,
+      Furniture2,
+      Furniture3,
+    ],
+  },
 ];
 
 function ServiceCard({
