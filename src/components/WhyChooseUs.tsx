@@ -1,161 +1,126 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ShieldCheck, Ruler, Users, Sparkles, ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  User,
+  ClipboardCheck,
+  Hammer,
+  Wrench,
+  Home,
+} from "lucide-react";
 
-const features = [
+const steps = [
   {
-    id: "01",
-    title: "Research-Driven Design",
-    desc: "Our design approach combines aesthetics with intelligent planning, ensuring every space is both beautiful and functional.",
-    icon: <ShieldCheck className="w-6 h-6" />
+    title: "Meet a Designer",
+    icon: <User className="w-7 h-7" />,
   },
   {
-    id: "02",
-    title: "Complete Turnkey Execution",
-    desc: "One team, one contract, one smooth journey. We manage everything from design to final handover.",
-    icon: <Users className="w-6 h-6" />
+    title: "Book Renovation",
+    subtitle: "5% Payment",
+    icon: <ClipboardCheck className="w-7 h-7" />,
   },
   {
-    id: "03",
-    title: "Modular + Custom Solutions",
-    desc: "We balance precision-built modular systems with bespoke custom furniture for optimal functionality and design flexibility.",
-    icon: <Ruler className="w-6 h-6" />
+    title: "Execution Begins",
+    subtitle: "60% Payment",
+    icon: <Hammer className="w-7 h-7" />,
   },
   {
-    id: "04",
-    title: "Transparent Pricing & Timelines",
-    desc: "Fixed timelines and transparent pricing ensure clarity throughout your project. No surprises, just honest communication.",
-    icon: <Sparkles className="w-6 h-6" />
-  }
+    title: "Final Installation",
+    subtitle: "100% Payment",
+    icon: <Wrench className="w-7 h-7" />,
+  },
+  {
+    title: "Move In & Enjoy",
+    icon: <Home className="w-7 h-7" />,
+  },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 lg:py-32 bg-[#F4F2ED] text-stone-900 overflow-hidden relative">
-      
-      {/* Background Watermark Text (Subtle Luxury Touch) */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none opacity-[0.03]">
-        <h2 className="text-[120px] md:text-[200px] font-serif leading-none tracking-tighter uppercase text-stone-900">
-          Why Us
-        </h2>
-      </div>
+    <section className="bg-[#f7f5f2] py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
 
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
-        
-        {/* Section Header */}
+        {/* Heading */}
         <div className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <span className="uppercase tracking-[0.3em] text-sm text-[#BFA181] font-semibold">
+            How It Works
+          </span>
+
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#2b2430]">
+            Your Interior Journey
+          </h2>
+
+          <p className="mt-5 text-stone-500 max-w-2xl mx-auto">
+            From concept to completion, we ensure a smooth and transparent
+            process with premium execution.
+          </p>
+        </div>
+
+        {/* Timeline */}
+        <div className="relative">
+
+          {/* Center Line */}
+          <div className="hidden lg:block absolute top-14 left-0 w-full border-t border-dashed border-stone-300"></div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 relative z-10">
+
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.15,
+                }}
+                className="flex flex-col items-center text-center group"
+              >
+
+                {/* Circle */}
+                <div className="relative w-28 h-28 rounded-full bg-white border border-stone-200 shadow-md flex items-center justify-center group-hover:scale-110 transition-all duration-500">
+
+                  {/* Inner Glow */}
+                  <div className="absolute inset-2 rounded-full bg-[#f5f1ea]"></div>
+
+                  {/* Icon */}
+                  <div className="relative z-10 text-[#BFA181]">
+                    {step.icon}
+                  </div>
+
+                  {/* Step Number */}
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#BFA181] text-white text-sm font-bold flex items-center justify-center shadow-md">
+                    {index + 1}
+                  </div>
+                </div>
+
+                {/* Text */}
+                <div className="mt-6">
+                  {step.subtitle && (
+                    <p className="text-[#BFA181] text-sm font-semibold mb-1 uppercase tracking-wide">
+                      {step.subtitle}
+                    </p>
+                  )}
+
+                  <h3 className="text-lg font-semibold text-[#2b2430] leading-snug">
+                    {step.title}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20 text-center">
+          <a
+            href="/Contact"
+            className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-[#e86b6b] text-white font-semibold tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
           >
-            <span className="text-[#BFA181] text-xs font-bold tracking-[0.3em] uppercase block mb-3">
-              Why Studia Saga Interiors
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-stone-900">
-              Luxury Should Feel <span className="italic font-light text-stone-500">Effortless</span>
-            </h2>
-            <p className="text-stone-600 mt-4 text-lg font-light max-w-2xl mx-auto">
-              We combine research-driven design, smart space planning, and disciplined execution to create interiors that are elegant, practical, and budget-conscious.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* The Centerpiece Layout */}
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
-
-          {/* --- Left Column (Points 1 & 2) --- */}
-          <div className="space-y-16 lg:text-right order-2 lg:order-1">
-            {features.slice(0, 2).map((item, idx) => (
-              <FeatureItem key={idx} item={item} align="right" delay={idx * 0.2} />
-            ))}
-          </div>
-
-          {/* --- Center Column (The Arch Image) --- */}
-          <div className="relative order-1 lg:order-2 h-[500px] lg:h-[600px] w-full">
-            <motion.div 
-              initial={{ height: 0 }}
-              whileInView={{ height: "100%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} // Custom cubic-bezier for smooth elegance
-              className="absolute inset-x-0 bottom-0 bg-stone-300 rounded-t-[200px] overflow-hidden border-4 border-white shadow-2xl mx-auto w-full max-w-md"
-            >
-<img 
-  src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=800&q=80" 
-  alt="Luxury Interior Arch"
-  className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-[2s]"
-/>
-              
-              {/* Floating Badge on Image */}
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-lg text-center min-w-[200px]">
-                 <p className="text-xs font-bold uppercase tracking-widest text-[#BFA181]">Affordable Luxury</p>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* --- Right Column (Points 3 & 4) --- */}
-          <div className="space-y-16 lg:text-left order-3">
-            {features.slice(2, 4).map((item, idx) => (
-              <FeatureItem key={idx} item={item} align="left" delay={0.4 + (idx * 0.2)} />
-            ))}
-          </div>
-
-        </div>
-
-        {/* Bottom CTA */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <a href="/Contact" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-stone-900 text-white overflow-hidden transition-all hover:bg-[#BFA181]">
-            <span className="relative z-10 text-sm font-bold uppercase tracking-widest">Book a Free Consultation</span>
-            <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+            BOOK FREE CONSULTATION
           </a>
-        </motion.div>
-
+        </div>
       </div>
     </section>
-  );
-};
-
-// Sub-component for individual points to keep code clean
-const FeatureItem = ({ item, align, delay }) => {
-  return (
-    <motion.div 
-      initial={{ opacity: 0, x: align === 'right' ? 30 : -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: delay }}
-      className={`group flex flex-col ${align === 'right' ? 'lg:items-end' : 'lg:items-start'} items-center gap-4`}
-    >
-      <div className="flex items-center gap-4">
-        {align === 'left' && (
-          <span className="text-4xl font-serif text-[#BFA181]/30 font-bold group-hover:text-[#BFA181] transition-colors">
-            {item.id}
-          </span>
-        )}
-        
-        <div className="w-12 h-12 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-900 shadow-sm group-hover:scale-110 transition-transform duration-300">
-          {item.icon}
-        </div>
-
-        {align === 'right' && (
-          <span className="text-4xl font-serif text-[#BFA181]/30 font-bold group-hover:text-[#BFA181] transition-colors">
-            {item.id}
-          </span>
-        )}
-      </div>
-
-      <div className={`space-y-2 ${align === 'right' ? 'lg:text-right' : 'lg:text-left'} text-center`}>
-        <h3 className="text-xl font-serif text-stone-900">{item.title}</h3>
-        <p className="text-sm text-stone-500 font-light leading-relaxed max-w-xs mx-auto lg:mx-0">
-          {item.desc}
-        </p>
-      </div>
-    </motion.div>
   );
 };
 

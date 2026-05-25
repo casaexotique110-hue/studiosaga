@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import ClientSection from "@/components/clients";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ChalkTVSection from '@/components/ChalkTVSection'; 
+import TrustedPartners from "@/components/TrustedPartners";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -84,6 +85,7 @@ const Index = () => {
         </section>
 
         <WhyChooseUs />
+        <TrustedPartners />
         <ClientSection />
         <ChalkTVSection />
       </main>
