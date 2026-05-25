@@ -54,7 +54,7 @@ const Index = () => {
               </p>
               
               <p>
-                We specialize in affordable luxury interiors—where refined aesthetics meet intelligent planning and disciplined execution.
+                We specialize in affordable luxury interiors where refined aesthetics meet intelligent planning and disciplined execution.
               </p>
               
               <p>
@@ -68,7 +68,7 @@ const Index = () => {
                 onClick={() => navigate("/Contact")}
                 className="border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide group"
               >
-                Book a Free Design Consultation
+                Book a Design Consultation
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -76,7 +76,7 @@ const Index = () => {
                 onClick={() => navigate("/our-saga")}
                 className="border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide group"
               >
-                View Our Work
+                View Our Idea's
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>

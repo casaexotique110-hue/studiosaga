@@ -13,16 +13,16 @@ const slides = [
   {
     desktopImage: hero1,
     mobileImage: mobileHero1, // Using 55.jpg
-    location: "GURUGRAM",
+    // location: "GURUGRAM",
     title: "Studia Saga HOME",
-    category: "RESIDENTIAL",
+    // category: "RESIDENTIAL",
   },
   {
     desktopImage: hero3,
     mobileImage: mobileHero2, // Using 66.jpg
-    location: "GURGAON",
+    // location: "GURGAON",
     title: "MINIMALIST RETREAT",
-    category: "RESIDENTIAL",
+    // category: "RESIDENTIAL",
   },
 ];
 
