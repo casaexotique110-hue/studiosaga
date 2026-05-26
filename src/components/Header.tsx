@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, ChevronDown } from "lucide-react";
-import {  ChevronUp } from "lucide-react";
-
-
+import {
+  Menu,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
 // LOGO
 import logo from "@/assets/logo 2.png";
@@ -29,8 +30,12 @@ import {
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+
+  const [mobileMenuOpen, setMobileMenuOpen] =
+    useState(false);
+
+  const [servicesOpen, setServicesOpen] =
+    useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +44,11 @@ const Header: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
   }, []);
 
   const textColor = isScrolled
@@ -47,9 +56,9 @@ const Header: React.FC = () => {
     : "text-white";
 
   const navLinkClass = `
-    text-sm font-light tracking-wide 
-    hover:text-[#BFA181] 
-    transition-colors 
+    text-sm font-light tracking-wide
+    hover:text-[#BFA181]
+    transition-colors
     ${textColor}
   `;
 
@@ -64,7 +73,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
 
-          {/* LOGO */}
+          {/* ================= LOGO ================= */}
           <Link
             to="/"
             className="flex items-center"
@@ -76,10 +85,11 @@ const Header: React.FC = () => {
             />
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
+          {/* ================= DESKTOP NAVIGATION ================= */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-8">
 
+              {/* HOME */}
               <NavigationMenuItem>
                 <Link
                   to="/"
@@ -89,6 +99,7 @@ const Header: React.FC = () => {
                 </Link>
               </NavigationMenuItem>
 
+              {/* OUR SAGA */}
               <NavigationMenuItem>
                 <Link
                   to="/our-saga"
@@ -98,6 +109,7 @@ const Header: React.FC = () => {
                 </Link>
               </NavigationMenuItem>
 
+              {/* STYLE PALETTE */}
               <NavigationMenuItem>
                 <Link
                   to="/style-palette"
@@ -107,96 +119,105 @@ const Header: React.FC = () => {
                 </Link>
               </NavigationMenuItem>
 
-{/* SERVICES DROPDOWN */}
-<NavigationMenuItem className="relative group">
+              {/* ================= SERVICES DROPDOWN ================= */}
+{/* ================= SERVICES DROPDOWN ================= */}
+<NavigationMenuItem className="relative">
 
-  <div
+  {/* SERVICES BUTTON */}
+  <button
+    onClick={() => setServicesOpen(!servicesOpen)}
     className={`flex items-center gap-1 cursor-pointer ${navLinkClass}`}
   >
     Services
-    <ChevronDown className="w-4 h-4" />
-  </div>
+
+    <ChevronDown
+      className={`w-4 h-4 transition-transform duration-300 ${
+        servicesOpen ? "rotate-180" : ""
+      }`}
+    />
+  </button>
 
   {/* DROPDOWN */}
-  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+  {servicesOpen && (
+    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-5 z-50">
 
-    <div className="w-[520px] rounded-3xl border border-white/20 bg-white/90 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.12)] p-4">
+      <div className="w-[520px] rounded-3xl border border-white/20 bg-white/95 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.12)] p-4">
 
-      <div className="space-y-3">
+        <div className="space-y-3">
 
-        {/* ITEM 1 */}
-        <Link
-          to="/services/modular-interiors"
-          className="group/item flex items-center gap-4 rounded-2xl p-3 hover:bg-[#f8f5f1] transition-all duration-300"
-        >
-          <img
-            src={modularImg}
-            alt=""
-            className="w-24 h-20 rounded-xl object-cover"
-          />
+          {/* ITEM 1 */}
+          <Link
+            to="/services/modular-interiors"
+            className="group/item flex items-center gap-4 rounded-2xl p-3 hover:bg-[#f8f5f1] transition-all duration-300"
+          >
+            <img
+              src={modularImg}
+              alt=""
+              className="w-24 h-20 rounded-xl object-cover"
+            />
 
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
-              Modular Interiors
-            </h3>
+            <div>
+              <h3 className="text-lg font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
+                Modular Interiors
+              </h3>
 
-            <p className="text-sm text-stone-500 mt-1">
-              Kitchens, wardrobes and storage
-            </p>
-          </div>
-        </Link>
+              <p className="text-sm text-stone-500 mt-1">
+                Kitchens, wardrobes and storage
+              </p>
+            </div>
+          </Link>
 
-        {/* ITEM 2 */}
-        <Link
-          to="/services/full-home-interiors"
-          className="group/item flex items-center gap-4 rounded-2xl p-3 hover:bg-[#f8f5f1] transition-all duration-300"
-        >
-          <img
-            src={fullhomeImg}
-            alt=""
-            className="w-24 h-20 rounded-xl object-cover"
-          />
+          {/* ITEM 2 */}
+          <Link
+            to="/services/full-home-interiors"
+            className="group/item flex items-center gap-4 rounded-2xl p-3 hover:bg-[#f8f5f1] transition-all duration-300"
+          >
+            <img
+              src={fullhomeImg}
+              alt=""
+              className="w-24 h-20 rounded-xl object-cover"
+            />
 
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
-              Full Home Interiors
-            </h3>
+            <div>
+              <h3 className="text-lg font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
+                Full Home Interiors
+              </h3>
 
-            <p className="text-sm text-stone-500 mt-1">
-              End-to-end home interiors
-            </p>
-          </div>
-        </Link>
+              <p className="text-sm text-stone-500 mt-1">
+                End-to-end home interiors
+              </p>
+            </div>
+          </Link>
 
-        {/* ITEM 3 */}
-        <Link
-          to="/services/luxury-interiors"
-          className="group/item flex items-center gap-4 rounded-2xl p-3 hover:bg-[#f8f5f1] transition-all duration-300"
-        >
-          <img
-            src={luxuryImg}
-            alt=""
-            className="w-24 h-20 rounded-xl object-cover"
-          />
+          {/* ITEM 3 */}
+          <Link
+            to="/services/luxury-interiors"
+            className="group/item flex items-center gap-4 rounded-2xl p-3 hover:bg-[#f8f5f1] transition-all duration-300"
+          >
+            <img
+              src={luxuryImg}
+              alt=""
+              className="w-24 h-20 rounded-xl object-cover"
+            />
 
-          <div>
-            <h3 className="text-lg font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
-              Luxury Interiors
-            </h3>
+            <div>
+              <h3 className="text-lg font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
+                Luxury Interiors
+              </h3>
 
-            <p className="text-sm text-stone-500 mt-1">
-              Homes that redefine elegance
-            </p>
-          </div>
-        </Link>
+              <p className="text-sm text-stone-500 mt-1">
+                Homes that redefine elegance
+              </p>
+            </div>
+          </Link>
 
+        </div>
       </div>
     </div>
-  </div>
+  )}
 </NavigationMenuItem>
 
-
-
+              {/* CONTACT */}
               <NavigationMenuItem>
                 <Link
                   to="/Contact"
@@ -209,7 +230,7 @@ const Header: React.FC = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* RIGHT BUTTON + MOBILE MENU */}
+          {/* ================= RIGHT BUTTON + MOBILE MENU ================= */}
           <div className="flex items-center gap-4">
 
             {/* DESKTOP BUTTON */}
@@ -220,7 +241,7 @@ const Header: React.FC = () => {
               <Button
                 variant="outline"
                 className="
-                  font-light tracking-wide uppercase text-xs 
+                  font-light tracking-wide uppercase text-xs
                   px-6 py-5
                   bg-[#E9E7DE]
                   text-black
@@ -235,7 +256,7 @@ const Header: React.FC = () => {
               </Button>
             </Link>
 
-            {/* MOBILE MENU */}
+            {/* ================= MOBILE MENU ================= */}
             <Sheet
               open={mobileMenuOpen}
               onOpenChange={setMobileMenuOpen}
@@ -308,97 +329,107 @@ const Header: React.FC = () => {
                       </Link>
 
                       {/* MOBILE SERVICES */}
-{/* MOBILE SERVICES */}
-<div className="space-y-3">
+                      <div className="space-y-3">
 
-  <button
-    onClick={() => setServicesOpen(!servicesOpen)}
-    className="flex items-center justify-between w-full"
-  >
-    <span className="text-lg font-serif text-stone-900">
-      Services
-    </span>
+                        <button
+                          onClick={() =>
+                            setServicesOpen(
+                              !servicesOpen
+                            )
+                          }
+                          className="flex items-center justify-between w-full"
+                        >
+                          <span className="text-lg font-serif text-stone-900">
+                            Services
+                          </span>
 
-    {servicesOpen ? (
-      <ChevronUp className="w-4 h-4 text-stone-700" />
-    ) : (
-      <ChevronDown className="w-4 h-4 text-stone-700" />
-    )}
-  </button>
+                          {servicesOpen ? (
+                            <ChevronUp className="w-4 h-4 text-stone-700" />
+                          ) : (
+                            <ChevronDown className="w-4 h-4 text-stone-700" />
+                          )}
+                        </button>
 
-  {servicesOpen && (
-    <div className="ml-3 border-l border-stone-200 pl-4 space-y-4">
+                        {servicesOpen && (
+                          <div className="ml-3 border-l border-stone-200 pl-4 space-y-4">
 
-      <Link
-        to="/services/modular-interiors"
-        className="flex items-center gap-3"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        <img
-          src={modularImg}
-          alt=""
-          className="w-12 h-12 rounded-lg object-cover"
-        />
+                            <Link
+                              to="/services/modular-interiors"
+                              className="flex items-center gap-3"
+                              onClick={() =>
+                                setMobileMenuOpen(false)
+                              }
+                            >
+                              <img
+                                src={modularImg}
+                                alt=""
+                                className="w-12 h-12 rounded-lg object-cover"
+                              />
 
-        <div>
-          <h4 className="text-sm font-medium text-stone-900">
-            Modular Interiors
-          </h4>
+                              <div>
+                                <h4 className="text-sm font-medium text-stone-900">
+                                  Modular Interiors
+                                </h4>
 
-          <p className="text-xs text-stone-500">
-            Kitchens & wardrobes
-          </p>
-        </div>
-      </Link>
+                                <p className="text-xs text-stone-500">
+                                  Kitchens & wardrobes
+                                </p>
+                              </div>
+                            </Link>
 
-      <Link
-        to="/services/full-home-interiors"
-        className="flex items-center gap-3"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        <img
-          src={fullhomeImg}
-          alt=""
-          className="w-12 h-12 rounded-lg object-cover"
-        />
+                            <Link
+                              to="/services/full-home-interiors"
+                              className="flex items-center gap-3"
+                              onClick={() =>
+                                setMobileMenuOpen(false)
+                              }
+                            >
+                              <img
+                                src={fullhomeImg}
+                                alt=""
+                                className="w-12 h-12 rounded-lg object-cover"
+                              />
 
-        <div>
-          <h4 className="text-sm font-medium text-stone-900">
-            Full Home Interiors
-          </h4>
+                              <div>
+                                <h4 className="text-sm font-medium text-stone-900">
+                                  Full Home Interiors
+                                </h4>
 
-          <p className="text-xs text-stone-500">
-            End-to-end interiors
-          </p>
-        </div>
-      </Link>
+                                <p className="text-xs text-stone-500">
+                                  End-to-end interiors
+                                </p>
+                              </div>
+                            </Link>
 
-      <Link
-        to="/services/luxury-interiors"
-        className="flex items-center gap-3"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        <img
-          src={luxuryImg}
-          alt=""
-          className="w-12 h-12 rounded-lg object-cover"
-        />
+                            <Link
+                              to="/services/luxury-interiors"
+                              className="flex items-center gap-3"
+                              onClick={() =>
+                                setMobileMenuOpen(false)
+                              }
+                            >
+                              <img
+                                src={luxuryImg}
+                                alt=""
+                                className="w-12 h-12 rounded-lg object-cover"
+                              />
 
-        <div>
-          <h4 className="text-sm font-medium text-stone-900">
-            Luxury Interiors
-          </h4>
+                              <div>
+                                <h4 className="text-sm font-medium text-stone-900">
+                                  Luxury Interiors
+                                </h4>
 
-          <p className="text-xs text-stone-500">
-            Premium luxury homes
-          </p>
-        </div>
-      </Link>
+                                <p className="text-xs text-stone-500">
+                                  Premium luxury homes
+                                </p>
+                              </div>
+                            </Link>
 
-    </div>
-  )}
-</div>
+                          </div>
+                        )}
+                      </div>
 
+                      {/* CONTACT */}
                       <Link
                         to="/Contact"
                         className="text-lg font-serif text-stone-900"
@@ -424,6 +455,7 @@ const Header: React.FC = () => {
                       </Button>
                     </Link>
                   </div>
+
                 </div>
               </SheetContent>
             </Sheet>
