@@ -12,6 +12,10 @@ import InteriorKitPremium from "./pages/InteriorKitPremium";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/services";
 import Contact from "./pages/Contact";
+import FullHomeInteriors from "./pages/FullHomeInteriors";
+import LuxuryInteriors from "./pages/LuxuryInteriors";
+import ModularInteriors from "./pages/ModularInteriors";
+
 
 
 const queryClient = new QueryClient();
@@ -30,6 +34,26 @@ const App = () => (
           <Route path="/Contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/style-palette" element={<StylePalette />} />
+
+
+  <Route
+    path="/services/full-home-interiors"
+    element={<FullHomeInteriors />}
+  />
+
+  <Route
+    path="/services/luxury-interiors"
+    element={<LuxuryInteriors />}
+  />
+
+  <Route
+    path="/services/modular-interiors"
+    element={<ModularInteriors />}
+  />
+
+
+
+
           <Route path="/interior-kit/base/:size" element={<InteriorKitBase />} />
           <Route path="/interior-kit/standard/:size" element={<InteriorKitStandard />} />
           <Route path="/interior-kit/premium/:size" element={<InteriorKitPremium />} />
