@@ -217,6 +217,17 @@ const Header: React.FC = () => {
   )}
 </NavigationMenuItem>
 
+
+       {/* BLOGS */}
+<NavigationMenuItem>
+  <Link
+    to="/blogs"
+    className={navLinkClass}
+  >
+    Blogs
+  </Link>
+</NavigationMenuItem>
+
               {/* CONTACT */}
               <NavigationMenuItem>
                 <Link
@@ -428,6 +439,16 @@ const Header: React.FC = () => {
                           </div>
                         )}
                       </div>
+
+                      <Link
+                        to="/blogs"
+                        className="text-lg font-serif text-stone-900"
+                        onClick={() =>
+                          setMobileMenuOpen(false)
+                        }
+                      >
+                        Blogs
+                      </Link>
 
                       {/* CONTACT */}
                       <Link

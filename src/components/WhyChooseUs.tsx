@@ -10,26 +10,28 @@ import {
 
 const steps = [
   {
-    title: "Meet a Designer",
+    title: "Meet Our Design Expert",
+    subtitle: "Initial Consultation",
     icon: <User className="w-7 h-7" />,
   },
   {
-    title: "Book Renovation",
-    subtitle: "5% Payment",
+    title: "Project Booking",
+    subtitle: "5% Advance Payment",
     icon: <ClipboardCheck className="w-7 h-7" />,
   },
   {
-    title: "Execution Begins",
-    subtitle: "60% Payment",
+    title: "Execution Starts",
+    subtitle: "60% Stage Payment",
     icon: <Hammer className="w-7 h-7" />,
   },
   {
-    title: "Final Installation",
-    subtitle: "100% Payment",
+    title: "Installation & Handover",
+    subtitle: "Final Payment",
     icon: <Wrench className="w-7 h-7" />,
   },
   {
-    title: "Move In & Enjoy",
+    title: "Enjoy Your New Space",
+    subtitle: "Move In Comfortably",
     icon: <Home className="w-7 h-7" />,
   },
 ];
@@ -50,8 +52,8 @@ const WhyChooseUs = () => {
           </h2>
 
           <p className="mt-5 text-stone-500 max-w-2xl mx-auto">
-            From concept to completion, we ensure a smooth and transparent
-            process with premium execution.
+            We transform your ideas into elegant living spaces with a seamless
+            and transparent interior design process.
           </p>
         </div>
 
@@ -116,7 +118,7 @@ const WhyChooseUs = () => {
             href="/Contact"
             className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-[#e86b6b] text-white font-semibold tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
           >
-            Book a Design Consultation
+            Book a Free Consultation
           </a>
         </div>
       </div>

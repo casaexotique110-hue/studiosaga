@@ -15,7 +15,7 @@ import Contact from "./pages/Contact";
 import FullHomeInteriors from "./pages/FullHomeInteriors";
 import LuxuryInteriors from "./pages/LuxuryInteriors";
 import ModularInteriors from "./pages/ModularInteriors";
-
+import Blogs from "./pages/Blogs";
 
 
 const queryClient = new QueryClient();
@@ -34,6 +34,7 @@ const App = () => (
           <Route path="/Contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/style-palette" element={<StylePalette />} />
+          <Route path="/blogs" element={<Blogs />} />
 
 
   <Route
