@@ -1,155 +1,165 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-const philosophies = [
+const interiorCategories = [
   {
     id: 1,
-    title: "Aesthetic Functionality",
-    desc: "Beauty serves a purpose. We ensure every curve and corner performs as well as it looks.",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" // Texture/Material
+    title: "Modular Interior",
+    desc: "Smart modular layouts crafted for modern living with premium finishes and functional elegance.",
+    images: [
+      "/images/interior/modular/1.jpeg",
+      "/images/interior/modular/2.jpeg",
+      "/images/interior/modular/3.jpeg",
+      "/images/interior/modular/4.jpeg",
+      "/images/interior/modular/5.jpeg",
+      "/images/interior/modular/6.jpeg",
+      "/images/interior/modular/7.jpeg",
+      "/images/interior/modular/8.jpeg",
+      "/images/interior/modular/9.jpeg",
+      "/images/interior/modular/10.jpeg",
+    ],
   },
+
   {
     id: 2,
-    title: "Sustainable Luxury",
-    desc: " Sourcing materials that respect the earth without compromising on the opulence you deserve.",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" // Texture/Material
+    title: "Full Home Interior",
+    desc: "Complete home transformations blending comfort, luxury, and timeless aesthetics.",
+    images: [
+      "/images/interior/fullhome/1.jpeg",
+      "/images/interior/fullhome/2.jpeg",
+      "/images/interior/fullhome/3.jpeg",
+      "/images/interior/fullhome/4.jpeg",
+      "/images/interior/fullhome/5.jpeg",
+      "/images/interior/fullhome/6.jpeg",
+      "/images/interior/fullhome/7.jpeg",
+      "/images/interior/fullhome/8.jpeg",
+      "/images/interior/fullhome/9.jpeg",
+      "/images/interior/fullhome/10.jpeg",
+    ],
   },
+
   {
     id: 3,
-    title: "Spatial Harmony",
-    desc: "Balancing light, flow, and volume to create spaces that feel expansive and serene.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" // Wide Room
+    title: "Luxury Interior",
+    desc: "High-end bespoke interiors designed with sophisticated materials and rich textures.",
+    images: [
+      "/images/interior/luxury/1.jpeg",
+      "/images/interior/luxury/2.jpeg",
+      "/images/interior/luxury/3.jpeg",
+      "/images/interior/luxury/4.jpeg",
+      "/images/interior/luxury/5.jpeg",
+      "/images/interior/luxury/6.jpeg",
+      "/images/interior/luxury/7.jpeg",
+      "/images/interior/luxury/8.jpeg",
+      "/images/interior/luxury/9.jpeg",
+      "/images/interior/luxury/10.jpeg",
+    ],
   },
-  {
-    id: 4,
-    title: "Timeless Curation",
-    desc: "Avoiding fleeting trends in favor of a classic aesthetic that evolves with your lifestyle.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop" // Art/Decor
-  }
 ];
 
 const PremiumApproach = () => {
   return (
-    <section className="relative py-32 bg-[#F9F8F6] text-stone-900 overflow-hidden">
-      
-      {/* Background Decorative Elements (Subtle) */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-stone-100/50 -skew-x-12 translate-x-32 pointer-events-none" />
+    <section className="relative bg-[#F8F6F2] py-28 overflow-hidden">
+      {/* Background Blur */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#d6b98c]/10 blur-[140px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#d6b98c]/10 blur-[140px]" />
+      </div>
 
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <motion.span
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="uppercase tracking-[0.3em] text-sm text-[#B08B57] font-semibold"
+          >
+            Interior Gallery
+          </motion.span>
 
-          {/* --- LEFT SIDE: Sticky Intro --- */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32 h-fit">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex items-center gap-4 mb-8">
-                <span className="h-[1px] w-12 bg-stone-400"></span>
-                <span className="text-stone-500 text-xs font-bold tracking-[0.25em] uppercase">
-                  Our Philosophy
-                </span>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-5xl md:text-7xl font-light text-[#222] mt-6 leading-tight"
+          >
+            Luxury Spaces <br />
+            <span className="italic font-serif text-[#B08B57]">
+              Crafted Beautifully
+            </span>
+          </motion.h2>
+
+          <p className="max-w-3xl mx-auto text-[#666] text-lg mt-8 leading-relaxed">
+            Explore a curated collection of premium interiors featuring modular
+            kitchens, luxury bedrooms, modern living rooms, full home
+            transformations, and bespoke interior concepts.
+          </p>
+        </div>
+
+        {/* Categories */}
+        <div className="space-y-32">
+          {interiorCategories.map((category, categoryIndex) => (
+            <div key={category.id}>
+              {/* Section Heading */}
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+                <div>
+                  <span className="text-[#B08B57] text-sm tracking-[0.25em] uppercase font-semibold">
+                    0{category.id}
+                  </span>
+
+                  <h3 className="text-4xl md:text-5xl font-light text-[#222] mt-4">
+                    {category.title}
+                  </h3>
+                </div>
+
+                <p className="max-w-2xl text-[#666] leading-relaxed">
+                  {category.desc}
+                </p>
               </div>
 
-              <h2 className="font-serif text-5xl md:text-6xl mb-8 leading-[1.05] text-stone-900">
-                Design for <br />
-                <span className="italic text-stone-400 font-light">Living Well.</span>
-              </h2>
+              {/* Masonry Gallery */}
+              <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                {category.images.map((img, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.05,
+                    }}
+                    className="relative overflow-hidden rounded-[28px] group break-inside-avoid shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
+                  >
+                    <img
+                      src={img}
+                      alt={`${category.title} ${index + 1}`}
+                      className="w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
 
-              <p className="text-stone-600 text-lg font-light leading-relaxed mb-12 max-w-md">
-                 feelings. Combining cutting-edge trends with practical execution to build livable masterpieces.
-              </p>
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
-              {/* Enhanced Stats */}
-{/* Updated Stats for a New Company */}
-<div className="flex gap-12 border-t border-stone-200 pt-8">
-  <div>
-    {/* Focus on "Modern" or "Bespoke" instead of years */}
-    <h4 className="text-3xl font-serif text-stone-800 uppercase tracking-tighter">Bespoke</h4>
-    <p className="text-xs font-semibold uppercase tracking-wider text-stone-400 mt-2">Design Philosophy</p>
-  </div>
-  <div>
-    <h4 className="text-4xl font-serif text-stone-800">100%</h4>
-    <p className="text-xs font-semibold uppercase tracking-wider text-stone-400 mt-2">Dedication</p>
-  </div>
-</div>
+                    {/* Text */}
+                    <div className="absolute bottom-0 left-0 p-6 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                      <h4 className="text-white text-2xl font-serif">
+                        {category.title}
+                      </h4>
 
-              {/* CTA Button */}
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-12 px-8 py-4 bg-stone-900 text-white text-sm tracking-widest uppercase hover:bg-stone-800 transition-colors"
-              >
-                Start Your Journey
-              </motion.button>
-            </motion.div>
-          </div>
-
-          {/* --- RIGHT SIDE: Floating Masonry Grid --- */}
-          <div className="lg:col-span-7">
-            <div className="grid md:grid-cols-2 gap-8">
-              
-              {/* Column 1 (Offset down for masonry look) */}
-              <div className="flex flex-col gap-8 md:mt-24">
-                 {philosophies.filter((_, i) => i % 2 === 0).map((phi, idx) => (
-                   <PhilosophyCard key={phi.id} data={phi} index={idx} />
-                 ))}
+                      <p className="text-white/80 text-sm mt-2">
+                        Premium Interior Design
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-
-              {/* Column 2 */}
-              <div className="flex flex-col gap-8">
-                {philosophies.filter((_, i) => i % 2 !== 0).map((phi, idx) => (
-                   <PhilosophyCard key={phi.id} data={phi} index={idx} />
-                 ))}
-              </div>
-
             </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>
-  );
-};
-
-// Sub-component for individual cards
-const PhilosophyCard = ({ data, index }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.7, delay: index * 0.2 }}
-      className="group relative bg-white p-6 pb-10 shadow-sm border border-stone-100 hover:shadow-2xl transition-all duration-500 ease-out overflow-hidden"
-    >
-      {/* Floating Image (Appears on Hover or stays visible based on design) */}
-      <div className="relative h-64 w-full mb-8 overflow-hidden">
-        <motion.img 
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.7 }}
-          src={data.image} 
-          alt={data.title}
-          className="w-full h-full object-cover"
-        />
-        {/* Number Overlay */}
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-bold font-serif tracking-widest border border-stone-200">
-            0{data.id}
-        </div>
-      </div>
-
-      <h3 className="text-2xl font-serif mb-3 text-stone-900 group-hover:text-[#BFA181] transition-colors duration-300">
-        {data.title}
-      </h3>
-      
-      <p className="text-sm text-stone-500 leading-relaxed font-light">
-        {data.desc}
-      </p>
-
-      {/* Decorative floating Line */}
-      <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#BFA181] group-hover:w-full transition-all duration-700 ease-out" />
-    </motion.div>
   );
 };
 

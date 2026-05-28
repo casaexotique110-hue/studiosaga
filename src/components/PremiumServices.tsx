@@ -1,88 +1,128 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, ArrowRight, Star, MessageSquare } from 'lucide-react';
+import { Phone, Star } from 'lucide-react';
 
 const packages = [
   {
-    name: "Essential Refresh",
-    tagline: "Single room & Studio makeovers",
-    image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80",
+    name: "5 - 15 Lakh Interior",
+    tagline: "Modern modular & compact luxury homes",
+    priceLabel: "Affordable Luxury",
+
+    // UPDATED LOCAL IMAGE PATH
+    image: "/pricing/Basic.jpeg",
+
     isPopular: false,
-    ctaText: "Get a Quote",
+    ctaText: "Book Consultation",
     features: [
-      "Initial Concept Moodboard",
-      "Curated Furniture List",
-      "Paint & Color Consultation",
-      "Space Optimization Plan"
+      "Modular Kitchen Design",
+      "Premium Wardrobes",
+      "False Ceiling & Lighting",
+      "TV Unit & Storage Solutions",
+      "Modern Bedroom Interiors",
+      "2D Layout Planning"
     ]
   },
+
   {
-    name: "Signature Living",
-    tagline: "Full home transformation",
-    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80",
+    name: "15 - 30 Lakh Interior",
+    tagline: "Complete premium home transformation",
+    priceLabel: "Most Preferred",
+
+    // UPDATED LOCAL IMAGE PATH
+    image: "/pricing/mid.jpeg",
+
     isPopular: true,
-    ctaText: "Schedule Call",
+    ctaText: "Start Your Project",
     features: [
-      "3D Spatial Rendering",
-      "Full Project Management",
-      "Custom Millwork Design",
-      "Material Procurement",
+      "Complete Home Interior",
+      "Luxury Modular Kitchen",
+      "Custom Furniture Design",
+      "Premium Wall Treatments",
+      "Designer Lighting Setup",
+      "3D Visualization",
+      "Site Supervision",
       "End-to-End Execution"
     ]
   },
+
   {
-    name: "Estate Curated",
-    tagline: "Architectural & Luxury elegance",
-    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80",
+    name: "30 - 45 Lakh Interior",
+    tagline: "Ultra luxury bespoke living experience",
+    priceLabel: "Elite Luxury",
+
+    // UPDATED LOCAL IMAGE PATH
+    image: "/pricing/luxury.jpeg",
+
     isPopular: false,
-    ctaText: "Enquire Now",
+    ctaText: "Talk To Designer",
     features: [
-      "Architectural Consulting",
-      "Bespoke Furniture Design",
-      "Art & Decor Curation",
-      "White-Glove Installation",
-      "Dedicated Site Supervisor"
+      "Luxury Villa Interiors",
+      "Imported Material Selection",
+      "Smart Home Integration",
+      "Bespoke Furniture",
+      "Italian Marble & Veneers",
+      "Architectural Detailing",
+      "Premium Decor Styling",
+      "Dedicated Project Manager"
     ]
   }
 ];
 
 const PremiumServices = () => {
   return (
-    <section className="py-32 bg-[#F9F8F6] text-stone-900">
-      <div className="container mx-auto px-6 max-w-7xl">
-        
-        {/* Header Section */}
-        <div className="text-center mb-20 max-w-3xl mx-auto">
-          <motion.div 
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
+    <section className="relative py-32 bg-[#F8F6F2] overflow-hidden">
+
+      {/* Background Glow */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#c8a46a]/10 blur-[140px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[#c8a46a]/10 blur-[140px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+        {/* HEADER */}
+        <div className="text-center mb-24 max-w-4xl mx-auto">
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
           >
-            <span className="text-[#BFA181] text-xs font-bold tracking-[0.3em] uppercase mb-4 block">
-              Our Expertise
+            <span className="text-[#B08B57] uppercase tracking-[0.35em] text-xs font-bold">
+              Interior Pricing
             </span>
-            <h2 className="font-serif text-4xl md:text-6xl text-stone-900 mb-6 leading-tight">
-              Design Services <br /> 
-              <span className="italic text-stone-400 font-light text-3xl md:text-5xl">Bespoke to your needs.</span>
+
+            <h2 className="text-5xl md:text-7xl font-light text-[#1f1f1f] mt-8 leading-[1]">
+              Luxury Interiors <br />
+
+              <span className="italic font-serif text-[#B08B57]">
+                Designed Around Your Budget
+              </span>
             </h2>
-            <p className="text-stone-500 font-light text-lg max-w-xl mx-auto">
-              Every space is unique. Contact us for a personalized estimate based on your site’s dimensions and design vision.
+
+            <p className="text-[#666] text-lg leading-relaxed mt-8 max-w-3xl mx-auto">
+              From elegant modular interiors to ultra luxury dream homes,
+              discover premium interior solutions crafted for every lifestyle
+              and investment range.
             </p>
           </motion.div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+        {/* PRICING CARDS */}
+        <div className="grid lg:grid-cols-3 gap-10 items-stretch">
+
           {packages.map((pkg, idx) => (
             <ServiceCard key={idx} pkg={pkg} index={idx} />
           ))}
+
         </div>
 
-        {/* Bottom Contact Note */}
+        {/* FOOTER NOTE */}
         <div className="mt-20 text-center border-t border-stone-200 pt-10">
-            <p className="text-stone-400 text-sm italic">
-                *Final pricing depends on project scope, site area, and material selection.
-            </p>
+          <p className="text-stone-400 text-sm italic">
+            *Pricing may vary depending on carpet area, material selection,
+            customization, and project scope.
+          </p>
         </div>
 
       </div>
@@ -91,75 +131,110 @@ const PremiumServices = () => {
 };
 
 const ServiceCard = ({ pkg, index }) => {
+
   const isDark = pkg.isPopular;
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 50 }}
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.6 }}
+      transition={{
+        duration: 0.7,
+        delay: index * 0.15,
+      }}
       className={`
-        group relative flex flex-col h-full rounded-none overflow-hidden transition-all duration-500
-        ${isDark 
-          ? 'bg-stone-900 text-white shadow-2xl lg:-mt-4 lg:-mb-4 z-10' 
-          : 'bg-white text-stone-900 border border-stone-100 shadow-sm hover:shadow-xl hover:-translate-y-2'}
+        group relative overflow-hidden transition-all duration-700
+        rounded-[38px] flex flex-col h-full
+        ${isDark
+          ? 'bg-[#1d1d1d] text-white scale-[1.03] shadow-[0_25px_80px_rgba(0,0,0,0.18)]'
+          : 'bg-white text-[#1d1d1d] shadow-[0_15px_50px_rgba(0,0,0,0.06)] hover:-translate-y-3'}
       `}
     >
-      {/* Top Image Area */}
-      <div className="h-72 overflow-hidden relative">
-        <div className={`absolute inset-0 z-10 ${isDark ? 'bg-black/30' : 'bg-transparent'}`} />
-        <motion.img 
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.8 }}
-          src={pkg.image} 
-          alt={pkg.name} 
-          className="w-full h-full object-cover"
+
+      {/* IMAGE */}
+      <div className="relative h-[320px] overflow-hidden">
+
+        <img
+          src={pkg.image}
+          alt={pkg.name}
+          className="w-full h-full object-cover group-hover:scale-110 transition duration-[2000ms]"
         />
-        
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+        {/* Badge */}
         {pkg.isPopular && (
-          <div className="absolute top-4 right-4 z-20 bg-[#BFA181] text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest shadow-md flex items-center gap-1">
-            <Star size={10} fill="currentColor" /> Premier Choice
+          <div className="absolute top-5 right-5 bg-[#B08B57] text-white px-4 py-2 rounded-full text-[10px] uppercase tracking-[0.2em] flex items-center gap-2">
+            <Star size={12} fill="currentColor" />
+            Most Popular
           </div>
         )}
+
+        {/* Price */}
+        <div className="absolute bottom-8 left-8">
+          <p className="text-white/70 uppercase tracking-[0.3em] text-xs">
+            {pkg.priceLabel}
+          </p>
+
+          <h2 className="text-white text-5xl font-light mt-3 leading-none">
+            {pkg.name}
+          </h2>
+        </div>
       </div>
 
-      {/* Content Area */}
+      {/* CONTENT */}
       <div className="p-10 flex flex-col flex-1">
-        <h3 className={`font-serif text-3xl mb-2 ${isDark ? 'text-white' : 'text-stone-900'}`}>
-          {pkg.name}
-        </h3>
-        <p className={`text-[10px] uppercase tracking-widest mb-8 font-bold ${isDark ? 'text-stone-400' : 'text-[#BFA181]'}`}>
+
+        <p className={`uppercase tracking-[0.25em] text-xs font-semibold mb-10
+          ${isDark ? 'text-[#B08B57]' : 'text-stone-500'}
+        `}>
           {pkg.tagline}
         </p>
 
-        {/* Features List */}
-        <div className="space-y-0 mb-12 flex-1">
-          {pkg.features.map((feat, fIdx) => (
-            <div 
-              key={fIdx} 
-              className={`flex items-center gap-4 py-4 border-b border-dashed ${isDark ? 'border-stone-700' : 'border-stone-100'}`}
+        {/* FEATURES */}
+        <div className="space-y-4 flex-1">
+
+          {pkg.features.map((feature, idx) => (
+            <div
+              key={idx}
+              className={`flex items-center gap-4 pb-4 border-b
+                ${isDark ? 'border-white/10' : 'border-stone-100'}
+              `}
             >
-              <div className={`w-1 h-1 rounded-full shrink-0 ${isDark ? 'bg-[#BFA181]' : 'bg-stone-400'}`} />
-              <span className={`text-sm font-light tracking-wide ${isDark ? 'text-stone-300' : 'text-stone-600'}`}>
-                {feat}
+              <div className={`w-2 h-2 rounded-full
+                ${isDark ? 'bg-[#B08B57]' : 'bg-stone-400'}
+              `} />
+
+              <span className={`
+                text-sm tracking-wide
+                ${isDark ? 'text-stone-300' : 'text-stone-600'}
+              `}>
+                {feature}
               </span>
             </div>
           ))}
+
         </div>
 
-        {/* Action Button - Updated to Call Action */}
-        <button 
-          onClick={() => window.location.href = 'tel:+91XXXXXXXXXX'} // Replace with actual number
+        {/* BUTTON */}
+        <button
+          onClick={() => window.location.href = 'tel:+91XXXXXXXXXX'}
           className={`
-          w-full py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 border
-          flex items-center justify-center gap-3 group-hover:gap-5
-          ${isDark 
-            ? 'bg-[#BFA181] border-[#BFA181] text-white hover:bg-white hover:text-stone-900 hover:border-white' 
-            : 'bg-stone-900 border-stone-900 text-white hover:bg-transparent hover:text-stone-900'}
-        `}>
-          {pkg.ctaText} <Phone size={14} className={isDark ? "animate-pulse" : ""} />
+            mt-12 w-full py-5 rounded-full uppercase tracking-[0.25em]
+            text-xs font-bold transition-all duration-500
+            flex items-center justify-center gap-3
+            ${isDark
+              ? 'bg-[#B08B57] text-white hover:bg-white hover:text-black'
+              : 'bg-[#1d1d1d] text-white hover:bg-[#B08B57]'}
+          `}
+        >
+          {pkg.ctaText}
+
+          <Phone size={16} />
         </button>
+
       </div>
     </motion.div>
   );

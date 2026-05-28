@@ -10,6 +10,7 @@ import About3 from "@/extracomponents/About3";
 import BlogsCarousel from "@/components/BlogsCarousel";
 import { motion } from "framer-motion";
 import { Check, Star, Heart, Zap, Shield, Layout, Palette, Lamp, Sofa, PenTool } from "lucide-react";
+import Newcomponentui from "@/components/Newcomponentui";
 
 const videoSources = ["/images/2.mp4"];
 
@@ -242,109 +243,6 @@ const OurSaga = () => {
 
 
         {/* ================== CORE VALUES (Mission/Vision) ================== */}
-{/* ================== CORE VALUES (FULL COLOR) ================== */}
-        <section className="py-32 bg-stone-100">
-          <div className="container mx-auto px-6 max-w-7xl">
-            
-            <div className="text-center mb-20">
-               <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">The Foundation</span>
-               <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4">Built on Principles</h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 items-start">
-              
-              {/* Card 1: MISSION */}
-              <div className="group relative h-[450px] w-full overflow-hidden rounded-xl cursor-default shadow-lg">
-                
-                {/* Background Image (Full Color) */}
-                <div className="absolute inset-0 w-full h-full">
-                   <img 
-                     src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=2000&auto=format&fit=crop" 
-                     alt="Mission" 
-                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
-                   />
-                </div>
-
-                {/* Dark Overlay (For text readability) */}
-                <div className="absolute inset-0 bg-black/60 transition-opacity duration-500 group-hover:bg-black/40"></div>
-
-                {/* Content */}
-                <div className="relative z-10 h-full p-10 flex flex-col justify-between">
-                  <div>
-                    <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center mb-6 text-white group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                      <Zap className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-serif text-3xl text-white mb-2">Our Mission</h3>
-                    <div className="w-12 h-[1px] bg-white/50 group-hover:w-24 group-hover:bg-primary transition-all duration-500"></div>
-                  </div>
-
-                  <p className="text-white/90 font-light leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    To create calm, functional, and timeless homes that support real living. We design interiors that balance aesthetics, functionality, and long-term usability—making luxury accessible without dilution.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 2: VISION (Center Offset) */}
-              <div className="group relative h-[450px] w-full overflow-hidden rounded-xl cursor-default shadow-2xl md:-mt-12 z-10 ring-4 ring-white">
-                
-                {/* Background Image (Full Color) */}
-                <div className="absolute inset-0 w-full h-full">
-                   <img 
-                     src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" 
-                     alt="Vision" 
-                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
-                   />
-                </div>
-
-                <div className="absolute inset-0 bg-black/60 transition-opacity duration-500 group-hover:bg-black/30"></div>
-
-                <div className="relative z-10 h-full p-10 flex flex-col justify-between">
-                  <div>
-                    <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center mb-6 text-white group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                      <Star className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-serif text-3xl text-white mb-2">Our Vision</h3>
-                    <div className="w-12 h-[1px] bg-white/50 group-hover:w-24 group-hover:bg-primary transition-all duration-500"></div>
-                  </div>
-
-                  <p className="text-white/95 font-light leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    To be the trusted partner for affordable luxury interiors, proving that thoughtful design and disciplined execution create homes that feel premium without overspending.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3: VALUES */}
-              <div className="group relative h-[450px] w-full overflow-hidden rounded-xl cursor-default shadow-lg">
-                
-                {/* Background Image (Full Color) */}
-                <div className="absolute inset-0 w-full h-full">
-                   <img 
-                     src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=2000&auto=format&fit=crop" 
-                     alt="Values" 
-                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
-                   />
-                </div>
-
-                <div className="absolute inset-0 bg-black/60 transition-opacity duration-500 group-hover:bg-black/40"></div>
-
-                <div className="relative z-10 h-full p-10 flex flex-col justify-between">
-                  <div>
-                    <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center mb-6 text-white group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                      <Shield className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-serif text-3xl text-white mb-2">Our Values</h3>
-                    <div className="w-12 h-[1px] bg-white/50 group-hover:w-24 group-hover:bg-primary transition-all duration-500"></div>
-                  </div>
-
-                  <p className="text-white/90 font-light leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    Function before decoration. Timeless over trendy. Calm color palettes. Durable materials. Homes designed for real life. These values guide every project and ensure spaces that age gracefully.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
 
 
 
@@ -353,30 +251,6 @@ const OurSaga = () => {
 
 
 
-
-        {/* ================== EXPERTISE GRID ================== */}
-        {/* <section className="py-24">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-5xl mb-4">Our Expertise</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">Comprehensive design solutions tailored to your unique needs.</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {expertise.map((item, idx) => (
-                <div key={idx} className="flex gap-4 p-6 hover:bg-secondary/10 rounded-lg transition-colors">
-                  <div className="w-12 h-12 shrink-0 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                    <item.icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif text-xl mb-2">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
   
 
 
@@ -419,6 +293,8 @@ const OurSaga = () => {
        
 
                <PremiumApproach />
+
+               <Newcomponentui />
 
                <PremiumServices/>
 
