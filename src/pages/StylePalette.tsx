@@ -117,9 +117,9 @@ const stylesData = [
     title: "Artistic Boutique",
     images: [
       "/images/ourr/5.jpg",
-      "/images/ourr/artistic/1.jpg",
-      "/images/ourr/artistic/2.jpg",
-      "/images/ourr/artistic/3.jpg",
+      "/images/ourr/artistic/1.jpeg",
+      "/images/ourr/artistic/2.jpeg",
+      "/images/ourr/artistic/3.jpeg",
     ],
     tagline: "Curated Luxury & Bold Expression",
     philosophy:
