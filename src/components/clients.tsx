@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 export const testimonials = [
   {
     id: 1,
-    name: "Vikram Mehta",
+    name: "Pankaj Batra",
     role: "Director",
     company: "DLF Homes",
     content: "The attention to detail and professional approach was outstanding. They truly understood our vision for the luxury segment and executed it flawlessly. We've seen a significant shift in brand perception since our collaboration.",
@@ -20,7 +20,7 @@ export const testimonials = [
   },
   {
     id: 2,
-    name: "Sarah Johnson",
+    name: "Sudha Yadav",
     role: "Marketing Head",
     company: "Hyatt Regency",
     content: "An exceptional experience from start to finish. Their team delivered beyond our expectations, capturing the essence of our brand perfectly. It's rare to find a partner who understands hospitality so deeply.",
@@ -28,7 +28,7 @@ export const testimonials = [
   },
   {
     id: 3,
-    name: "Arjun Sharma",
+    name: "Charu Singh",
     role: "CEO",
     company: "Whiteland Corp",
     content: "Working with them felt like having an extension of our own team. Their strategic thinking is what sets them apart in the real estate market. They don't just design; they build visual legacies.",
@@ -36,7 +36,7 @@ export const testimonials = [
   },
   {
     id: 4,
-    name: "Priya Singh",
+    name: "Ankit Jain",
     role: "Project Manager",
     company: "Pioneer Urban",
     content: "The most reliable partners we've worked with. They managed to balance high-end aesthetics with functional design requirements effortlessly. Their workflow is incredibly transparent.",
@@ -44,7 +44,7 @@ export const testimonials = [
   },
   {
     id: 5,
-    name: "Rajesh Khanna",
+    name: "Ankit Dewan",
     role: "VP Operations",
     company: "Okaya",
     content: "Innovative, responsive, and highly professional. Their work helped us redefine our digital presence in a very competitive landscape. The ROI on this partnership has been evident since day one.",
@@ -52,7 +52,7 @@ export const testimonials = [
   },
   {
     id: 6,
-    name: "Ananya Patel",
+    name: "Lalita",
     role: "Founder",
     company: "Ipsaa Daycare",
     content: "They brought a warmth and creativity to our project that we hadn't found elsewhere. The feedback from our clients has been incredible. They truly care about the impact of their work.",
