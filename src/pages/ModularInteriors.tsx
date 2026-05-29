@@ -1,101 +1,146 @@
 // ModularInteriors.tsx
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 const ModularInteriors = () => {
   return (
-    <div className="bg-white text-stone-800">
+    <div className="bg-white text-stone-800 w-full overflow-x-hidden">
       <Header />
 
       {/* HERO */}
-      <section className="relative h-[90vh] flex items-center justify-center">
+      <section className="relative h-[85vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Local Public Folder Hero Image (1.png) */}
         <img
-          src="https://images.unsplash.com/photo-1484154218962-a197022b5858"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          src="/modular/1.png"
+          alt="Premium Modular Interior"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 text-center max-w-4xl px-6">
-          <p className="uppercase tracking-[4px] text-white/70 text-sm">
-            Modular Interiors
+        <div className="relative z-10 text-center max-w-4xl px-4 sm:px-6">
+          <p className="uppercase tracking-[3px] md:tracking-[4px] text-white/70 text-xs md:text-sm font-medium">
+            Modular Interiors By StudioSaga
           </p>
 
-          <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight mt-4">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight mt-4 tracking-tight">
             Smart Designs That Last A Lifetime
           </h1>
 
-          <p className="mt-6 text-lg text-white/80">
+          <p className="mt-6 text-base md:text-lg text-white/80 max-w-2xl mx-auto font-light">
             Beautiful modular kitchens, wardrobes and storage solutions crafted
             for modern living.
           </p>
 
-          <Button className="mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-8 py-6 rounded-full text-lg">
+          <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
             Book Consultation
           </Button>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-[#BFA181] uppercase tracking-[3px]">
+      {/* SERVICES WITH VISUAL IMAGES */}
+      <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-[#BFA181] uppercase tracking-[3px] text-xs md:text-sm font-semibold">
             What We Offer
           </p>
-
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 md:mt-4 text-stone-900">
             Modular Solutions
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* 1-col on mobile, 3-col on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
             {
               title: "Modular Kitchen",
               desc: "Elegant kitchens designed with smart functionality and premium finishes.",
+              img: "/modular/2.png" // Applied image 2
             },
             {
               title: "Wardrobes",
               desc: "Customized wardrobes crafted to maximize storage beautifully.",
+              img: "/modular/3.png" // Applied image 3
             },
             {
               title: "Storage Units",
               desc: "TV units, bookshelves, shoe racks and more designed for modern homes.",
+              img: "/modular/4.png" // Applied image 4
             },
           ].map((item, i) => (
             <div
               key={i}
-              className="border border-stone-200 rounded-3xl p-8 hover:shadow-2xl transition-all"
+              className="border border-stone-200 rounded-2xl md:rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group"
             >
-              <h3 className="text-3xl font-semibold mb-4">
-                {item.title}
-              </h3>
-
-              <p className="text-stone-600 leading-7">
-                {item.desc}
-              </p>
+              {/* Responsive Image Wrapper for Service Cards */}
+              <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-stone-100">
+                <img 
+                  src={item.img} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              
+              <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-3 text-stone-900">
+                    {item.title}
+                  </h3>
+                  <p className="text-stone-600 leading-relaxed text-sm md:text-base font-light">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
+      {/* COMPLETED WORK / PORTFOLIO SHOWCASE */}
+      <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-stone-100">
+        <div className="text-center mb-12">
+          <p className="text-[#BFA181] uppercase tracking-[3px] text-xs md:text-sm font-semibold">
+            Showcase
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 text-stone-900">
+            Realized Modular Projects
+          </h2>
+        </div>
+
+        {/* Asymmetric Visual Grid: Phatega nahi aur perfectly align hoga */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          <div className="w-full aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden bg-stone-100 shadow-sm">
+            <img 
+              src="/modular/1.png" 
+              alt="Modular Execution 01" 
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+          <div className="w-full aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden bg-stone-100 shadow-sm">
+            <img 
+              src="/modular/2.png" 
+              alt="Modular Execution 02" 
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS */}
-      <section className="bg-[#f8f5f1] py-24 px-6">
+      <section className="bg-[#f8f5f1] py-16 md:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#BFA181] uppercase tracking-[3px]">
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-[#BFA181] uppercase tracking-[3px] text-xs md:text-sm font-semibold">
               Our Process
             </p>
-
-            <h2 className="text-5xl font-bold mt-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 md:mt-4 text-stone-900">
               Precision In Every Detail
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-6">
+          {/* Responsive Grid for Steps: 2-col on mobile, 5-col on desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
             {[
               "Design",
               "Materials",
@@ -105,13 +150,13 @@ const ModularInteriors = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white rounded-3xl p-8 text-center"
+                className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-stone-100 flex flex-col items-center justify-center"
               >
-                <div className="w-16 h-16 rounded-full bg-[#BFA181] text-white flex items-center justify-center mx-auto text-2xl font-bold">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#BFA181] text-white flex items-center justify-center text-lg md:text-2xl font-bold shadow-sm">
                   {i + 1}
                 </div>
 
-                <h3 className="mt-6 text-2xl font-semibold">
+                <h3 className="mt-4 md:mt-6 text-lg md:text-2xl font-semibold text-stone-800 tracking-tight">
                   {item}
                 </h3>
               </div>
@@ -121,12 +166,12 @@ const ModularInteriors = () => {
       </section>
 
       {/* GUARANTEE */}
-      <section className="py-24 px-6 max-w-6xl mx-auto text-center">
-        <h2 className="text-5xl font-bold leading-tight">
+      <section className="py-16 md:py-24 px-4 sm:px-6 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-stone-900">
           Crafted With Precision & Built To Last
         </h2>
 
-        <p className="mt-8 text-stone-600 leading-8 max-w-3xl mx-auto">
+        <p className="mt-6 md:mt-8 text-sm md:text-lg text-stone-600 leading-relaxed font-light">
           Using premium materials, precision manufacturing and expert
           installation, StudioSaga delivers modular interiors that combine
           durability with sophisticated aesthetics.
@@ -134,17 +179,17 @@ const ModularInteriors = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-black text-white py-24 px-6 text-center">
-        <h2 className="text-5xl font-bold">
+      <section className="bg-stone-900 text-white py-16 md:py-24 px-4 sm:px-6 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           Transform Your Home With Smart Interiors
         </h2>
 
-        <p className="mt-6 text-white/70 max-w-2xl mx-auto">
+        <p className="mt-4 md:mt-6 text-sm md:text-base text-white/70 max-w-2xl mx-auto font-light">
           Experience functional elegance with beautifully designed modular
           interiors tailored for your lifestyle.
         </p>
 
-        <Button className="mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-8 py-6 rounded-full text-lg">
+        <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
           Start Your Project
         </Button>
       </section>
@@ -154,4 +199,4 @@ const ModularInteriors = () => {
   );
 };
 
-export default ModularInteriors ;
+export default ModularInteriors;

@@ -1,97 +1,113 @@
 // FullHomeInteriors.tsx
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 const FullHomeInteriors = () => {
   return (
-    <div className="bg-white text-stone-800">
+    <div className="bg-white text-stone-800 w-full overflow-x-hidden">
       <Header />
 
-      {/* HERO */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* HERO SECTION - Wapas original image set kar di hai */}
+      <section className="relative h-[85vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          alt="The Complete Home Interiors Experience"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/50" />
 
-        <div className="relative z-10 text-center px-6 max-w-4xl">
-          <p className="text-white/80 mb-3 tracking-[3px] uppercase text-sm">
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl">
+          <p className="text-white/80 mb-3 tracking-[3px] uppercase text-xs md:text-sm font-medium">
             StudioSaga Interiors
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
             The Complete Home Interiors Experience
           </h1>
 
-          <p className="mt-6 text-lg text-white/80">
+          <p className="mt-6 text-base md:text-lg text-white/80 max-w-2xl mx-auto font-light">
             From concept to completion, we craft homes that reflect your
             lifestyle, elegance, and personality.
           </p>
 
-          <Button className="mt-8 bg-[#BFA181] hover:bg-[#a88a69] text-white px-8 py-6 rounded-full text-lg">
+          <Button className="mt-8 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
             Book a Design Consultation
           </Button>
         </div>
       </section>
 
-      {/* WHAT WE OFFER */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-[#BFA181] uppercase tracking-[3px]">
+      {/* WHAT WE OFFER WITH VISUAL CARDS */}
+      <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-[#BFA181] uppercase tracking-[3px] text-xs md:text-sm font-semibold">
             What We Offer
           </p>
-
-          <h2 className="text-4xl font-bold mt-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 md:mt-4 text-stone-900">
             Luxury Interior Solutions
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* 1-column on mobile, 3-columns on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
             {
               title: "Home Design",
               desc: "Thoughtfully designed interiors tailored to your lifestyle and vision.",
+              img: "/full-home-interior/1.png",
             },
             {
               title: "Project Management",
               desc: "End-to-end execution with seamless coordination and timely delivery.",
+              img: "/full-home-interior/2.png",
             },
             {
               title: "Custom Solutions",
               desc: "Furniture, decor, lighting and styling curated exclusively for your home.",
+              img: "/full-home-interior/3.png",
             },
           ].map((item, i) => (
             <div
               key={i}
-              className="p-8 rounded-3xl border border-stone-200 hover:shadow-2xl transition-all duration-300"
+              className="rounded-2xl md:rounded-3xl border border-stone-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group bg-white"
             >
-              <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+              {/* Image Frame with responsive scaling protection */}
+              <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-stone-100">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
 
-              <p className="text-stone-600 leading-7">{item.desc}</p>
+              <div className="p-6 md:p-8 flex-1 flex flex-col">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 text-stone-900">
+                  {item.title}
+                </h3>
+                <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light">
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* JOURNEY */}
-      <section className="bg-[#f8f5f1] py-24 px-6">
+      {/* JOURNEY SECTION */}
+      <section className="bg-[#f8f5f1] py-16 md:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[#BFA181] uppercase tracking-[3px]">
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-[#BFA181] uppercase tracking-[3px] text-xs md:text-sm font-semibold">
               Your Journey
             </p>
-
-            <h2 className="text-4xl font-bold mt-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 md:mt-4 text-stone-900">
               From Vision To Reality
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          {/* Responsive Steps Track */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[
               "Consultation",
               "Design Planning",
@@ -100,39 +116,38 @@ const FullHomeInteriors = () => {
             ].map((step, i) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-3xl shadow-sm text-center"
+                className="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.01)] text-center border border-stone-100/80 flex flex-col items-center justify-center"
               >
-                <div className="w-16 h-16 rounded-full bg-[#BFA181] text-white flex items-center justify-center mx-auto text-2xl font-bold">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#BFA181] text-white flex items-center justify-center text-lg md:text-2xl font-bold shadow-sm">
                   {i + 1}
                 </div>
-
-                <h3 className="mt-6 text-2xl font-semibold">{step}</h3>
+                <h3 className="mt-4 md:mt-6 text-base md:text-xl font-semibold text-stone-800 tracking-tight">
+                  {step}
+                </h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TEAM */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div className="bg-[#f8f5f1] p-10 rounded-3xl">
-            <h3 className="text-3xl font-bold mb-6">
+      {/* DESIGNER & PROJECT MANAGER TEAM SECTION */}
+      <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          <div className="bg-[#f8f5f1] p-8 md:p-12 rounded-2xl md:rounded-3xl hover:border-[#BFA181]/20 border border-transparent transition-all">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-stone-900">
               Your Interior Designer
             </h3>
-
-            <p className="text-stone-600 leading-7">
+            <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light">
               Our expert designers combine creativity with functionality to
               create timeless spaces tailored to your lifestyle.
             </p>
           </div>
 
-          <div className="bg-[#f8f5f1] p-10 rounded-3xl">
-            <h3 className="text-3xl font-bold mb-6">
+          <div className="bg-[#f8f5f1] p-8 md:p-12 rounded-2xl md:rounded-3xl hover:border-[#BFA181]/20 border border-transparent transition-all">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-stone-900">
               Your Project Manager
             </h3>
-
-            <p className="text-stone-600 leading-7">
+            <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light">
               Dedicated project experts ensure smooth execution, quality checks,
               and timely completion of your dream home.
             </p>
@@ -140,30 +155,42 @@ const FullHomeInteriors = () => {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section className="py-24 bg-black text-white text-center px-6">
-        <h2 className="text-4xl font-bold max-w-4xl mx-auto leading-tight">
-          “StudioSaga transformed our dream into reality with elegance,
-          precision and unmatched craftsmanship.”
-        </h2>
-
-        <p className="mt-8 text-white/70">
-          — Happy Homeowners, Delhi NCR
-        </p>
+      {/* VISUAL BACKGROUND SHOWCASE BLOCK */}
+      <section className="w-full px-4 sm:px-6 max-w-7xl mx-auto pb-16 md:pb-24">
+        <div className="w-full aspect-[4/3] sm:aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-md">
+          <img 
+            src="/full-home-interior/3.png" 
+            alt="StudioSaga Premium Living Room Execution" 
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 px-6 text-center">
-        <h2 className="text-5xl font-bold leading-tight">
+      {/* TESTIMONIAL BLOCK */}
+      <section className="py-24 bg-stone-900 text-white text-center px-4 sm:px-6 relative overflow-hidden">
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif italic font-light max-w-4xl mx-auto leading-snug text-stone-100">
+            “StudioSaga transformed our dream into reality with elegance,
+            precision and unmatched craftsmanship.”
+          </h2>
+          <p className="mt-6 md:mt-8 text-[#BFA181] uppercase tracking-[2px] text-xs md:text-sm font-semibold">
+            — Happy Homeowners, Delhi NCR
+          </p>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="py-16 md:py-24 px-4 sm:px-6 text-center max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-stone-900 tracking-tight">
           Experience Bespoke Living
         </h2>
 
-        <p className="mt-6 text-stone-600 max-w-2xl mx-auto">
+        <p className="mt-4 md:mt-6 text-sm md:text-base text-stone-600 max-w-2xl mx-auto font-light">
           Let us create interiors that reflect luxury, comfort and timeless
           sophistication.
         </p>
 
-        <Button className="mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-8 py-6 rounded-full text-lg">
+        <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
           Begin Your Journey
         </Button>
       </section>
@@ -173,4 +200,4 @@ const FullHomeInteriors = () => {
   );
 };
 
-export default FullHomeInteriors ;
+export default FullHomeInteriors;

@@ -1,9 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const interiorCategories = [
   {
     id: 1,
+    slug: "modular",
     title: "Modular Interior",
     desc: "Smart modular layouts crafted for modern living with premium finishes and functional elegance.",
     images: [
@@ -19,9 +20,9 @@ const interiorCategories = [
       "/images/interior/modular/10.jpeg",
     ],
   },
-
   {
     id: 2,
+    slug: "fullhome",
     title: "Full Home Interior",
     desc: "Complete home transformations blending comfort, luxury, and timeless aesthetics.",
     images: [
@@ -37,9 +38,9 @@ const interiorCategories = [
       "/images/interior/fullhome/10.jpeg",
     ],
   },
-
   {
     id: 3,
+    slug: "luxury",
     title: "Luxury Interior",
     desc: "High-end bespoke interiors designed with sophisticated materials and rich textures.",
     images: [
@@ -58,107 +59,183 @@ const interiorCategories = [
 ];
 
 const PremiumApproach = () => {
+  const [activeTab, setActiveTab] = useState(interiorCategories[0].slug);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const currentCategory = interiorCategories.find((cat) => cat.slug === activeTab);
+
+  // Desktop asymmetric layout helper
+  const getGridStyles = (index) => {
+    if (index === 0) return "md:col-span-2 md:row-span-2 h-[350px] md:h-[600px]";
+    if (index === 3) return "md:col-span-2 h-[250px] md:h-[280px]";
+    if (index === 5) return "md:col-span-1 md:row-span-2 h-[350px] md:h-[600px]";
+    return "col-span-1 h-[250px] md:h-[280px]";
+  };
+
   return (
-    <section className="relative bg-[#F8F6F2] py-28 overflow-hidden">
-      {/* Background Blur */}
+    <section className="relative bg-[#F8F6F2] text-[#222222] py-20 md:py-28 overflow-hidden selection:bg-[#B08B57] selection:text-white">
+      {/* Luxury Light Ambient Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#d6b98c]/10 blur-[140px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#d6b98c]/10 blur-[140px]" />
+        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#d6b98c]/20 blur-[130px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#d6b98c]/15 blur-[130px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        {/* Header Block */}
+        <div className="text-center mb-16 md:mb-24">
           <motion.span
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="uppercase tracking-[0.3em] text-sm text-[#B08B57] font-semibold"
+            className="uppercase tracking-[0.3em] text-xs text-[#B08B57] font-semibold block mb-4"
           >
             Interior Gallery
           </motion.span>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-light text-[#222] mt-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-light text-[#222] leading-tight"
           >
             Luxury Spaces <br />
-            <span className="italic font-serif text-[#B08B57]">
-              Crafted Beautifully
-            </span>
+            <span className="italic font-serif text-[#B08B57]">Crafted Beautifully</span>
           </motion.h2>
 
-          <p className="max-w-3xl mx-auto text-[#666] text-lg mt-8 leading-relaxed">
-            Explore a curated collection of premium interiors featuring modular
-            kitchens, luxury bedrooms, modern living rooms, full home
-            transformations, and bespoke interior concepts.
+          <p className="max-w-2xl mx-auto text-[#666666] text-sm md:text-lg mt-6 font-light leading-relaxed">
+            Explore our architectural realizations where comfort meets high-end bespoke design execution.
           </p>
         </div>
 
-        {/* Categories */}
-        <div className="space-y-32">
-          {interiorCategories.map((category, categoryIndex) => (
-            <div key={category.id}>
-              {/* Section Heading */}
-              <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
-                <div>
-                  <span className="text-[#B08B57] text-sm tracking-[0.25em] uppercase font-semibold">
-                    0{category.id}
-                  </span>
-
-                  <h3 className="text-4xl md:text-5xl font-light text-[#222] mt-4">
-                    {category.title}
-                  </h3>
-                </div>
-
-                <p className="max-w-2xl text-[#666] leading-relaxed">
-                  {category.desc}
-                </p>
-              </div>
-
-              {/* Masonry Gallery */}
-              <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                {category.images.map((img, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.6,
-                      delay: index * 0.05,
-                    }}
-                    className="relative overflow-hidden rounded-[28px] group break-inside-avoid shadow-[0_10px_40px_rgba(0,0,0,0.08)]"
-                  >
-                    <img
-                      src={img}
-                      alt={`${category.title} ${index + 1}`}
-                      className="w-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
-
-                    {/* Text */}
-                    <div className="absolute bottom-0 left-0 p-6 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                      <h4 className="text-white text-2xl font-serif">
-                        {category.title}
-                      </h4>
-
-                      <p className="text-white/80 text-sm mt-2">
-                        Premium Interior Design
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+        {/* Premium Smooth Tab Bar */}
+        <div className="flex justify-start md:justify-center overflow-x-auto no-scrollbar scroll-smooth gap-2 md:gap-6 mb-12 border-b border-gray-200/60 pb-2 px-2 mask-linear">
+          {interiorCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveTab(category.slug)}
+              className="relative px-5 py-3 text-xs md:text-sm tracking-[0.15em] uppercase font-medium whitespace-nowrap transition-colors duration-300"
+              style={{ WebkitTapHighlightColor: "transparent" }}
+            >
+              <span className={activeTab === category.slug ? "text-[#B08B57] font-semibold" : "text-[#777777] hover:text-[#222]"}>
+                {category.title}
+              </span>
+              {activeTab === category.slug && (
+                <motion.div
+                  layoutId="activeUnderline"
+                  className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-[#B08B57]"
+                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                />
+              )}
+            </button>
           ))}
         </div>
+
+        {/* Dynamic Subtitle description per tab selection */}
+        <div className="max-w-3xl mb-10 px-2">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={activeTab}
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -5 }}
+              transition={{ duration: 0.3 }}
+              className="text-base md:text-lg font-serif text-[#555] italic"
+            >
+              {currentCategory.desc}
+            </motion.p>
+          </AnimatePresence>
+        </div>
+
+        {/* Optimized Grid: 2-Columns on Mobile, Asymmetric Complex Layout on Desktop */}
+        <motion.div layout className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+          <AnimatePresence mode="popLayout">
+            {currentCategory.images.map((img, index) => (
+              <motion.div
+                layout
+                key={img}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5, delay: index * 0.02 }}
+                onClick={() => setSelectedImage(img)}
+                className={`relative overflow-hidden rounded-xl md:rounded-2xl group cursor-pointer bg-[#F0ECE4] shadow-[0_4px_20px_rgba(0,0,0,0.03)] ${getGridStyles(
+                  index
+                )}`}
+              >
+                {/* Image Component */}
+                <img
+                  src={img}
+                  alt={`${currentCategory.title}`}
+                  className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1000ms] ease-out"
+                  loading="lazy"
+                />
+
+                {/* Light Editorial Soft Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-400" />
+
+                {/* Minimalist Floating Card Info */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6 text-white flex justify-between items-end">
+                  <div>
+                    <p className="text-[9px] md:text-xs uppercase tracking-widest text-[#D6B98C] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      View Space
+                    </p>
+                    <h4 className="text-sm md:text-xl font-serif font-light mt-0.5 truncate">
+                      Concept 0{index + 1}
+                    </h4>
+                  </div>
+                  {/* Plus Icon Button */}
+                  <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
+
+      {/* Light Luxury High-Fidelity Lightbox View */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 bg-[#F8F6F2]/95 z-50 flex items-center justify-center p-4 backdrop-blur-md cursor-zoom-out"
+          >
+            {/* Minimal Dark-Gold Close Trigger */}
+            <button className="absolute top-6 right-6 text-[#222]/70 hover:text-[#B08B57] transition-colors flex items-center gap-1.5 tracking-[0.2em] text-xs uppercase font-medium">
+              Close
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Light Frame Container */}
+            <motion.div
+              initial={{ scale: 0.96, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.96, y: 15 }}
+              transition={{ type: "spring", duration: 0.4 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-4xl max-h-[85vh] overflow-hidden rounded-xl shadow-[0_25px_60px_rgba(176,139,87,0.15)] border border-[#E8E5DF] bg-white p-2"
+            >
+              <img
+                src={selectedImage}
+                alt="Enlarged curated interior design work"
+                className="w-full h-full max-h-[82vh] object-contain rounded-lg"
+              />
+              <div className="bg-[#F8F6F2] py-3 px-4 mt-2 rounded-lg flex justify-between items-center text-xs">
+                <span className="font-serif italic text-[#555]">{currentCategory.title} Portfolio Concept</span>
+                <span className="text-[#B08B57] tracking-widest uppercase font-semibold">Premium Realization</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
