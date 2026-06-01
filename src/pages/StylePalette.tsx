@@ -8,155 +8,236 @@ import HeroCarousel2 from "@/components/HeroCarousel2";
 const stylesData = [
   {
     id: 1,
-    title: "Scandinavian",
-    images: [
-      "/images/ourr/8.jpg",
-      "/images/ourr/Scandinavian/1.jpeg",
-      "/images/ourr/Scandinavian/2.jpeg",
-      "/images/ourr/Scandinavian/3.jpeg",
-    ],
-    tagline: "Serenity in Simplicity",
-    philosophy:
-      "Rooted in the Nordic regions, this style emphasizes clean lines, utility, and simple furnishings that are functional, beautiful, and cozy.",
-    elements: [
-      "Light, muted colors (whites, creams, pale grays)",
-      "Heavy use of natural wood accents",
-      "Clutter-free spaces with hidden storage",
-      "Maximizing natural light",
-      "Cozy textiles (wool, sheepskin, linen)",
-    ],
-  },
-
-  {
-    id: 2,
-    title: "Bohemian (Boho Chic)",
-    images: [
-      "/images/ourr/11.jpg",
-      "/images/ourr/bohimean/1.jpeg",
-      "/images/ourr/bohimean/2.jpeg",
-      "/images/ourr/bohimean/3.jpeg",
-    ],
-    tagline: "Curated Chaos & Artistic Freedom",
-    philosophy:
-      "Boho chic implies a lifestyle that is unconventional and artistic. It is a 'more is more' approach that layers colors, patterns, and textures.",
-    elements: [
-      "Mix of vintage and modern furniture",
-      "Global-inspired textiles",
-      "Abundance of indoor plants",
-      "Warm, earthy tones",
-      "Low-level seating",
-    ],
-  },
-
-  {
-    id: 3,
-    title: "Industrial",
-    images: [
-      "/images/ourr/industrial/1.jpeg",
-      "/images/ourr/industrial/2.jpeg",
-      "/images/ourr/industrial/3.jpeg",
-      "/images/ourr/industrial/4.jpeg",
-
-    ],
-    tagline: "Raw, Refined & Edgy",
-    philosophy:
-      "Inspired by the lofty look of warehouses and factories, this style celebrates raw materials like exposed brick and metal.",
-    elements: [
-      "Exposed brick, beams, and ductwork",
-      "Concrete floors and metal finishes",
-      "Vintage industrial lighting",
-      "Neutral color palette",
-      "Open floor plans",
-    ],
-  },
-
-  {
-    id: 4,
-    title: "Contemporary",
+    title: "Modern Contemporary",
+    tagline: "Clean, Elegant & Current",
+    philosophy: "Balances sleek modern architecture with daily functionality. It utilizes high-end current materials and curved elements to create spaces that feel sophisticated yet highly liveable.",
     images: [
       "/images/ourr/10.jpg",
       "/images/ourr/contemporary/1.jpeg",
       "/images/ourr/contemporary/2.jpeg",
       "/images/ourr/contemporary/3.jpeg",
     ],
-    tagline: "Soft Textures & Inviting Lines",
-    philosophy:
-      "Balances the sleekness of modern style with the comfort of traditional homes through curved silhouettes.",
     elements: [
-      "Curved furniture silhouettes",
-      "Warm wood veneers",
-      "Mixed metal accents",
-      "Layered lighting",
-      "Plush fabrics",
+      "Neutral color palettes with strategic contrast",
+      "Sleek furniture profiles with straight and gentle lines",
+      "Minimal clutter with integrated space management",
+      "Statement architectural lighting fixtures",
+      "Rich mix of glass, polished metal, and natural wood",
     ],
   },
-
   {
-    id: 5,
-    title: "Modern Minimalist",
+    id: 2,
+    title: "Minimalist",
+    tagline: "Less is More",
+    philosophy: "Focuses strictly on the essence of the space. By stripping away excess decoration, it creates a deeply peaceful, airy, and calming environment where architecture itself takes center stage.",
     images: [
       "/images/ourr/4.jpg",
       "/images/ourr/ModernMinimalist/1.jpeg",
       "/images/ourr/ModernMinimalist/2.jpeg",
       "/images/ourr/ModernMinimalist/3.jpeg",
     ],
-    tagline: "Understated Elegance",
-    philosophy:
-      "Uses high-end materials and monochromatic palettes to create luxury without clutter.",
     elements: [
-      "High-quality materials (Marble, Brass)",
-      "Monochromatic color scheme",
-      "Sharp architectural lines",
-      "Statement art pieces",
-      "Ambient lighting",
+      "Extremely clean, uninterrupted open spaces",
+      "Intelligent hidden storage systems",
+      "Strictly limited or monochromatic color palettes",
+      "Highly functional, multi-purpose furniture",
+      "An abundance of natural negative space",
     ],
   },
-
+  {
+    id: 3,
+    title: "Scandinavian",
+    tagline: "Serenity in Simplicity",
+    philosophy: "Rooted in the Nordic lifestyle, this design language emphasizes clean lines, warm utility, and cozy furnishings that are both beautiful and structurally accessible.",
+    images: [
+      "/images/ourr/8.jpg",
+      "/images/ourr/Scandinavian/1.jpeg",
+      "/images/ourr/Scandinavian/2.jpeg",
+      "/images/ourr/Scandinavian/3.jpeg",
+    ],
+    elements: [
+      "Light wood accents (Ash, Beech, Pine)",
+      "White, cream, and pale pastel backdrops",
+      "Cozy layered textures (Wool, sheepskin, linen)",
+      "Maximizing natural light with expansive windows",
+      "Functional and highly organic decor choices",
+    ],
+  },
+  {
+    id: 4,
+    title: "Victorian / Classical",
+    tagline: "Royal, Elegant & Timeless Luxury",
+    philosophy: "Inspired by majestic European heritage and royal palaces. It features intricate detailing, high ceilings, and majestic layouts designed for grand villas and clients who appreciate historical aesthetics.",
+    images: [
+      "/images/ourr/classical/1.jpeg",
+      "/images/ourr/classical/2.jpeg",
+      "/images/ourr/classical/3.jpeg",
+      "/images/ourr/classical/4.jpeg",
+    ],
+    elements: [
+      "Ornate wall moldings and detailed cornices",
+      "Grand crystal or brass chandeliers",
+      "Rich, heavy fabrics like velvet and silk brocades",
+      "Exquisitely carved statement furniture pieces",
+      "Intricate wallpaper and detailed ceiling medallions",
+    ],
+  },
+  {
+    id: 5,
+    title: "Modern Classic",
+    tagline: "Simplicity Meets Timeless Elegance",
+    philosophy: "A heavily trending style in luxury Indian residences. It beautiful bridges the gap between historical architectural detailing and clean, mid-century or modern furniture layouts.",
+    images: [
+      "/images/ourr/1.jpg",
+      "/images/ourr/modernclassic/1.jpeg",
+      "/images/ourr/modernclassic/2.jpeg",
+      "/images/ourr/modernclassic/3.jpeg",
+    ],
+    elements: [
+      "Sophisticated classical wall paneling/moldings",
+      "Neutral luxury color palettes (Champagne, Taupe, Ivories)",
+      "Sleek contemporary furniture silhouettes",
+      "Premium marble flooring and high-end stone inserts",
+      "Elegant minimalist chandeliers and warm lighting profiles",
+    ],
+  },
   {
     id: 6,
-    title: "Artistic Boutique",
+    title: "Industrial",
+    tagline: "Raw, Refined & Edgy",
+    philosophy: "Inspired by converted warehouses and urban lofts. This aesthetic celebrates exposed building materials and rugged structural elements while maintaining premium functional interior zoning.",
+    images: [
+      "/images/ourr/industrial/1.jpeg",
+      "/images/ourr/industrial/2.jpeg",
+      "/images/ourr/industrial/3.jpeg",
+      "/images/ourr/industrial/4.jpeg",
+    ],
+    elements: [
+      "Exposed original brickwork, iron beams, and ductwork",
+      "Micro-concrete or polished concrete flooring setups",
+      "Vintage industrial or cage lighting fixtures",
+      "Deep neutral and dark monochrome color schemes",
+      "Expansive open floor plans with high architectural windows",
+    ],
+  },
+  {
+    id: 7,
+    title: "Bohemian (Boho)",
+    tagline: "Free-Spirited & Artistic Expression",
+    philosophy: "An unconventional, artistic approach that layers vibrant colors, global textures, and natural elements. It represents an eclectic lifestyle that is deeply personal and creative.",
+    images: [
+      "/images/ourr/11.jpg",
+      "/images/ourr/bohimean/1.jpeg",
+      "/images/ourr/bohimean/2.jpeg",
+      "/images/ourr/bohimean/3.jpeg",
+    ],
+    elements: [
+      "Richly layered global textiles, poufs, and rugs",
+      "Warm, saturated earthy background tones",
+      "Abundance of diverse indoor potted plants",
+      "Natural cane, rattan, and wicker furniture detailing",
+      "Eclectic, travel-inspired vintage decor collections",
+    ],
+  },
+  {
+    id: 8,
+    title: "Japandi",
+    tagline: "Zen Minimalism & Clean Textures",
+    philosophy: "The ultimate fusion of Japanese artistic mindfulness and Scandinavian functionality. It brings forth a warm minimalism, utilizing organic materials to craft a highly luxurious, zen-like peace.",
+    images: [
+      "/images/ourr/japandi/1.jpeg",
+      "/images/ourr/japandi/2.jpeg",
+      "/images/ourr/japandi/3.jpeg",
+      "/images/ourr/japandi/4.jpeg",
+    ],
+    elements: [
+      "Warm minimalist design with zero unnecessary clutter",
+      "Deeply natural textures like clay, linen, and raw wood",
+      "Low-profile furniture structures keeping spaces open",
+      "Muted, calming earth and organic neutral tones",
+      "Soft, diffused architectural lighting systems",
+    ],
+  },
+  {
+    id: 9,
+    title: "Mediterranean",
+    tagline: "Vacation Luxury & Organic Airiness",
+    philosophy: "Captures the sun-drenched coastal vibes of Spain, Italy, and Greece. It relies heavily on soft curves, rough stone finishes, and earthy whites to evoke a relaxed, premium resort-like living experience.",
+    images: [
+      "/images/ourr/mediterranean/1.jpeg",
+      "/images/ourr/mediterranean/2.jpeg",
+      "/images/ourr/mediterranean/3.jpeg",
+      "/images/ourr/mediterranean/4.jpeg",
+    ],
+    elements: [
+      "Soft structural archways and wall niches",
+      "Textured lime-plaster or wabi-sabi wall finishes",
+      "Terracotta tiles or natural limestone floors",
+      "Heavy, dark hand-hewn exposed wooden ceiling beams",
+      "Earthy whites paired with sea-inspired blue or olive accents",
+    ],
+  },
+  {
+    id: 10,
+    title: "Art Deco",
+    tagline: "Glamour, Bold Geometry & Sophistication",
+    philosophy: "Channeling the vintage luxury of the 1920s high-society hotel spaces. It brings theatrical drama and bold geometric structures together with bespoke craftsmanship for a truly striking statement.",
     images: [
       "/images/ourr/5.jpg",
       "/images/ourr/artistic/1.jpeg",
       "/images/ourr/artistic/2.jpeg",
       "/images/ourr/artistic/3.jpeg",
     ],
-    tagline: "Curated Luxury & Bold Expression",
-    philosophy:
-      "A fusion of gallery-style sophistication and high-fashion interiors. This style treats every piece of furniture as a work of art, blending bold colors with bespoke craftsmanship.",
     elements: [
-      "Custom-made furniture and unique sculptures",
-      "Bold, dramatic color palettes (Emerald, Gold, Navy)",
-      "High-contrast textures like velvet and polished stone",
-      "Symmetry and high-end wallpaper",
-      "Theatrical lighting fixtures",
+      "Bold, symmetrical geometric and chevron patterns",
+      "High-contrast metallic gold, brass, or chrome accents",
+      "Rich velvet, high-gloss lacquered surfaces, and exotic veneers",
+      "Dramatic, high-contrast black, emerald, or deep gold palettes",
+      "Theatrical sculptural lighting and custom geometric wallpaper",
     ],
   },
-
   {
-    id: 8,
-    title: "Mid-Century Modern",
+    id: 11,
+    title: "Rustic / Farmhouse",
+    tagline: "Natural, Comfortable & Homely Warmth",
+    philosophy: "Celebrates the rugged charm of countryside living. It focuses on weathered wood, heavy stonework, and soft fabrics to build a deeply welcoming and historic space for family living.",
     images: [
-      "/images/ourr/1.jpg",
-      "/images/ourr/midcentury/1.jpeg",
-      "/images/ourr/midcentury/2.jpeg",
-      "/images/ourr/midcentury/3.jpeg",
+      "/images/ourr/rustic/1.jpeg",
+      "/images/ourr/rustic/2.jpeg",
+      "/images/ourr/rustic/3.jpeg",
+      "/images/ourr/rustic/4.jpeg",
     ],
-    tagline: "Retro Nostalgia meets Function",
-    philosophy:
-      "Form follows function, featuring organic curves and geometric lines from the 50s and 60s.",
     elements: [
-      "Furniture with tapered legs",
-      "Warm wood tones",
-      "Bold accent colors",
-      "Organic curves",
-      "Statement lighting",
+      "Reclaimed wood detailing and large structural beams",
+      "Natural rough-cut stone textures or accent walls",
+      "Warm, cozy, and highly inviting neutral earth palettes",
+      "Vintage wrought-iron hardware and classical fixtures",
+      "Deeply comfortable, slipcovered oversized seating configurations",
+    ],
+  },
+  {
+    id: 12,
+    title: "Luxury Hotel Style",
+    tagline: "Premium Hospitality & Immersive Lounging",
+    philosophy: "Brings the bespoke, tailored feeling of an elite five-star boutique hotel into daily domestic spaces. Every corner is micro-styled with high-end layers to evoke an ongoing sense of pampering.",
+    images: [
+      "/images/ourr/hotel/1.jpeg",
+      "/images/ourr/hotel/2.jpeg",
+      "/images/ourr/hotel/3.jpeg",
+      "/images/ourr/hotel/4.jpeg",
+    ],
+    elements: [
+      "Multi-layered ambient, task, and architectural lighting",
+      "Ultra-rich textures layered seamlessly side by side",
+      "Sophisticated materials (Polished onyx, satin, high-end carpets)",
+      "Perfect symmetrical design layouts with curated custom art",
+      "Bespoke premium hardware and hidden smart-home automations",
     ],
   },
 ];
 
 const StylePalette = () => {
-  const [selectedImages, setSelectedImages] = React.useState({});
+  const [selectedImages, setSelectedImages] = React.useState<Record<number, string>>({});
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-luxury-gold/30">
@@ -181,7 +262,7 @@ const StylePalette = () => {
             className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto"
           >
             Discover the aesthetic that speaks to your soul. From raw
-            industrial lofts to serene scandinavian retreats.
+            industrial lofts to serene classical retreats.
           </motion.p>
         </div>
       </div>
@@ -215,7 +296,6 @@ const StylePalette = () => {
                         className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"
                       />
-
                       <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                     </div>
 
@@ -232,10 +312,9 @@ const StylePalette = () => {
                               }))
                             }
                             className={`overflow-hidden border rounded-sm cursor-pointer transition-all duration-300 ${
-                              (selectedImages[style.id] ||
-                                style.images[0]) === img
-                                ? "border-black"
-                                : "border-stone-200"
+                              (selectedImages[style.id] || style.images[0]) === img
+                                ? "border-black dark:border-white"
+                                : "border-stone-200 dark:border-stone-800"
                             }`}
                           >
                             <img
@@ -253,39 +332,34 @@ const StylePalette = () => {
                 {/* Text Section */}
                 <div className="w-full md:w-1/2 md:px-8">
                   <h3 className="text-luxury-gold text-sm tracking-[0.3em] uppercase mb-3 font-semibold">
-                    {index + 1 < 10
-                      ? `0${index + 1}`
-                      : index + 1}{" "}
-                    — {style.tagline}
+                    {index + 1 < 10 ? `0${index + 1}` : index + 1} — {style.tagline}
                   </h3>
 
-                  <h2 className="text-4xl md:text-5xl font-light mb-8 uppercase tracking-wide">
+                  <h2 className="text-4xl md:text-5xl font-light mb-8 uppercase tracking-wide text-stone-900 dark:text-stone-100">
                     {style.title}
                   </h2>
 
                   <div className="space-y-8">
                     <div>
-                      <h4 className="text-xl font-light mb-3 border-b border-stone-200 pb-2 inline-block">
+                      <h4 className="text-xl font-light mb-3 border-b border-stone-200 dark:border-stone-800 pb-2 inline-block">
                         Philosophy
                       </h4>
-
-                      <p className="text-muted-foreground leading-relaxed font-light">
+                      <p className="text-muted-foreground leading-relaxed font-light text-sm md:text-base">
                         {style.philosophy}
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-xl font-light mb-3 border-b border-stone-200 pb-2 inline-block">
+                      <h4 className="text-xl font-light mb-3 border-b border-stone-200 dark:border-stone-800 pb-2 inline-block">
                         Key Elements
                       </h4>
-
                       <ul className="grid grid-cols-1 gap-2">
                         {style.elements.map((element, i) => (
                           <li
                             key={i}
                             className="flex items-center gap-3 text-muted-foreground font-light text-sm md:text-base"
                           >
-                            <span className="h-px w-4 bg-luxury-gold/50"></span>
+                            <span className="h-px w-4 bg-luxury-gold/50 flex-shrink-0"></span>
                             {element}
                           </li>
                         ))}
@@ -306,7 +380,7 @@ const StylePalette = () => {
 
               {/* Decorative Divider */}
               {index !== stylesData.length - 1 && (
-                <div className="w-full h-px bg-stone-200 mt-24 max-w-md mx-auto" />
+                <div className="w-full h-px bg-stone-200 dark:bg-stone-800 mt-24 max-w-md mx-auto" />
               )}
             </div>
           ))}
@@ -315,19 +389,17 @@ const StylePalette = () => {
         {/* Bottom CTA */}
         <div className="bg-stone-900 text-stone-50 py-24 mt-20 text-center">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-5xl font-light mb-6 uppercase">
+            <h2 className="text-3xl md:text-5xl font-light mb-6 uppercase tracking-wide">
               Not sure which style fits you?
             </h2>
-
-            <p className="text-stone-400 max-w-2xl mx-auto mb-10 font-light">
+            <p className="text-stone-400 max-w-2xl mx-auto mb-10 font-light text-sm md:text-base">
               Our designers specialize in blending these styles to create
               something uniquely yours. Book a consultation to find your
               signature palette.
             </p>
-
             <Button
               size="lg"
-              className="bg-white text-stone-900 hover:bg-stone-200 rounded-none px-10 py-6 uppercase tracking-widest"
+              className="bg-white text-stone-900 hover:bg-stone-200 rounded-none px-10 py-6 uppercase tracking-widest text-xs"
             >
               Book Consultation
             </Button>
