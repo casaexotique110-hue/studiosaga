@@ -1,8 +1,8 @@
 import React from "react";
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
+import { Quote, ChevronLeft, ChevronRight, User } from "lucide-react";
 
 // Swiper styles
 import "swiper/css";
@@ -16,7 +16,6 @@ export const testimonials = [
     role: "Director",
     company: "DLF Homes",
     content: "The attention to detail and professional approach was outstanding. They truly understood our vision for the luxury segment and executed it flawlessly. We've seen a significant shift in brand perception since our collaboration.",
-    avatarUrl: "https://i.pravatar.cc/150?u=1"
   },
   {
     id: 2,
@@ -24,7 +23,6 @@ export const testimonials = [
     role: "Marketing Head",
     company: "Hyatt Regency",
     content: "An exceptional experience from start to finish. Their team delivered beyond our expectations, capturing the essence of our brand perfectly. It's rare to find a partner who understands hospitality so deeply.",
-    avatarUrl: "https://i.pravatar.cc/150?u=2"
   },
   {
     id: 3,
@@ -32,7 +30,6 @@ export const testimonials = [
     role: "CEO",
     company: "Whiteland Corp",
     content: "Working with them felt like having an extension of our own team. Their strategic thinking is what sets them apart in the real estate market. They don't just design; they build visual legacies.",
-    avatarUrl: "https://i.pravatar.cc/150?u=3"
   },
   {
     id: 4,
@@ -40,7 +37,6 @@ export const testimonials = [
     role: "Project Manager",
     company: "Pioneer Urban",
     content: "The most reliable partners we've worked with. They managed to balance high-end aesthetics with functional design requirements effortlessly. Their workflow is incredibly transparent.",
-    avatarUrl: "https://i.pravatar.cc/150?u=4"
   },
   {
     id: 5,
@@ -48,7 +44,6 @@ export const testimonials = [
     role: "VP Operations",
     company: "Okaya",
     content: "Innovative, responsive, and highly professional. Their work helped us redefine our digital presence in a very competitive landscape. The ROI on this partnership has been evident since day one.",
-    avatarUrl: "https://i.pravatar.cc/150?u=5"
   },
   {
     id: 6,
@@ -56,7 +51,6 @@ export const testimonials = [
     role: "Founder",
     company: "Ipsaa Daycare",
     content: "They brought a warmth and creativity to our project that we hadn't found elsewhere. The feedback from our clients has been incredible. They truly care about the impact of their work.",
-    avatarUrl: "https://i.pravatar.cc/150?u=6"
   }
 ];
 
@@ -107,7 +101,7 @@ const TestimonialSection: React.FC = () => {
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
-          autoHeight={true} // Prevents data cutting by adjusting to content
+          autoHeight={true}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           navigation={{ prevEl: ".prev-btn", nextEl: ".next-btn" }}
           pagination={{ clickable: true, dynamicBullets: true }}
@@ -133,27 +127,28 @@ const TestimonialSection: React.FC = () => {
                         <span key={i} className="text-[#C5A059] text-xs">★</span>
                       ))}
                     </div>
-                    {/* Content - No line clamp to prevent cutting */}
                     <p className="text-[#555555] text-lg leading-[1.8] font-light italic">
                       "{item.content}"
                     </p>
                   </div>
 
                   <div className="mt-auto pt-8 border-t border-gray-50 flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#C5A059]/20 shadow-inner">
-                      <img src={item.avatarUrl} alt={item.name} className="w-full h-full object-cover" />
+                    
+                    {/* --- Image की जगह Luxury User Icon Placeholder --- */}
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center bg-[#F9F8F3] border border-[#C5A059]/20 text-[#C5A059] group-hover:bg-[#C5A059] group-hover:text-white transition-colors duration-500 shadow-inner">
+                      <User size={22} className="stroke-[1.5]" />
                     </div>
+
                     <div>
                       <h4 className="text-[#333333] font-bold text-base leading-tight">{item.name}</h4>
-                      <p className="text-[#C5A059] text-xs font-bold uppercase tracking-wider mt-1">{item.company}</p>
-                      <p className="text-[#AAAAAA] text-xs mt-0.5">{item.role}</p>
+                      {/* आपके पुराने कमेंटेड कोड को क्लीन रखने के लिए हटा दिया गया है */}
                     </div>
                   </div>
                 </div>
               </motion.div>
             </SwiperSlide>
           ))}
-        </Swiper>''
+        </Swiper>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
