@@ -7,9 +7,8 @@ import PremiumServices from "@/components/PremiumServices";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { useEffect, useState } from "react";
 import About3 from "@/extracomponents/About3";
-import BlogsCarousel from "@/components/BlogsCarousel";
 import { motion } from "framer-motion";
-import { Check, Star, Heart, Zap, Shield, Layout, Palette, Lamp, Sofa, PenTool } from "lucide-react";
+import { Layout, Palette, Lamp, Sofa, PenTool, Star } from "lucide-react";
 import Newcomponentui from "@/components/Newcomponentui";
 
 const videoSources = ["/images/2.mp4"];
@@ -34,9 +33,7 @@ const philosophies = [
   }
 ];
 
-
-// --- REPLACE YOUR OLD EXPERTISE ARRAY WITH THIS ---
-// --- UPDATE THIS EXPERTISE ARRAY AGAIN ---
+// --- EXPERTISE ARRAY ---
 const expertise2 = [
   { 
     icon: Layout, 
@@ -60,14 +57,12 @@ const expertise2 = [
     icon: Lamp, 
     title: "Lighting Design", 
     desc: "Layered lighting strategies for perfect ambiance and utility.",
-    // NEW LINK FOR LIGHTING
     image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?q=80&w=1935&auto=format&fit=crop" 
   },
   { 
     icon: Star, 
     title: "Decor Styling", 
     desc: "The finishing touches that bring personality to your space.",
-    // NEW LINK FOR DECOR
     image: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2080&auto=format&fit=crop"
   },
   { 
@@ -75,7 +70,7 @@ const expertise2 = [
     title: "Project Management", 
     desc: "Seamless execution from initial concept to final installation.",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
-  },
+  }
 ];
 
 const expertise = [
@@ -84,7 +79,7 @@ const expertise = [
   { icon: Sofa, title: "Furniture Selection", desc: "Curated sourcing balancing aesthetics and cost." },
   { icon: Lamp, title: "Lighting Design", desc: "Layered lighting strategies for ambiance." },
   { icon: Star, title: "Decor Styling", desc: "Finishing touches that bring personality." },
-  { icon: PenTool, title: "Project Management", desc: "Seamless execution from concept to install." },
+  { icon: PenTool, title: "Project Management", desc: "Seamless execution from concept to install." }
 ];
 
 const packages = [
@@ -135,7 +130,6 @@ const OurSaga = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
 
-
       {/* ================== HERO BANNER ================== */}
       <div className="relative w-full h-[80vh] md:h-[100vh] overflow-hidden">
         {videoSources.map((src, index) => (
@@ -151,32 +145,28 @@ const OurSaga = () => {
           />
         ))}
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Single Balanced Visual Overlay */}
+        <div className="absolute inset-0 bg-black/45"></div>
 
-{/* Overlay */}
-<div className="absolute inset-0 bg-black/40"></div>
-
-<div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-  <motion.h1 
-    initial={{ y: 20, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.8 }}
-    // UPDATE: Sizes reduced to (3xl, 5xl, 6xl) for a cleaner, smaller look
-    className="text-white text-3xl md:text-5xl lg:text-6xl mb-6 font-extralight tracking-[0.2em] uppercase"
-  >
-    Our Studia Saga 
-  </motion.h1>
-  
-  <motion.p 
-    initial={{ y: 20, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.8, delay: 0.2 }}
-    className="text-white/90 text-xs md:text-base font-light tracking-[0.3em] uppercase"
-  >
-    Designing Homes That Feel Calm, Functional & Timeless
-  </motion.p>
-</div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <motion.h1 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-white text-3xl md:text-5xl lg:text-6xl mb-6 font-extralight tracking-[0.2em] uppercase"
+          >
+            Our Saga 
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-white/90 text-xs md:text-base font-light tracking-[0.3em] uppercase"
+          >
+            Designing Homes That Feel Calm, Functional & Timeless
+          </motion.p>
+        </div>
       </div>
 
       <main>
@@ -194,7 +184,7 @@ const OurSaga = () => {
                     Studia Saga Interiors is a residential interior design and turnkey execution studio dedicated to creating affordable luxury homes with soul, simplicity, and structure.
                   </p>
                   <p>
-                    We believe great design is not about excess—it's about intent. Every space we create balances aesthetics, functionality, and long-term usability. Our work reflects thoughtful planning, calm neutral aesthetics, quality craftsmanship, honest pricing, and respect for timelines.
+                    We believe great design is not about excess, it's about intent. Every space we create balances aesthetics, functionality, and long-term usability. Our work reflects thoughtful planning, calm neutral aesthetics, quality craftsmanship, honest pricing, and respect for timelines.
                   </p>
                   <p>
                     We design spaces that age gracefully and feel good every day. Homes should support life, not overwhelm it.
@@ -202,122 +192,36 @@ const OurSaga = () => {
                 </div>
               </div>
 
-
-
-
-              
-              {/* Image Placeholder - Replace url with your image */}
-{/* REPLACE YOUR EXISTING IMAGE DIV WITH THIS BLOCK */}
-{/* REPLACE YOUR EXISTING IMAGE DIV WITH THIS BLOCK */}
-<div className="relative h-[500px] w-full pl-6 pb-6 mt-6 mr-6">
-   {/* The Offset Background Layer (Primary Color Accent) */}
-   <div className="absolute inset-0 w-full h-full bg-primary/10 rounded-2xl transform -translate-x-6 translate-y-6 -z-10"></div>
-   
-   {/* Main Image Card on top */}
-   <div className="relative h-full w-full bg-white rounded-xl overflow-hidden shadow-2xl border-[3px] border-white z-10">
-      <img 
-        src="https://images.pexels.com/photos/2067638/pexels-photo-2067638.jpeg" 
-        alt="Interior Story" 
-        className="object-cover w-full h-full" 
-      />
-       {/* Subtle inner border overlay for definition */}
-      <div className="absolute inset-0 border border-black/10 rounded-xl pointer-events-none"></div>
-   </div>
-</div>
-
-
-
-
-
-
+              {/* Image Container */}
+              <div className="relative h-[500px] w-full pl-6 pb-6 mt-6 mr-6">
+                {/* The Offset Background Layer (Primary Color Accent) */}
+                <div className="absolute inset-0 w-full h-full bg-primary/10 rounded-2xl transform -translate-x-6 translate-y-6 -z-10"></div>
+                 
+                {/* Main Image Card on top */}
+                <div className="relative h-full w-full bg-white rounded-xl overflow-hidden shadow-2xl border-[3px] border-white z-10">
+                  <img
+                    src="/aboutus.png"
+                    alt="Interior Story"
+                    className="object-cover w-full h-full"
+                  />
+                  {/* Subtle inner border overlay for definition */}
+                  <div className="absolute inset-0 border border-black/10 rounded-xl pointer-events-none"></div>
+                </div>
+              </div>
 
             </div>
           </div>
         </section>
 
-
-                    <About3 />
-
-
-
-
-
-        {/* ================== CORE VALUES (Mission/Vision) ================== */}
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {/* ================== PHILOSOPHY SECTION ================== */}
-{/* ================== PHILOSOPHY SECTION (REDESIGNED) ================== */}
-       
-
-               <PremiumApproach />
-
-               <Newcomponentui />
-
-               <PremiumServices/>
-
-
-
-
-
-
-        {/* ================== PACKAGES ================== */}
-
-
-
-        <WhyChooseUs/>
-
-
-
-
-
-
-        {/* Keep existing component if you wish, or remove if the data above replaces it */}
-        {/* <About3 /> */}
-        
-        {/* <BlogsCarousel /> */}
+        <About3 />
+
+        {/* ================== PHILOSOPHY & PREMIUM SECTIONS ================== */}
+        <PremiumApproach />
+        <Newcomponentui />
+        <PremiumServices />
+
+        {/* ================== PACKAGES / REASONS ================== */}
+        <WhyChooseUs />
       </main>
 
       <Footer />

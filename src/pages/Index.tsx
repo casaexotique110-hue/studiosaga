@@ -74,10 +74,10 @@ const Index = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => navigate("/our-saga")}
+                onClick={() => navigate("/style-palette")}
                 className="border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide group"
               >
-                View Our Idea's
+                Ideas & Inspiration
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>

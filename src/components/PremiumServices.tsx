@@ -7,54 +7,39 @@ const packages = [
     name: "5 - 15 Lakh Interior",
     tagline: "Modern modular & compact luxury homes",
     priceLabel: "Affordable Luxury",
-
-    // UPDATED LOCAL IMAGE PATH
     image: "/pricing/Basic.jpeg",
-
     isPopular: false,
-    ctaText: "Book Consultation",
+    ctaText: "Start Your Project", // Updated
     features: [
-      "Modular Kitchen Design",
-      "Premium Wardrobes",
       "False Ceiling & Lighting",
       "TV Unit & Storage Solutions",
       "Modern Bedroom Interiors",
       "2D Layout Planning"
     ]
   },
-
   {
     name: "15 - 30 Lakh Interior",
     tagline: "Complete premium home transformation",
     priceLabel: "Most Preferred",
-
-    // UPDATED LOCAL IMAGE PATH
     image: "/pricing/mid.jpeg",
-
     isPopular: true,
-    ctaText: "Start Your Project",
+    ctaText: "Start Your Project", // Updated
     features: [
       "Complete Home Interior",
-      "Luxury Modular Kitchen",
-      "Custom Furniture Design",
-      "Premium Wall Treatments",
+      "Modular Kitchen",
+      "Premium Wall Wardrobe",
       "Designer Lighting Setup",
-      "3D Visualization",
       "Site Supervision",
       "End-to-End Execution"
     ]
   },
-
   {
     name: "30 - 45 Lakh Interior",
     tagline: "Ultra luxury bespoke living experience",
     priceLabel: "Elite Luxury",
-
-    // UPDATED LOCAL IMAGE PATH
     image: "/pricing/luxury.jpeg",
-
     isPopular: false,
-    ctaText: "Talk To Designer",
+    ctaText: "Start Your Project", // Updated
     features: [
       "Luxury Villa Interiors",
       "Imported Material Selection",
@@ -71,7 +56,6 @@ const packages = [
 const PremiumServices = () => {
   return (
     <section className="relative py-32 bg-[#F8F6F2] overflow-hidden">
-
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#c8a46a]/10 blur-[140px]" />
@@ -79,10 +63,8 @@ const PremiumServices = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-
         {/* HEADER */}
         <div className="text-center mb-24 max-w-4xl mx-auto">
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +76,6 @@ const PremiumServices = () => {
 
             <h2 className="text-5xl md:text-7xl font-light text-[#1f1f1f] mt-8 leading-[1]">
               Luxury Interiors <br />
-
               <span className="italic font-serif text-[#B08B57]">
                 Designed Around Your Budget
               </span>
@@ -110,11 +91,9 @@ const PremiumServices = () => {
 
         {/* PRICING CARDS */}
         <div className="grid lg:grid-cols-3 gap-10 items-stretch">
-
           {packages.map((pkg, idx) => (
             <ServiceCard key={idx} pkg={pkg} index={idx} />
           ))}
-
         </div>
 
         {/* FOOTER NOTE */}
@@ -124,14 +103,12 @@ const PremiumServices = () => {
             customization, and project scope.
           </p>
         </div>
-
       </div>
     </section>
   );
 };
 
 const ServiceCard = ({ pkg, index }) => {
-
   const isDark = pkg.isPopular;
 
   return (
@@ -151,10 +128,8 @@ const ServiceCard = ({ pkg, index }) => {
           : 'bg-white text-[#1d1d1d] shadow-[0_15px_50px_rgba(0,0,0,0.06)] hover:-translate-y-3'}
       `}
     >
-
       {/* IMAGE */}
       <div className="relative h-[320px] overflow-hidden">
-
         <img
           src={pkg.image}
           alt={pkg.name}
@@ -178,7 +153,8 @@ const ServiceCard = ({ pkg, index }) => {
             {pkg.priceLabel}
           </p>
 
-          <h2 className="text-white text-5xl font-light mt-3 leading-none">
+          {/* CHANGED: text-5xl to text-3xl and font-light to font-normal for a cleaner look */}
+          <h2 className="text-white text-3xl font-normal mt-3 leading-none">
             {pkg.name}
           </h2>
         </div>
@@ -186,41 +162,16 @@ const ServiceCard = ({ pkg, index }) => {
 
       {/* CONTENT */}
       <div className="p-10 flex flex-col flex-1">
-
-        <p className={`uppercase tracking-[0.25em] text-xs font-semibold mb-10
+        <p className={`uppercase tracking-[0.25em] text-xs font-semibold mb-6
           ${isDark ? 'text-[#B08B57]' : 'text-stone-500'}
         `}>
           {pkg.tagline}
         </p>
 
-        {/* FEATURES */}
-        <div className="space-y-4 flex-1">
-
-          {pkg.features.map((feature, idx) => (
-            <div
-              key={idx}
-              className={`flex items-center gap-4 pb-4 border-b
-                ${isDark ? 'border-white/10' : 'border-stone-100'}
-              `}
-            >
-              <div className={`w-2 h-2 rounded-full
-                ${isDark ? 'bg-[#B08B57]' : 'bg-stone-400'}
-              `} />
-
-              <span className={`
-                text-sm tracking-wide
-                ${isDark ? 'text-stone-300' : 'text-stone-600'}
-              `}>
-                {feature}
-              </span>
-            </div>
-          ))}
-
-        </div>
 
         {/* BUTTON */}
         <button
-          onClick={() => window.location.href = 'tel:+91XXXXXXXXXX'}
+          onClick={() => window.location.href = 'tel:+919667733382'}
           className={`
             mt-12 w-full py-5 rounded-full uppercase tracking-[0.25em]
             text-xs font-bold transition-all duration-500
@@ -231,10 +182,8 @@ const ServiceCard = ({ pkg, index }) => {
           `}
         >
           {pkg.ctaText}
-
           <Phone size={16} />
         </button>
-
       </div>
     </motion.div>
   );

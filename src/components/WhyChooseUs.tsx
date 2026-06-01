@@ -15,8 +15,8 @@ const steps = [
     icon: <User className="w-7 h-7" />,
   },
   {
-    title: "Project Booking",
-    subtitle: "5% Advance Payment",
+    title: "Onboarding",
+    subtitle: "5% Payment",
     icon: <ClipboardCheck className="w-7 h-7" />,
   },
   {
@@ -99,12 +99,12 @@ const WhyChooseUs = () => {
                 <div className="mt-6">
                   {step.subtitle && (
                     <p className="text-[#BFA181] text-sm font-semibold mb-1 uppercase tracking-wide">
-                      {step.subtitle}
+                      {step.title}
                     </p>
                   )}
 
                   <h3 className="text-lg font-semibold text-[#2b2430] leading-snug">
-                    {step.title}
+                    {step.subtitle}
                   </h3>
                 </div>
               </motion.div>

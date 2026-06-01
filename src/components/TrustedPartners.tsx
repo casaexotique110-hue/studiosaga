@@ -35,7 +35,7 @@ const TrustedPartners: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-[#2b2430]"
           >
-            Our Trusted Partners
+            Our Preferred Brands
           </motion.h2>
 
           <motion.p
