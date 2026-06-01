@@ -118,7 +118,7 @@ const WhyChooseUs = () => {
             href="/Contact"
             className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-[#e86b6b] text-white font-semibold tracking-wide hover:scale-105 transition-all duration-300 shadow-lg"
           >
-            Book a Free Consultation
+            Book a Design Consultation
           </a>
         </div>
       </div>
