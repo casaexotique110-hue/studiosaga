@@ -201,7 +201,7 @@ export default function Contact() {
       {/* --- 3. GOOGLE MAPS SECTION --- */}
       <section className="w-full h-[500px]  transition-all duration-700 ease-in-out border-t border-border/30">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10835.491907685486!2d76.9934030319635!3d28.440750623889517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d55b1d4b8d%3A0xf79816a4f0c34423!2sCasa%20Exotique%20-%20Best%20Home%20Interior%20Designer%20in%20Gurugram!5e1!3m2!1sen!2sin!4v1766138152681!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.2916795570836!2d77.0116869!3d28.4406225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x62a0565d15a0e467%3A0x58a0c2c1fce2a77c!2sStudia%20Saga!5e0!3m2!1sen!2sin!4v1780297215125!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -216,3 +216,7 @@ export default function Contact() {
     </main>
   );
 }
+
+
+
+

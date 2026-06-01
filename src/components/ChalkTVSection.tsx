@@ -1,66 +1,60 @@
 import React, { useRef } from 'react';
 
-interface InstagramPost {
+interface InteriorProject {
   id: string;
-  username: string;
-  profileLink: string;
+  title: string;
+  spaceType: string;
   imageUrl: string; 
-  postUrl: string; 
-  caption: string; 
-  followers: string;
+  projectUrl: string; 
+  description: string; 
 }
 
 interface ArrowProps {
   direction: 'left' | 'right';
 }
 
-interface InstagramPostCardProps extends InstagramPost {}
+interface ProjectCardProps extends InteriorProject {}
 
-const instagramPosts: InstagramPost[] = [
+const interiorProjects: InteriorProject[] = [
   {
-    id: 'post1',
-    username: 'AnamCara',
-    profileLink: 'https://www.instagram.com/chalkstudio.design/',
+    id: 'project1',
+    title: 'The Grand Living Lounge',
+    spaceType: 'Residential | Living Room',
     imageUrl: "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
-    postUrl: 'https://www.instagram.com/p/Cva_r4vRldA/',
-    caption: 'Social Reels | Magic in The Hamptons (feat. Lil Yachty)',
-    followers: 'Social Reels',
+    projectUrl: '#',
+    description: 'Bespoke luxury seating layout combined with warm metallic accents and custom ambient lighting.',
   },
   {
-    id: 'post2',
-    username: 'AnamCara',
-    profileLink: 'https://www.instagram.com/chalkstudio.design/',
+    id: 'project2',
+    title: 'Minimalist Culinary Space',
+    spaceType: 'Residential | Kitchen',
     imageUrl: "https://images.pexels.com/photos/1129413/pexels-photo-1129413.jpeg",
-    postUrl: 'https://www.instagram.com/p/CtX3Y0OASpC/',
-    caption: '34.5k followers',
-    followers: '34.5k followers',
+    projectUrl: '#',
+    description: 'Handle-less seamless cabinetry paired with premium marble countertops and sleek profiles.',
   },
   {
-    id: 'post3',
-    username: 'AnamCara',
-    profileLink: 'https://www.instagram.com/chalkstudio.design/',
+    id: 'project3',
+    title: 'The Executive Boardroom',
+    spaceType: 'Commercial | Office Workspace',
     imageUrl: "https://images.pexels.com/photos/827518/pexels-photo-827518.jpeg",
-    postUrl: 'https://www.instagram.com/p/CvX-23bJvWs/',
-    caption: 'nc_123_julb | You Know How We Do It',
-    followers: 'nc_123_julb',
+    projectUrl: '#',
+    description: 'Sophisticated design patterns and acoustic paneling tailored to inspire modern corporate workflows.',
   },
   {
-    id: 'post4',
-    username: 'AnamCara',
-    profileLink: 'https://www.instagram.com/chalkstudio.design/',
+    id: 'project4',
+    title: 'Modern Master Bedroom Oasis',
+    spaceType: 'Residential | Bedroom',
     imageUrl: "https://images.pexels.com/photos/1374125/pexels-photo-1374125.jpeg",
-    postUrl: 'https://www.instagram.com/p/CwY-01cKxYx/',
-    caption: 'New collection drops!',
-    followers: 'Exclusive',
+    projectUrl: '#',
+    description: 'Plush tufted bedback wall setup integrated beautifully with subtle wooden paneling textures.',
   },
   {
-    id: 'post5',
-    username: 'AnamCara',
-    profileLink: 'https://www.instagram.com/chalkstudio.design/',
+    id: 'project5',
+    title: 'Artisanal Fine Dining Setup',
+    spaceType: 'Commercial | Hospitality',
     imageUrl: "https://images.pexels.com/photos/2067638/pexels-photo-2067638.jpeg",
-    postUrl: 'https://www.instagram.com/p/CvZ-01cKxYx/',
-    caption: 'Featured project highlight.',
-    followers: 'Highlight',
+    projectUrl: '#',
+    description: 'Intimate seating configurations highlighting architectural chandeliers and structural symmetry.',
   },
 ];
 
@@ -69,104 +63,79 @@ const Arrow: React.FC<ArrowProps> = ({ direction }) => (
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="20"
-    fill="currentColor"
-    viewBox="0 0 16 16"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     className="text-gray-700"
     style={{ transform: direction === 'left' ? 'scaleX(-1)' : 'none' }}
   >
-    <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 0 0 .708L10.293 8l-5.647 5.646a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708l-6-6a.5.5 0 0 0-.708 0z"/>
+    <path d="M5 12h14M12 5l7 7-7 7" />
   </svg>
 );
 
-const InstagramPostCard: React.FC<InstagramPostCardProps> = ({ 
-  username, 
-  profileLink, 
+const ProjectCard: React.FC<ProjectCardProps> = ({ 
+  title, 
+  spaceType, 
   imageUrl, 
-  postUrl, 
-  caption, 
-  followers 
+  projectUrl, 
+  description 
 }) => {
-
-  const renderIcon = (path: string, viewBox: string = "0 0 16 16") => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="text-gray-500 hover:text-gray-700 transition" viewBox={viewBox}>
-      <path d={path}/>
-    </svg>
-  );
-
   return (
-    <div className="instagram-card w-[350px] flex-shrink-0 snap-center bg-white border border-gray-200 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition duration-300">
-      <div className="flex items-center justify-between p-3 border-b">
-        <div className="flex items-center">
-          <div className="w-8 h-8 bg-gray-200 rounded-full mr-2 flex items-center justify-center text-xs text-gray-600 font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-              <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-            </svg>
-          </div>
-
-          <div>
-            <a href={profileLink} target="_blank" rel="noopener noreferrer" className="font-semibold text-sm text-gray-800 hover:text-blue-600">
-              {username}
-            </a>
-            <p className="text-xs text-gray-500">{followers}</p>
-          </div>
-        </div>
-
-        <a href={profileLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 border border-blue-500 rounded-full px-3 py-1 text-sm hover:bg-blue-50 transition duration-150">
-          View profile
-        </a>
+    <div className="project-card w-[350px] flex-shrink-0 snap-center bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+      
+      {/* Top Header - Project Information */}
+      <div className="p-4 border-b border-gray-50 bg-white">
+        <h3 className="font-semibold text-base text-gray-800 tracking-tight truncate">
+          {title}
+        </h3>
+        <p className="text-xs text-[#C5A059] font-semibold tracking-wide uppercase mt-0.5">{spaceType}</p>
       </div>
 
-      <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+      {/* Center Showcase - Image with Luxury Overlay */}
+      <div className="relative aspect-[3/4] bg-gray-50 overflow-hidden group">
         <img
           src={imageUrl}
-          alt={caption}
-          className="w-full h-full object-cover"
-          onError={(e) => { e.currentTarget.src = "https://placehold.co/350x466/EAEAEA/888888?text=Image+Unavailable"; }}
+          alt={title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          onError={(e) => { e.currentTarget.src = "https://placehold.co/350x466/EAEAEA/888888?text=Design+Preview"; }}
         />
 
+        {/* Dynamic Hover Effect for Luxury Aesthetic */}
         <a 
-          href={postUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+          href={projectUrl}
+          className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
-          </svg>
-          <span className="text-white text-lg font-semibold mt-2">Watch on Instagram</span>
+          <span className="text-white text-xs font-bold tracking-widest uppercase border border-white/50 px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300">
+            View Project
+          </span>
         </a>
       </div>
 
-      <div className="p-3">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex space-x-3">
-            <button className="focus:outline-none">{renderIcon("M8 1.314C12.438-3.248 23.534 4.736 8 15-7.534 4.736 3.562-3.248 8 1.314")}</button>
-            <button className="focus:outline-none">{renderIcon("M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.075L.909 13.525A1 1 0 0 1 0 12.729V2a1 1 0 0 1 1-1z")}</button>
-          </div>
-
-          <button className="focus:outline-none">{renderIcon("M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5z")}</button>
-        </div>
-        
-        <p className="text-sm text-gray-700 mb-2 truncate">
-          <span className="font-medium text-gray-900">{username}: </span>
-          {caption}
+      {/* Bottom Footer - Brief Technical Detail */}
+      <div className="p-5 bg-white flex-grow flex flex-col justify-between">
+        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 mb-4 italic">
+          "{description}"
         </p>
 
-        <a href={postUrl} target="_blank" rel="noopener noreferrer" className="block text-center text-blue-500 hover:text-blue-600 text-sm font-medium transition duration-150">
-          View Original Post
+        <a 
+          href={projectUrl} 
+          className="inline-flex items-center text-xs font-bold tracking-wider text-gray-800 uppercase hover:text-[#C5A059] transition-colors duration-200"
+        >
+          Explore Details <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
         </a>
       </div>
     </div>
   );
 };
 
-const ChalkTVSection: React.FC = () => {
+const StudiaSagaPortfolio: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
-  const SCROLL_STEP = 350 + 16;
-  const AUTO_SCROLL_SPEED = 3000;
+  const SCROLL_STEP = 350 + 16; // Card Width + Gap
+  const AUTO_SCROLL_SPEED = 3500; // Adjusted for a smoother scrolling experience
 
   const handleScroll = (direction: 'left' | 'right') => {
     if (!carouselRef.current) return;
@@ -205,58 +174,62 @@ const ChalkTVSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-16 px-4 bg-gray-50 font-sans">
+    <section className="py-20 px-6 bg-[#FDFDFB] font-sans">
       <div className="max-w-7xl mx-auto">
 
-        <div className="flex flex-col sm:flex-row justify-between items-end mb-8 border-b pb-4">
-          <h2 className="text-5xl text-gray-900">Studia Saga</h2>
+        {/* Section Header Layout */}
+        <div className="flex flex-col sm:flex-row justify-between items-end mb-10 border-b border-gray-100 pb-5">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A059] block mb-2">Our Signature Spaces</span>
+            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">Studia Saga</h2>
+          </div>
 
-          <div className="flex items-center space-x-6">
-            <span className="text-sm text-gray-500 hidden sm:block font-medium">
+          <div className="flex items-center space-x-6 mt-4 sm:mt-0">
+            <span className="text-xs text-gray-400 hidden sm:block font-medium tracking-wide">
               *Swipe, Drag or let it Auto-Scroll
             </span>
 
-            {/* BUTTONS → HIDDEN ON MOBILE */}
-            <div className="flex space-x-2 hidden md:flex">
+            {/* Premium Navigation Arrows */}
+            <div className="flex space-x-2">
               <button
                 onClick={() => handleScroll('left')}
-                className="p-1 border border-gray-300 rounded-full hover:bg-white transition duration-200 shadow-md focus:ring-2 focus:ring-blue-300"
+                className="w-10 h-10 border border-gray-200 rounded-full bg-white flex items-center justify-center hover:bg-gray-50 hover:border-gray-300 transition duration-200 shadow-sm focus:outline-none"
               >
                 <Arrow direction="left" />
               </button>
 
               <button
                 onClick={() => handleScroll('right')}
-                className="p-1 border border-gray-300 rounded-full hover:bg-white transition duration-200 shadow-md focus:ring-1 focus:ring-blue-300"
+                className="w-10 h-10 border border-gray-200 rounded-full bg-white flex items-center justify-center hover:bg-gray-50 hover:border-gray-300 transition duration-200 shadow-sm focus:outline-none"
               >
                 <Arrow direction="right" />
               </button>
             </div>
-
           </div>
         </div>
 
+        {/* Scrollable Gallery Container */}
         <div
           ref={carouselRef}
-          className="content-carousel flex overflow-x-auto snap-x snap-mandatory space-x-4 pb-4 cursor-grab -mx-2"
+          className="content-carousel flex overflow-x-auto snap-x snap-mandatory space-x-4 pb-6 cursor-grab -mx-2"
           onMouseEnter={stopAutoScroll}
           onMouseLeave={startAutoScroll}
           style={{ scrollbarWidth: "none" }}
         >
-          <style>{`
+          <style dangerouslySetInnerHTML={{__html: `
             .content-carousel::-webkit-scrollbar {
               display: none;
             }
-          `}</style>
+          `}} />
 
-          {instagramPosts.map((post) => (
-            <InstagramPostCard key={post.id} {...post} />
+          {interiorProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
           ))}
         </div>
 
       </div>
     </section>
   );
-};
+}; 
 
-export default ChalkTVSection;
+export default StudiaSagaPortfolio;
