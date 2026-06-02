@@ -20,7 +20,7 @@ const FullHomeInteriors = () => {
 
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl">
           <p className="text-white/80 mb-3 tracking-[3px] uppercase text-xs md:text-sm font-medium">
-            StudioSaga Interiors
+            StudiaSaga Interiors
           </p>
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
@@ -45,7 +45,7 @@ const FullHomeInteriors = () => {
             What We Offer
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 md:mt-4 text-stone-900">
-            Luxury Interior Solutions
+            Full Home Interiors 
           </h2>
         </div>
 
@@ -58,12 +58,12 @@ const FullHomeInteriors = () => {
               img: "/images/ourr/servies-pages/full-home/1.jpeg",
             },
             {
-              title: "WashRomm",
+              title: "Washroom",
               desc: "End-to-end execution with seamless coordination and timely delivery.",
               img: "/images/ourr/servies-pages/full-home/2.jpeg",
             },
             {
-              title: "Custom Solutions",
+              title: "Living Room",
               desc: "Furniture, decor, lighting and styling curated exclusively for your home.",
               img: "/images/ourr/servies-pages/full-home/3.jpeg",
             },
@@ -160,7 +160,7 @@ const FullHomeInteriors = () => {
         <div className="w-full aspect-[4/3] sm:aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-md">
           <img 
             src="/images/ourr/servies-pages/full-home/3.jpeg" 
-            alt="StudioSaga Premium Living Room Execution" 
+            alt="StudiaSaga Premium Living Room Execution" 
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -170,7 +170,7 @@ const FullHomeInteriors = () => {
       <section className="py-24 bg-stone-900 text-white text-center px-4 sm:px-6 relative overflow-hidden">
         <div className="relative z-10 max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif italic font-light max-w-4xl mx-auto leading-snug text-stone-100">
-            “StudioSaga transformed our dream into reality with elegance,
+            “StudiaSaga transformed our dream into reality with elegance,
             precision and unmatched craftsmanship.”
           </h2>
           <p className="mt-6 md:mt-8 text-[#BFA181] uppercase tracking-[2px] text-xs md:text-sm font-semibold">

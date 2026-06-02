@@ -53,20 +53,20 @@ const ModularInteriors = () => {
         {/* 1-col on mobile, 3-col on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
-            {
+            {                                  
               title: "Modular Kitchen",
               desc: "Elegant kitchens designed with smart functionality and premium finishes.",
-              img: "/modular/2.png" // Applied image 2
+              img: "/modular/kitchen.jpeg" // Applied image 2
             },
             {
               title: "Wardrobes",
               desc: "Customized wardrobes crafted to maximize storage beautifully.",
-              img: "/modular/3.png" // Applied image 3
+              img: "/modular/wardrob.png" // Applied image 3
             },
             {
               title: "Storage Units",
               desc: "TV units, bookshelves, shoe racks and more designed for modern homes.",
-              img: "/modular/4.png" // Applied image 4
+              img: "/modular/TVUnit.png" // Applied image 4
             },
           ].map((item, i) => (
             <div
@@ -173,7 +173,7 @@ const ModularInteriors = () => {
 
         <p className="mt-6 md:mt-8 text-sm md:text-lg text-stone-600 leading-relaxed font-light">
           Using premium materials, precision manufacturing and expert
-          installation, StudioSaga delivers modular interiors that combine
+          installation, StudiaSaga delivers modular interiors that combine
           durability with sophisticated aesthetics.
         </p>
       </section>
