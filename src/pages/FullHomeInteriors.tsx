@@ -53,19 +53,19 @@ const FullHomeInteriors = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
             {
-              title: "Home Design",
+              title: "Bedroom",
               desc: "Thoughtfully designed interiors tailored to your lifestyle and vision.",
-              img: "/full-home-interior/1.png",
+              img: "/images/ourr/servies-pages/full-home/1.jpeg",
             },
             {
-              title: "Project Management",
+              title: "WashRomm",
               desc: "End-to-end execution with seamless coordination and timely delivery.",
-              img: "/full-home-interior/2.png",
+              img: "/images/ourr/servies-pages/full-home/2.jpeg",
             },
             {
               title: "Custom Solutions",
               desc: "Furniture, decor, lighting and styling curated exclusively for your home.",
-              img: "/full-home-interior/3.png",
+              img: "/images/ourr/servies-pages/full-home/3.jpeg",
             },
           ].map((item, i) => (
             <div
@@ -159,7 +159,7 @@ const FullHomeInteriors = () => {
       <section className="w-full px-4 sm:px-6 max-w-7xl mx-auto pb-16 md:pb-24">
         <div className="w-full aspect-[4/3] sm:aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-md">
           <img 
-            src="/full-home-interior/3.png" 
+            src="/images/ourr/servies-pages/full-home/3.jpeg" 
             alt="StudioSaga Premium Living Room Execution" 
             className="w-full h-full object-cover object-center"
           />

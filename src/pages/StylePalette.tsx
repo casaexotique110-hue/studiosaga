@@ -69,10 +69,10 @@ const stylesData = [
     tagline: "Royal, Elegant & Timeless Luxury",
     philosophy: "Inspired by majestic European heritage and royal palaces. It features intricate detailing, high ceilings, and majestic layouts designed for grand villas and clients who appreciate historical aesthetics.",
     images: [
-      "/images/ourr/classical/1.jpeg",
-      "/images/ourr/classical/2.jpeg",
-      "/images/ourr/classical/3.jpeg",
-      "/images/ourr/classical/4.jpeg",
+      "/images/ourr/Classic/1.jpeg",
+      "/images/ourr/Classic/2.jpeg",
+      "/images/ourr/Classic/3.jpeg",
+      "/images/ourr/Classic/4.jpeg",
     ],
     elements: [
       "Ornate wall moldings and detailed cornices",
@@ -107,7 +107,7 @@ const stylesData = [
     tagline: "Raw, Refined & Edgy",
     philosophy: "Inspired by converted warehouses and urban lofts. This aesthetic celebrates exposed building materials and rugged structural elements while maintaining premium functional interior zoning.",
     images: [
-      "/images/ourr/industrial/1.jpeg",
+      "/images/ourr/1.jpeg",
       "/images/ourr/industrial/2.jpeg",
       "/images/ourr/industrial/3.jpeg",
       "/images/ourr/industrial/4.jpeg",
@@ -145,7 +145,7 @@ const stylesData = [
     tagline: "Zen Minimalism & Clean Textures",
     philosophy: "The ultimate fusion of Japanese artistic mindfulness and Scandinavian functionality. It brings forth a warm minimalism, utilizing organic materials to craft a highly luxurious, zen-like peace.",
     images: [
-      "/images/ourr/japandi/1.jpeg",
+      "/images/ourr/japandi/5.jpeg",
       "/images/ourr/japandi/2.jpeg",
       "/images/ourr/japandi/3.jpeg",
       "/images/ourr/japandi/4.jpeg",
@@ -221,10 +221,10 @@ const stylesData = [
     tagline: "Premium Hospitality & Immersive Lounging",
     philosophy: "Brings the bespoke, tailored feeling of an elite five-star boutique hotel into daily domestic spaces. Every corner is micro-styled with high-end layers to evoke an ongoing sense of pampering.",
     images: [
-      "/images/ourr/hotel/1.jpeg",
-      "/images/ourr/hotel/2.jpeg",
-      "/images/ourr/hotel/3.jpeg",
-      "/images/ourr/hotel/4.jpeg",
+      "/images/ourr/Luxury/1.jpeg",
+      "/images/ourr/Luxury/2.jpeg",
+      "/images/ourr/Luxury/3.jpeg",
+      "/images/ourr/Luxury/4.jpeg",
     ],
     elements: [
       "Multi-layered ambient, task, and architectural lighting",
@@ -286,18 +286,17 @@ const StylePalette = () => {
                 <div className="w-full md:w-1/2">
                   <div className="flex flex-col gap-4">
                     
-                    {/* Main Image */}
-                    <div className="relative group overflow-hidden rounded-sm shadow-xl aspect-[4/5] md:aspect-[3/4]">
-                      <img
-                        src={
-                          selectedImages[style.id] || style.images[0]
-                        }
-                        alt={style.title}
-                        className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-                    </div>
+{/* Main Image */}
+{/* Changed aspect ratios from vertical [3/4] to standard horizontal [4/3] / video */}
+<div className="relative group overflow-hidden rounded-sm shadow-xl aspect-[4/3] sm:aspect-video md:aspect-[4/3]">
+  <img
+    src={selectedImages[style.id] || style.images[0]}
+    alt={style.title}
+    className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
+    loading="lazy"
+  />
+  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+</div>
 
                     {/* Thumbnail Images */}
                     {style.images.length > 1 && (
