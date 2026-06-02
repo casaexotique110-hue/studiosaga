@@ -1,5 +1,14 @@
 import React, { useRef } from 'react';
 
+// 1. Import your local images from the assets folder
+import projectImg1 from '../assets/insta/1.jpeg';
+import projectImg2 from '../assets/insta/2.jpeg';
+import projectImg3 from '../assets/insta/3.jpeg';
+import projectImg4 from '../assets/insta/4.jpeg';
+import projectImg5 from '../assets/insta/5.jpeg';
+import { Link } from "react-router-dom";
+// Note: If you add a 6th project later, you can import projectImg6 here!
+
 interface InteriorProject {
   id: string;
   title: string;
@@ -15,12 +24,13 @@ interface ArrowProps {
 
 interface ProjectCardProps extends InteriorProject {}
 
+// 2. Updated data array utilizing the locally bundled assets
 const interiorProjects: InteriorProject[] = [
   {
     id: 'project1',
     title: 'The Grand Living Lounge',
     spaceType: 'Residential | Living Room',
-    imageUrl: "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
+    imageUrl: projectImg1,
     projectUrl: '#',
     description: 'Bespoke luxury seating layout combined with warm metallic accents and custom ambient lighting.',
   },
@@ -28,7 +38,7 @@ const interiorProjects: InteriorProject[] = [
     id: 'project2',
     title: 'Minimalist Culinary Space',
     spaceType: 'Residential | Kitchen',
-    imageUrl: "https://images.pexels.com/photos/1129413/pexels-photo-1129413.jpeg",
+    imageUrl: projectImg2,
     projectUrl: '#',
     description: 'Handle-less seamless cabinetry paired with premium marble countertops and sleek profiles.',
   },
@@ -36,7 +46,7 @@ const interiorProjects: InteriorProject[] = [
     id: 'project3',
     title: 'The Executive Boardroom',
     spaceType: 'Commercial | Office Workspace',
-    imageUrl: "https://images.pexels.com/photos/827518/pexels-photo-827518.jpeg",
+    imageUrl: projectImg3,
     projectUrl: '#',
     description: 'Sophisticated design patterns and acoustic paneling tailored to inspire modern corporate workflows.',
   },
@@ -44,7 +54,7 @@ const interiorProjects: InteriorProject[] = [
     id: 'project4',
     title: 'Modern Master Bedroom Oasis',
     spaceType: 'Residential | Bedroom',
-    imageUrl: "https://images.pexels.com/photos/1374125/pexels-photo-1374125.jpeg",
+    imageUrl: projectImg4,
     projectUrl: '#',
     description: 'Plush tufted bedback wall setup integrated beautifully with subtle wooden paneling textures.',
   },
@@ -52,7 +62,7 @@ const interiorProjects: InteriorProject[] = [
     id: 'project5',
     title: 'Artisanal Fine Dining Setup',
     spaceType: 'Commercial | Hospitality',
-    imageUrl: "https://images.pexels.com/photos/2067638/pexels-photo-2067638.jpeg",
+    imageUrl: projectImg5,
     projectUrl: '#',
     description: 'Intimate seating configurations highlighting architectural chandeliers and structural symmetry.',
   },
@@ -103,14 +113,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
 
         {/* Dynamic Hover Effect for Luxury Aesthetic */}
-        <a 
-          href={projectUrl}
-          className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
-        >
-          <span className="text-white text-xs font-bold tracking-widest uppercase border border-white/50 px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-            View Project
-          </span>
-        </a>
+<Link
+  to="/style-palette"
+  className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
+>
+  <span className="text-white text-xs font-bold tracking-widest uppercase border border-white/50 px-5 py-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300">
+    Style Palette
+  </span>
+</Link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
 
       {/* Bottom Footer - Brief Technical Detail */}
@@ -135,7 +165,7 @@ const StudiaSagaPortfolio: React.FC = () => {
   const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
   const SCROLL_STEP = 350 + 16; // Card Width + Gap
-  const AUTO_SCROLL_SPEED = 3500; // Adjusted for a smoother scrolling experience
+  const AUTO_SCROLL_SPEED = 3500; 
 
   const handleScroll = (direction: 'left' | 'right') => {
     if (!carouselRef.current) return;
@@ -181,7 +211,7 @@ const StudiaSagaPortfolio: React.FC = () => {
         <div className="flex flex-col sm:flex-row justify-between items-end mb-10 border-b border-gray-100 pb-5">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A059] block mb-2">Our Signature Spaces</span>
-            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">Studia Saga</h2>
+            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">Our Portfolio</h2>
           </div>
 
           <div className="flex items-center space-x-6 mt-4 sm:mt-0">
