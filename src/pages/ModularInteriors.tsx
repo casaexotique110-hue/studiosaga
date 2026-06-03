@@ -2,6 +2,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import PremiumServices from "@/components/PremiumServices";
+
 
 const ModularInteriors = () => {
   return (
@@ -193,6 +195,9 @@ const ModularInteriors = () => {
           Start Your Project
         </Button>
       </section>
+
+              <PremiumServices />
+
 
       <Footer />
     </div>

@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import PremiumServices from "@/components/PremiumServices";
 
 const FullHomeInteriors = () => {
   return (
@@ -178,6 +179,9 @@ const FullHomeInteriors = () => {
           </p>
         </div>
       </section>
+
+              <PremiumServices />
+
 
       {/* CTA SECTION */}
       <section className="py-16 md:py-24 px-4 sm:px-6 text-center max-w-4xl mx-auto">

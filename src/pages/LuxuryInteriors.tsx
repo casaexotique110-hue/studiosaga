@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import PremiumServices from "@/components/PremiumServices";
 
 const LuxuryInteriors = () => {
   return (
@@ -155,6 +156,8 @@ const LuxuryInteriors = () => {
           </Button>
         </div>
       </section>
+
+      <PremiumServices />
 
       <Footer />
     </div>

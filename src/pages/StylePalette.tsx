@@ -367,12 +367,13 @@ const StylePalette = () => {
                   </div>
 
                   <div className="mt-10">
-                    <Button
-                      variant="outline"
-                      className="rounded-none border-foreground/50 hover:bg-foreground hover:text-background uppercase tracking-widest text-xs py-6 px-8 transition-all duration-300"
-                    >
-                      Explore {style.title}
-                    </Button>
+<Button
+  variant="outline"
+  onClick={() => window.location.href = "/contact"}
+  className="rounded-none border-foreground/50 hover:bg-foreground hover:text-background uppercase tracking-widest text-xs py-6 px-8 transition-all duration-300"
+>
+  Talk To Our Designer
+</Button>
                   </div>
                 </div>
               </motion.div>
@@ -396,12 +397,13 @@ const StylePalette = () => {
               something uniquely yours. Book a consultation to find your
               signature palette.
             </p>
-            <Button
-              size="lg"
-              className="bg-white text-stone-900 hover:bg-stone-200 rounded-none px-10 py-6 uppercase tracking-widest text-xs"
-            >
-              Book Consultation
-            </Button>
+<Button
+  size="lg"
+  onClick={() => window.location.href = "/contact"}
+  className="bg-white text-stone-900 hover:bg-stone-200 rounded-none px-10 py-6 uppercase tracking-widest"
+>
+  Book Consultation
+</Button>
           </div>
         </div>
       </main>

@@ -6,6 +6,17 @@ import projectImg2 from '../assets/insta/2.jpeg';
 import projectImg3 from '../assets/insta/3.jpeg';
 import projectImg4 from '../assets/insta/4.jpeg';
 import projectImg5 from '../assets/insta/5.jpeg';
+import projectImg6 from '../assets/insta/6.jpeg';
+import projectImg7 from '../assets/insta/7.jpeg';
+import projectImg8 from '../assets/insta/8.jpeg';
+import projectImg9 from '../assets/insta/9.jpeg';
+import projectImg10 from '../assets/insta/10.jpeg';
+import projectImg11 from '../assets/insta/11.jpeg';
+import projectImg12 from '../assets/insta/12.jpeg';
+
+
+
+
 import { Link } from "react-router-dom";
 // Note: If you add a 6th project later, you can import projectImg6 here!
 
@@ -24,47 +35,103 @@ interface ArrowProps {
 
 interface ProjectCardProps extends InteriorProject {}
 
-// 2. Updated data array utilizing the locally bundled assets
+// 2. Updated data array utilizing the locally bundled assets\
 const interiorProjects: InteriorProject[] = [
   {
     id: 'project1',
-    title: 'The Grand Living Lounge',
-    spaceType: 'Residential | Living Room',
-    imageUrl: projectImg1,
+    title: 'Modern Contemporary',
+    spaceType: '01 — Clean, Elegant & Current',
+    imageUrl: projectImg1, // No quotes here!
     projectUrl: '#',
     description: 'Bespoke luxury seating layout combined with warm metallic accents and custom ambient lighting.',
   },
   {
     id: 'project2',
-    title: 'Minimalist Culinary Space',
-    spaceType: 'Residential | Kitchen',
+    title: 'Minimalist',
+    spaceType: '02 — Less is More',
     imageUrl: projectImg2,
     projectUrl: '#',
     description: 'Handle-less seamless cabinetry paired with premium marble countertops and sleek profiles.',
   },
   {
     id: 'project3',
-    title: 'The Executive Boardroom',
-    spaceType: 'Commercial | Office Workspace',
+    title: 'Scandinavian',
+    spaceType: '03 — Serenity in Simplicity',
     imageUrl: projectImg3,
     projectUrl: '#',
     description: 'Sophisticated design patterns and acoustic paneling tailored to inspire modern corporate workflows.',
   },
   {
     id: 'project4',
-    title: 'Modern Master Bedroom Oasis',
-    spaceType: 'Residential | Bedroom',
+    title: 'Luxury Victorian / Classical',
+    spaceType: '04 — Royal, Elegant & Timeless',
     imageUrl: projectImg4,
     projectUrl: '#',
     description: 'Plush tufted bedback wall setup integrated beautifully with subtle wooden paneling textures.',
   },
   {
     id: 'project5',
-    title: 'Artisanal Fine Dining Setup',
-    spaceType: 'Commercial | Hospitality',
+    title: 'Modern Classic',
+    spaceType: '05 — Simplicity Meets Timeless Elegance',
     imageUrl: projectImg5,
     projectUrl: '#',
     description: 'Intimate seating configurations highlighting architectural chandeliers and structural symmetry.',
+  },
+  {
+    id: 'project6',
+    title: 'Industrial',
+    spaceType: '06 — Raw, Refined & Edgy',
+    imageUrl: projectImg6,
+    projectUrl: '#',
+    description: 'Exposed brickwork, metallic elements, and open layouts crafted for an urban, edgy aesthetic.',
+  },
+  {
+    id: 'project7',
+    title: 'Bohemian (Boho)',
+    spaceType: '07 — Free-Spirited & Artistic Expression',
+    imageUrl: projectImg7,
+    projectUrl: '#',
+    description: 'Vibrant textures, layered textiles, and natural elements celebrating free-spirited design.',
+  },
+  {
+    id: 'project8',
+    title: 'Japandi',
+    spaceType: '08 — Zen Minimalism & Clean Textures',
+    imageUrl: projectImg8,
+    projectUrl: '#',
+    description: 'The perfect fusion of Japanese functionality and Scandinavian warmth with organic materials.',
+  },
+  {
+    id: 'project9',
+    title: 'Mediterranean',
+    spaceType: '09 — Vacation Luxury & Organic Airiness',
+    imageUrl: projectImg9,
+    projectUrl: '#',
+    description: 'Arched entryways, sun-drenched spaces, and earthy tones that bring the coastal vibe indoors.',
+  },
+  {
+    id: 'project10',
+    title: 'Art Deco',
+    spaceType: '10 — Glamour, Bold Geometry & Sophistication',
+    imageUrl: projectImg10,
+    projectUrl: '#',
+    description: 'Rich colors, bold geometric patterns, and lavish metallic details defining pure glamour.',
+  },
+  {
+    id: 'project11',
+    title: 'Rustic / Farmhouse',
+    spaceType: '11 — Natural, Comfortable & Homely Warmth',
+    imageUrl: projectImg11,
+    projectUrl: '#',
+    description: 'Weathered wood, cozy textiles, and vintage accents creating a warm and welcoming sanctuary.',
+  },
+  {
+    id: 'project12',
+    title: 'Luxury Hotel Style',
+    spaceType: '12 — Premium Hospitality & Immersive Lounging',
+    imageUrl: projectImg12,
+    projectUrl: '#',
+    description: 'Grand scale aesthetics, opulent fabrics, and bespoke details tailored for a five-star living experience.',
   },
 ];
 
