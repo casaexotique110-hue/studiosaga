@@ -12,7 +12,7 @@ const ModularInteriors = () => {
       <section className="relative h-[85vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Local Public Folder Hero Image (1.png) */}
         <img
-          src="/modular/1.png"
+          src="/modular/1.jpeg"
           alt="Premium Modular Interior"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
@@ -112,7 +112,7 @@ const ModularInteriors = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           <div className="w-full aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden bg-stone-100 shadow-sm">
             <img 
-              src="/modular/1.png" 
+              src="/modular/1.jpeg" 
               alt="Modular Execution 01" 
               className="w-full h-full object-cover object-center"
             />
@@ -173,7 +173,7 @@ const ModularInteriors = () => {
 
         <p className="mt-6 md:mt-8 text-sm md:text-lg text-stone-600 leading-relaxed font-light">
           Using premium materials, precision manufacturing and expert
-          installation, StudiaSaga delivers modular interiors that combine
+          installation, Studia Saga delivers modular interiors that combine
           durability with sophisticated aesthetics.
         </p>
       </section>

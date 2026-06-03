@@ -62,9 +62,7 @@ const HeroCarousel2 = () => {
 
           {/* Text overlays */}
           <div className="absolute bottom-24 left-6 md:left-12 z-20 text-white animate-fade-in">
-            <p className="text-sm md:text-base font-light tracking-[0.3em] uppercase">
-              {slide.location}
-            </p>
+
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-center animate-fade-in">
@@ -74,9 +72,7 @@ const HeroCarousel2 = () => {
           </div>
 
           <div className="absolute bottom-24 right-6 md:right-12 z-20 text-white animate-fade-in">
-            <p className="text-sm md:text-base font-light tracking-[0.3em] uppercase">
-              {slide.category}
-            </p>
+
           </div>
         </div>
       ))}

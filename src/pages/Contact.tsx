@@ -111,7 +111,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Call Us</p>
-                    <p className="font-serif text-xl text-foreground">+91 XXXXXXXX</p>
+                    <p className="text-xl text-foreground">+91 9667733382</p>
                   </div>
                 </div>
 
@@ -121,7 +121,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Email Us</p>
-                    <p className="font-serif text-xl text-foreground">info@anamcarainteriors.com</p>
+                    <p className="font-serif text-xl text-foreground">studiasagaA@gmail.com</p>
                   </div>
                 </div>
 

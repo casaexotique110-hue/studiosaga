@@ -11,7 +11,7 @@ import logo from "@/assets/logo 2.png";
 
 // SERVICES IMAGES
 import modularImg from "@/assets/services/modular.jpg";
-import fullhomeImg from "@/assets/services/fullhome.png";
+import fullhomeImg from "@/assets/services/fullhome.jpeg";
 import luxuryImg from "@/assets/services/luxury.png";
 
 import {

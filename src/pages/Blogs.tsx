@@ -68,7 +68,7 @@ const Blogs: React.FC = () => {
         {/* Banner Image Background */}
         <img
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1920&auto=format&fit=crop"
-          alt="StudiaSaga Editorial Magazine Banner"
+          alt="Studia Saga Editorial Magazine Banner"
           className="absolute inset-0 w-full h-full object-cover object-center transform scale-100"
         />
         {/* Soft Dark Overlay to ensure typography readability */}
@@ -91,7 +91,7 @@ const Blogs: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight"
           >
-            StudiaSaga Chronicles
+            Studia Saga Chronicles
           </motion.h1>
 
           <motion.p
