@@ -59,7 +59,7 @@ const FullHomeInteriors = () => {
               img: "/images/ourr/servies-pages/full-home/1.jpeg",
             },
             {
-              title: "Washroom",
+              title: "Bathroom",
               desc: "End-to-end execution with seamless coordination and timely delivery.",
               img: "/images/ourr/servies-pages/full-home/2.jpeg",
             },

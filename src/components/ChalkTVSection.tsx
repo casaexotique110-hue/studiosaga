@@ -277,7 +277,7 @@ const StudiaSagaPortfolio: React.FC = () => {
         <div className="flex flex-col sm:flex-row justify-between items-end mb-10 border-b border-gray-100 pb-5">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A059] block mb-2">Our Signature Spaces</span>
-            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">Our Portfolio</h2>
+            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">Select Your Style</h2>
           </div>
 
           <div className="flex items-center space-x-6 mt-4 sm:mt-0">

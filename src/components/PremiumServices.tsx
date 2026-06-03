@@ -5,7 +5,7 @@ import { Phone, Star } from 'lucide-react';
 const packages = [
   {
     name: "5 - 15 Lakh Interior",
-    tagline: "Modern modular & compact luxury homes",
+    tagline: "Modern modular & compact Premium homes",
     priceLabel: "Affordable Luxury",
     image: "/pricing/Basic.jpeg",
     isPopular: false,

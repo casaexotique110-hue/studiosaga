@@ -66,7 +66,7 @@ const ModularInteriors = () => {
               img: "/modular/wardrob.png" // Applied image 3
             },
             {
-              title: "Storage Units",
+              title: "Wall Units",
               desc: "TV units, bookshelves, shoe racks and more designed for modern homes.",
               img: "/modular/TVUnit.png" // Applied image 4
             },
