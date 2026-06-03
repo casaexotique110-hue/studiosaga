@@ -34,12 +34,7 @@ const blogs: Blog[] = [
     image: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
     category: "Furniture",
   },
-  {
-    id: 5,
-    title: "Kitchen Interior Designs That Look Premium",
-    image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200&auto=format&fit=crop",
-    category: "Kitchen",
-  },
+
   {
     id: 6,
     title: "How To Make Your Home Look Expensive",
