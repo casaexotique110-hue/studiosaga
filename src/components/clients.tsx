@@ -81,9 +81,7 @@ const TestimonialSection: React.FC = () => {
             <h2 className="text-5xl md:text-6xl font-light text-[#333333] tracking-tight mb-6 leading-tight">
               What Our <span className="font-serif italic text-[#C5A059]">Clients Say</span>
             </h2>
-            <p className="text-[#777777] text-lg font-light max-w-lg">
-              Partnering with visionaries to create exceptional digital and physical experiences.
-            </p>
+  
           </motion.div>
           
           <div className="flex gap-4">
