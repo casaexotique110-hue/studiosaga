@@ -12,7 +12,7 @@ const stylesData = [
     tagline: "Clean, Elegant & Current",
     philosophy: "Balances sleek modern architecture with daily functionality. It utilizes high-end current materials and curved elements to create spaces that feel sophisticated yet highly liveable.",
     images: [
-      "/images/ourr/10.jpg",
+      "/images/ourr/banner/1.png",
       "/images/ourr/contemporary/1.jpeg",
       "/images/ourr/contemporary/2.jpeg",
       "/images/ourr/contemporary/3.jpeg",
@@ -31,7 +31,7 @@ const stylesData = [
     tagline: "Less is More",
     philosophy: "Focuses strictly on the essence of the space. By stripping away excess decoration, it creates a deeply peaceful, airy, and calming environment where architecture itself takes center stage.",
     images: [
-      "/images/ourr/4.jpg",
+      "/images/ourr/banner/2.png",
       "/images/ourr/ModernMinimalist/1.jpeg",
       "/images/ourr/ModernMinimalist/2.jpeg",
       "/images/ourr/ModernMinimalist/3.jpeg",
@@ -50,7 +50,7 @@ const stylesData = [
     tagline: "Serenity in Simplicity",
     philosophy: "Rooted in the Nordic lifestyle, this design language emphasizes clean lines, warm utility, and cozy furnishings that are both beautiful and structurally accessible.",
     images: [
-      "/images/ourr/8.jpg",
+      "/images/ourr/banner/3.png",
       "/images/ourr/Scandinavian/1.jpeg",
       "/images/ourr/Scandinavian/2.jpeg",
       "/images/ourr/Scandinavian/3.jpeg",
@@ -69,7 +69,7 @@ const stylesData = [
     tagline: "Royal, Elegant & Timeless Luxury",
     philosophy: "Inspired by majestic European heritage and royal palaces. It features intricate detailing, high ceilings, and majestic layouts designed for grand villas and clients who appreciate historical aesthetics.",
     images: [
-      "/images/ourr/Classic/1.jpeg",
+      "/images/ourr/banner/4.png",
       "/images/ourr/Classic/2.jpeg",
       "/images/ourr/Classic/3.jpeg",
       "/images/ourr/Classic/4.jpeg",
@@ -88,7 +88,7 @@ const stylesData = [
     tagline: "Simplicity Meets Timeless Elegance",
     philosophy: "A heavily trending style in luxury Indian residences. It beautiful bridges the gap between historical architectural detailing and clean, mid-century or modern furniture layouts.",
     images: [
-      "/images/ourr/1.jpg",
+      "/images/ourr/banner/5.png",
       "/images/ourr/modernclassic/1.jpeg",
       "/images/ourr/modernclassic/2.jpeg",
       "/images/ourr/modernclassic/3.jpeg",
@@ -107,7 +107,7 @@ const stylesData = [
     tagline: "Raw, Refined & Edgy",
     philosophy: "Inspired by converted warehouses and urban lofts. This aesthetic celebrates exposed building materials and rugged structural elements while maintaining premium functional interior zoning.",
     images: [
-      "/images/ourr/1.jpeg",
+      "/images/ourr/banner/6.png",
       "/images/ourr/industrial/2.jpeg",
       "/images/ourr/industrial/3.jpeg",
       "/images/ourr/industrial/4.jpeg",
@@ -126,7 +126,7 @@ const stylesData = [
     tagline: "Free-Spirited & Artistic Expression",
     philosophy: "An unconventional, artistic approach that layers vibrant colors, global textures, and natural elements. It represents an eclectic lifestyle that is deeply personal and creative.",
     images: [
-      "/images/ourr/11.jpg",
+      "/images/ourr/banner/7.png",
       "/images/ourr/bohimean/1.jpeg",
       "/images/ourr/bohimean/2.jpeg",
       "/images/ourr/bohimean/3.jpeg",
@@ -145,7 +145,7 @@ const stylesData = [
     tagline: "Zen Minimalism & Clean Textures",
     philosophy: "The ultimate fusion of Japanese artistic mindfulness and Scandinavian functionality. It brings forth a warm minimalism, utilizing organic materials to craft a highly luxurious, zen-like peace.",
     images: [
-      "/images/ourr/japandi/5.jpeg",
+      "/images/ourr/banner/8.png",
       "/images/ourr/japandi/2.jpeg",
       "/images/ourr/japandi/3.jpeg",
       "/images/ourr/japandi/4.jpeg",
@@ -164,7 +164,7 @@ const stylesData = [
     tagline: "Vacation Luxury & Organic Airiness",
     philosophy: "Captures the sun-drenched coastal vibes of Spain, Italy, and Greece. It relies heavily on soft curves, rough stone finishes, and earthy whites to evoke a relaxed, premium resort-like living experience.",
     images: [
-      "/images/ourr/mediterranean/1.jpeg",
+      "/images/ourr/banner/9.png",
       "/images/ourr/mediterranean/2.jpeg",
       "/images/ourr/mediterranean/3.jpeg",
       "/images/ourr/mediterranean/4.jpeg",
@@ -183,7 +183,7 @@ const stylesData = [
     tagline: "Glamour, Bold Geometry & Sophistication",
     philosophy: "Channeling the vintage luxury of the 1920s high-society hotel spaces. It brings theatrical drama and bold geometric structures together with bespoke craftsmanship for a truly striking statement.",
     images: [
-      "/images/ourr/5.jpg",
+      "/images/ourr/banner/10.png",
       "/images/ourr/artistic/1.jpeg",
       "/images/ourr/artistic/2.jpeg",
       "/images/ourr/artistic/3.jpeg",
@@ -202,7 +202,7 @@ const stylesData = [
     tagline: "Natural, Comfortable & Homely Warmth",
     philosophy: "Celebrates the rugged charm of countryside living. It focuses on weathered wood, heavy stonework, and soft fabrics to build a deeply welcoming and historic space for family living.",
     images: [
-      "/images/ourr/rustic/1.jpeg",
+      "/images/ourr/banner/11.png",
       "/images/ourr/rustic/2.jpeg",
       "/images/ourr/rustic/3.jpeg",
       "/images/ourr/rustic/4.jpeg",
@@ -221,7 +221,7 @@ const stylesData = [
     tagline: "Premium Hospitality & Immersive Lounging",
     philosophy: "Brings the bespoke, tailored feeling of an elite five-star boutique hotel into daily domestic spaces. Every corner is micro-styled with high-end layers to evoke an ongoing sense of pampering.",
     images: [
-      "/images/ourr/Luxury/1.jpeg",
+      "/images/ourr/banner/12.png",
       "/images/ourr/Luxury/2.jpeg",
       "/images/ourr/Luxury/3.jpeg",
       "/images/ourr/Luxury/4.jpeg",
