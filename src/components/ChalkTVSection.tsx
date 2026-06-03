@@ -16,7 +16,6 @@ import projectImg12 from '../assets/insta/12.jpeg';
 
 
 
-
 import { Link } from "react-router-dom";
 // Note: If you add a 6th project later, you can import projectImg6 here!
 
@@ -216,12 +215,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           "{description}"
         </p>
 
-        <a 
-          href={projectUrl} 
-          className="inline-flex items-center text-xs font-bold tracking-wider text-gray-800 uppercase hover:text-[#C5A059] transition-colors duration-200"
-        >
-          Explore Details <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
-        </a>
+<Link 
+  to="/style-palette" 
+  className="inline-flex items-center text-xs font-bold tracking-wider text-gray-800 uppercase hover:text-[#C5A059] transition-colors duration-200"
+>
+  Explore Details <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
+</Link>
       </div>
     </div>
   );

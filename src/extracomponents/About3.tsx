@@ -1,10 +1,10 @@
 import React from "react";
-import leftChair from "../assets/image11.webp";
-import rightChair from "../assets/image22.webp";
+import leftChair from "../assets/image11.png";
+import rightChair from "../assets/image22.png";
 
 const About3: React.FC = () => {
   return (
-    <section className="w-full bg-white py-24 px-6">
+    <section className="w-full bg-white py-24 px-6">                   
       <div className="max-w-5xl mx-auto flex items-center justify-between gap-4 md:gap-10">
 
         {/* Left Image */}
