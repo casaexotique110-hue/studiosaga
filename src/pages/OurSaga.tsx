@@ -218,10 +218,10 @@ const OurSaga = () => {
         {/* ================== PHILOSOPHY & PREMIUM SECTIONS ================== */}
         <PremiumApproach />
         <Newcomponentui />
-        <PremiumServices />
+        {/* <PremiumServices /> */}
 
         {/* ================== PACKAGES / REASONS ================== */}
-        <WhyChooseUs />
+        {/* <WhyChooseUs /> */}
       </main>
 
       <Footer />

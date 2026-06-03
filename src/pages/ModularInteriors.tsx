@@ -100,34 +100,7 @@ const ModularInteriors = () => {
       </section>
 
       {/* COMPLETED WORK / PORTFOLIO SHOWCASE */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-stone-100">
-        <div className="text-center mb-12">
-          <p className="text-[#BFA181] uppercase tracking-[3px] text-xs md:text-sm font-semibold">
-            Showcase
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 text-stone-900">
-            Realized Modular Projects
-          </h2>
-        </div>
 
-        {/* Asymmetric Visual Grid: Phatega nahi aur perfectly align hoga */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-          <div className="w-full aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden bg-stone-100 shadow-sm">
-            <img 
-              src="/modular/1.jpeg" 
-              alt="Modular Execution 01" 
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-          <div className="w-full aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden bg-stone-100 shadow-sm">
-            <img 
-              src="/modular/2.png" 
-              alt="Modular Execution 02" 
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* PROCESS */}
       <section className="bg-[#f8f5f1] py-16 md:py-24 px-4 sm:px-6">
