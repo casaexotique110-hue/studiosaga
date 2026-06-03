@@ -121,7 +121,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Email Us</p>
-                    <p className="font-serif text-xl text-foreground">studiasagaA@gmail.com</p>
+                    <p className="font-serif text-xl text-foreground">studiasagaa@gmail.com</p>
                   </div>
                 </div>
 
