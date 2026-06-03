@@ -179,9 +179,7 @@ const PremiumApproach = () => {
                     <p className="text-[9px] md:text-xs uppercase tracking-widest text-[#D6B98C] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Space
                     </p>
-                    <h4 className="text-sm md:text-xl font-serif font-light mt-0.5 truncate">
-                      Concept 0{index + 1}
-                    </h4>
+       
                   </div>
                   {/* Plus Icon Button */}
                   <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
