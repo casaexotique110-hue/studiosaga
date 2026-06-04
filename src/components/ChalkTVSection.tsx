@@ -40,7 +40,7 @@ const interiorProjects: InteriorProject[] = [
     id: 'project1',
     title: 'Modern Contemporary',
     spaceType: '01 — Clean, Elegant & Current',
-    imageUrl: projectImg1, // No quotes here!
+    imageUrl: projectImg1,
     projectUrl: '#',
     description: 'Bespoke luxury seating layout combined with warm metallic accents and custom ambient lighting.',
   },
@@ -131,6 +131,14 @@ const interiorProjects: InteriorProject[] = [
     imageUrl: projectImg12,
     projectUrl: '#',
     description: 'Grand scale aesthetics, opulent fabrics, and bespoke details tailored for a five-star living experience.',
+  },
+  {
+    id: 'project13',
+    title: 'Indian Traditional / Ethnic',
+    spaceType: '13 — Heritage, Rich Textures & Royal Culture',
+    imageUrl: projectImg12,
+    projectUrl: '#',
+    description: 'Intricately carved premium wood furniture, traditional jali patterns, brass decor elements, and rich ethnic textiles creating a royal cultural ambiance.',
   },
 ];
 
@@ -276,8 +284,8 @@ const StudiaSagaPortfolio: React.FC = () => {
         {/* Section Header Layout */}
         <div className="flex flex-col sm:flex-row justify-between items-end mb-10 border-b border-gray-100 pb-5">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A059] block mb-2">Our Signature Spaces</span>
-            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">Select Your Style</h2>
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5A059] block mb-2">Our Signature Style</span>
+            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">Find Your Perfect Style</h2>
           </div>
 
           <div className="flex items-center space-x-6 mt-4 sm:mt-0">

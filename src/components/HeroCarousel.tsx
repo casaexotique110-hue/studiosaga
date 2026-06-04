@@ -93,13 +93,17 @@ const [whatsappUpdates, setWhatsappUpdates] =
             />
 
             {/* CENTER TEXT */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-center px-4">
-              <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-extralight tracking-[0.2em] uppercase leading-tight">
-                {slide.title}
-              </h1>
-            </div>
-          </div>
-        ))}
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-center px-4 w-full max-w-4xl">
+          {/* Adjusted text sizing to prevent clashing on medium-sized desktop screens */}
+          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-extralight tracking-[0.2em] uppercase leading-tight md:pr-[24rem] lg:pr-0">
+            {slide.title}
+          </h1>
+        </div>
+      </div>
+    ))}
+
+
+
 
         {/* ================= DESKTOP FORM ================= */}
 {/* ================= DESKTOP FORM ================= */}
@@ -265,6 +269,12 @@ const [whatsappUpdates, setWhatsappUpdates] =
     )}
   </div>
 </div>
+
+
+
+
+
+
 
         {/* Navigation Arrows */}
         <button

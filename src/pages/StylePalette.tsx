@@ -234,6 +234,25 @@ const stylesData = [
       "Bespoke premium hardware and hidden smart-home automations",
     ],
   },
+  {
+    id: 13,
+    title: "Indian Traditional / Ethnic",
+    tagline: "Heritage, Rich Textures & Royal Culture",
+    philosophy: "Rooted deeply in rich cultural history and royal legacies. It seamlessly blends intricately carved solid wood, traditional architecture patterns like Jali and arches, and hand-woven ethnic fabrics to create spaces that look incredibly royal and deeply familiar.",
+    images: [
+      "http://googleusercontent.com/image_collection/image_retrieval/8651922252927421479_0",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=600&auto=format&fit=crop",
+    ],
+    elements: [
+      "Intricately hand-carved solid teak or rosewood furniture",
+      "Traditional architectural element integrations like Jharokhas & Jali work",
+      "Rich ethnic Indian fabrics (Silk, brocades, hand-woven cotton, Ikat)",
+      "Warm vibrant accent palettes paired with brass and copper decor elements",
+      "Curated custom artwork including Pichwai paintings, terracotta, and murals",
+    ],
+  },
 ];
 
 const StylePalette = () => {
@@ -286,17 +305,16 @@ const StylePalette = () => {
                 <div className="w-full md:w-1/2">
                   <div className="flex flex-col gap-4">
                     
-{/* Main Image */}
-{/* Changed aspect ratios from vertical [3/4] to standard horizontal [4/3] / video */}
-<div className="relative group overflow-hidden rounded-sm shadow-xl aspect-[4/3] sm:aspect-video md:aspect-[4/3]">
-  <img
-    src={selectedImages[style.id] || style.images[0]}
-    alt={style.title}
-    className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
-    loading="lazy"
-  />
-  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-</div>
+                    {/* Main Image */}
+                    <div className="relative group overflow-hidden rounded-sm shadow-xl aspect-[4/3] sm:aspect-video md:aspect-[4/3]">
+                      <img
+                        src={selectedImages[style.id] || style.images[0]}
+                        alt={style.title}
+                        className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                    </div>
 
                     {/* Thumbnail Images */}
                     {style.images.length > 1 && (
@@ -367,13 +385,13 @@ const StylePalette = () => {
                   </div>
 
                   <div className="mt-10">
-<Button
-  variant="outline"
-  onClick={() => window.location.href = "/contact"}
-  className="rounded-none border-foreground/50 hover:bg-foreground hover:text-background uppercase tracking-widest text-xs py-6 px-8 transition-all duration-300"
->
-  Talk To Our Designer
-</Button>
+                    <Button
+                      variant="outline"
+                      onClick={() => window.location.href = "/contact"}
+                      className="rounded-none border-foreground/50 hover:bg-foreground hover:text-background uppercase tracking-widest text-xs py-6 px-8 transition-all duration-300"
+                    >
+                      Talk To Our Designer
+                    </Button>
                   </div>
                 </div>
               </motion.div>
@@ -397,13 +415,13 @@ const StylePalette = () => {
               something uniquely yours. Book a consultation to find your
               signature palette.
             </p>
-<Button
-  size="lg"
-  onClick={() => window.location.href = "/contact"}
-  className="bg-white text-stone-900 hover:bg-stone-200 rounded-none px-10 py-6 uppercase tracking-widest"
->
-  Book Consultation
-</Button>
+            <Button
+              size="lg"
+              onClick={() => window.location.href = "/contact"}
+              className="bg-white text-stone-900 hover:bg-stone-200 rounded-none px-10 py-6 uppercase tracking-widest"
+            >
+              Book Consultation
+            </Button>
           </div>
         </div>
       </main>
