@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
+import FAQSection from "@/components/FAQSection";
+
 
 const LuxuryInteriors = () => {
   return (
@@ -158,7 +160,9 @@ const LuxuryInteriors = () => {
       </section>
 
       <PremiumServices />
-
+      
+    <FAQSection page="luxury"/>
+    
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
+import FAQSection from "@/components/FAQSection";
 
 
 const ModularInteriors = () => {
@@ -170,7 +171,8 @@ const ModularInteriors = () => {
       </section>
 
               <PremiumServices />
-
+      
+      <FAQSection page="modular"/>
 
       <Footer />
     </div>

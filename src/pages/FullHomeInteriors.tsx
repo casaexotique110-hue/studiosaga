@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
+import FAQSection from "@/components/FAQSection";
+
 
 const FullHomeInteriors = () => {
   return (
@@ -51,48 +53,69 @@ const FullHomeInteriors = () => {
         </div>
 
         {/* 1-column on mobile, 3-columns on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {[
-            {
-              title: "Bedroom",
-              desc: "Thoughtfully designed interiors tailored to your lifestyle and vision.",
-              img: "/images/ourr/servies-pages/full-home/1.jpeg",
-            },
-            {
-              title: "Bathroom",
-              desc: "End-to-end execution with seamless coordination and timely delivery.",
-              img: "/images/ourr/servies-pages/full-home/2.jpeg",
-            },
-            {
-              title: "Living Room",
-              desc: "Furniture, decor, lighting and styling curated exclusively for your home.",
-              img: "/images/ourr/servies-pages/full-home/3.jpeg",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="rounded-2xl md:rounded-3xl border border-stone-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group bg-white"
-            >
-              {/* Image Frame with responsive scaling protection */}
-              <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-stone-100">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
 
-              <div className="p-6 md:p-8 flex-1 flex flex-col">
-                <h3 className="text-xl md:text-2xl font-semibold mb-3 text-stone-900">
-                  {item.title}
-                </h3>
-                <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light">
-                  {item.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+  {[
+    {
+      title: "Bedroom",
+      desc: "Thoughtfully designed interiors tailored to your lifestyle and vision.",
+      img: "/images/ourr/servies-pages/full-home/Bedroom.jpeg",
+    },
+    {
+      title: "Bathroom",
+      desc: "End-to-end execution with seamless coordination and timely delivery.",
+      img: "/images/ourr/servies-pages/full-home/Bathroom.jpeg",
+    },
+    {
+      title: "Living Room",
+      desc: "Furniture, decor, lighting and styling curated exclusively for your home.",
+      img: "/images/ourr/servies-pages/full-home/Living-Room.jpeg",
+    },
+    {
+      title: "Kids Room",
+      desc: "Vibrant, safe, and imaginative spaces designed to grow with your children.",
+      img: "/images/ourr/servies-pages/full-home/kidsroom.png",
+    },
+    {
+      title: "Dining Area",
+      desc: "Elegant and welcoming dining setups crafted for memorable family gatherings.",
+      img: "/images/ourr/servies-pages/full-home/Dinningarea.jpeg",
+    },
+    {
+      title: "Lounge",
+      desc: "Bespoke immersive lounging setups blended perfectly with luxury comfort.",
+      img: "/images/ourr/servies-pages/full-home/6.jpeg",
+    },
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="rounded-2xl md:rounded-3xl border border-stone-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group bg-white"
+    >
+      {/* Image Frame with responsive scaling protection */}
+      <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-stone-100">
+        <img
+          src={item.img}
+          alt={item.title}
+          className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+
+      <div className="p-6 md:p-8 flex-1 flex flex-col">
+        <h3 className="text-xl md:text-2xl font-semibold mb-3 text-stone-900">
+          {item.title}
+        </h3>
+        <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light">
+          {item.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
+
+
       </section>
 
       {/* JOURNEY SECTION */}
@@ -198,6 +221,7 @@ const FullHomeInteriors = () => {
           Begin Your Journey
         </Button>
       </section>
+      <FAQSection page="fullhome"/>
 
       <Footer />
     </div>

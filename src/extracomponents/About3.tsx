@@ -1,6 +1,6 @@
 import React from "react";
-import leftChair from "../assets/image11.png";
-import rightChair from "../assets/image22.png";
+import leftChair from "../assets/111.png";
+import rightChair from "../assets/222.png";
 
 const About3: React.FC = () => {
   return (

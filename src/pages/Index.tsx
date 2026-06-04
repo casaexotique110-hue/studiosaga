@@ -9,6 +9,8 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import ChalkTVSection from '@/components/ChalkTVSection'; 
 import TrustedPartners from "@/components/TrustedPartners";
 import { useNavigate } from "react-router-dom";
+import FAQSection from "@/components/FAQSection";
+
 
 const Index = () => {
   const navigate = useNavigate();
@@ -88,6 +90,7 @@ const Index = () => {
         <TrustedPartners />
         <ClientSection />
         <ChalkTVSection />
+        <FAQSection page="homepage" />
       </main>
 
       {/* <StudiaSagaDisplay /> */}
