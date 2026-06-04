@@ -196,15 +196,7 @@ const Footer = () => {
                 <MediumIcon className="w-4 h-4" />
               </a>
 
-              {/* BLOGSPOT */}
-              <a
-                href="https://www.blogger.com/dashboard/reading?hl=en&tab=jj"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-foreground flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
-              >
-                <BlogspotIcon className="w-4 h-4" />
-              </a>
+
             </div>
           </div>
         </div>
