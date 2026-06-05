@@ -4,6 +4,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
+import Newcomponentui from "@/components/Newcomponentui";
+import LuxuryInteriorsPricing from "@/components/LuxuryInteriorsPricing";
+
 
 
 const LuxuryInteriors = () => {
@@ -160,8 +163,13 @@ const LuxuryInteriors = () => {
       </section>
 
       <PremiumServices />
+      {/* <Newcomponentui /> */}
+          <LuxuryInteriorsPricing />
+
+
       
     <FAQSection page="luxury"/>
+
     
       <Footer />
     </div>

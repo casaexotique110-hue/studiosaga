@@ -13,6 +13,7 @@ import projectImg9 from '../assets/insta/9.jpeg';
 import projectImg10 from '../assets/insta/10.jpeg';
 import projectImg11 from '../assets/insta/11.jpeg';
 import projectImg12 from '../assets/insta/12.jpeg';
+import projectImg13 from '../assets/insta/14.png';
 
 
 
@@ -136,7 +137,7 @@ const interiorProjects: InteriorProject[] = [
     id: 'project13',
     title: 'Indian Traditional / Ethnic',
     spaceType: '13 — Heritage, Rich Textures & Royal Culture',
-    imageUrl: projectImg12,
+    imageUrl: projectImg13,
     projectUrl: '#',
     description: 'Intricately carved premium wood furniture, traditional jali patterns, brass decor elements, and rich ethnic textiles creating a royal cultural ambiance.',
   },
@@ -195,25 +196,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     Style Palette
   </span>
 </Link>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       </div>
 

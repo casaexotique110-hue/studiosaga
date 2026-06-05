@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
-
+import FullHomeInteriorsPricing from "@/components/FullHomeInteriorsPricing";
 
 const FullHomeInteriors = () => {
   return (
@@ -222,6 +222,8 @@ const FullHomeInteriors = () => {
         </Button>
       </section>
       <FAQSection page="fullhome"/>
+
+      {/* <FullHomeInteriorsPricing /> */}
 
       <Footer />
     </div>

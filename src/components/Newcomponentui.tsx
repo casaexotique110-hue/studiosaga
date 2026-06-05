@@ -2,32 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const interiorCategories = [
-  {
-    id: 1,
-    title: "Modular Interior",
-    desc: "Smart modular layouts crafted for modern living with premium finishes and elegant space planning.",
-    images: [
-      "/images/interior/modular/1.jpeg", // Hero Image
-      "/images/interior/modular/2.jpeg", // Slideshow Image 1
-      "/images/interior/modular/3.jpeg", // Slideshow Image 2
-      "/images/interior/modular/4.jpeg", // Slideshow Image 3
-      "/images/interior/modular/5.jpeg", // Slideshow Image 4
-      "/images/interior/modular/6.jpeg", // Slideshow Image 5
-    ],
-  },
-  {
-    id: 2,
-    title: "Full Home Interior",
-    desc: "Complete home transformations blending luxury, comfort, and timeless aesthetics.",
-    images: [
-      "/images/interior/fullhome/1.jpeg", // Hero Image
-      "/images/interior/fullhome/2.jpeg", // Slideshow Image 1
-      "/images/interior/fullhome/3.jpeg", // Slideshow Image 2
-      "/images/interior/fullhome/4.jpeg", // Slideshow Image 3
-      "/images/interior/fullhome/5.jpeg", // Slideshow Image 4
-      "/images/interior/fullhome/6.jpeg", // Slideshow Image 5
-    ],
-  },
+
+
   {
     id: 3,
     title: "Luxury Interior",
@@ -42,6 +18,7 @@ const interiorCategories = [
     ],
   },
 ];
+
 
 // Reusable Auto-Carousel Card Component
 const AutoCarouselCard = ({ images, title, layoutClass, delayMultiplier }) => {

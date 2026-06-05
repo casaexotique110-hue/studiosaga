@@ -240,10 +240,10 @@ const stylesData = [
     tagline: "Heritage, Rich Textures & Royal Culture",
     philosophy: "Rooted deeply in rich cultural history and royal legacies. It seamlessly blends intricately carved solid wood, traditional architecture patterns like Jali and arches, and hand-woven ethnic fabrics to create spaces that look incredibly royal and deeply familiar.",
     images: [
-      "http://googleusercontent.com/image_collection/image_retrieval/8651922252927421479_0",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=600&auto=format&fit=crop",
+      "/images/ourr/India/1.png",
+      "/images/ourr/India/2.png",
+      "/images/ourr/India/3.png",
+      "/images/ourr/India/4.png",
     ],
     elements: [
       "Intricately hand-carved solid teak or rosewood furniture",

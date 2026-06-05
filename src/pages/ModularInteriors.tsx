@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
-
+import ModularInteriorsPricing from "@/components/ModularInteriorsPricing";
 
 const ModularInteriors = () => {
   return (
@@ -170,7 +170,8 @@ const ModularInteriors = () => {
         </Button>
       </section>
 
-              <PremiumServices />
+      <ModularInteriorsPricing />
+      
       
       <FAQSection page="modular"/>
 
