@@ -183,7 +183,7 @@ const stylesData = [
     tagline: "Glamour, Bold Geometry & Sophistication",
     philosophy: "Channeling the vintage luxury of the 1920s high-society hotel spaces. It brings theatrical drama and bold geometric structures together with bespoke craftsmanship for a truly striking statement.",
     images: [
-      "/images/ourr/banner/10.png",
+      "/images/ourr/banner/10.jpeg",
       "/images/ourr/artistic/1.jpeg",
       "/images/ourr/artistic/2.jpeg",
       "/images/ourr/artistic/3.jpeg",
