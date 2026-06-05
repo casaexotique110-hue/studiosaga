@@ -208,7 +208,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Studia Saga. All rights reserved.
             </p>
 
-            <div className="flex gap-6">
+            {/* <div className="flex gap-6">
               <a
                 href="#"
                 className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
@@ -222,7 +222,11 @@ const Footer = () => {
               >
                 Terms of Service
               </a>
-            </div>
+            </div> */}
+
+
+
+
           </div>
         </div>
       </div>

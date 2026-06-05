@@ -4,7 +4,7 @@ import { Phone, Star } from 'lucide-react';
 
 const packages = [
   {
-    name: "5 - 15 Lakh Interior",
+    name: "15 - 30 Lakh Interior",
     tagline: "Modern modular & compact Budget homes",
     priceLabel: "Budget Home Interiors",
     image: "/pricing/Basic.jpeg",
@@ -18,7 +18,7 @@ const packages = [
     ]
   },
   {
-    name: "15 - 30 Lakh Interior",
+    name: "30 - 45 Lakh Interior",
     tagline: "Complete Full home transformation",
     priceLabel: "Most Preferred",
     image: "/pricing/mid.jpeg",
@@ -34,7 +34,7 @@ const packages = [
     ]
   },
   {
-    name: "30 - 45 Lakh Interior",
+    name: "45 - 60 Lakh Interior",
     tagline: "Premium living experience",
     priceLabel: "Premium Home Interiors",
     image: "/pricing/luxury.jpeg",

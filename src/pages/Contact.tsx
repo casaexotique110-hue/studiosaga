@@ -22,7 +22,8 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/xyzrpyza", {
+      // Formspree API Updated
+      const response = await fetch("https://formspree.io/f/mgobvdla", {
         method: "POST",
         body: formData,
         headers: {
@@ -85,7 +86,7 @@ export default function Contact() {
           <div ref={ref} className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             {/* Left Side: Contact Info */}
             <motion.div
-              className="lg:col-span-5 flex flex-col justify-center"
+              className="lg:col-span-4 flex flex-col justify-center"
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -139,7 +140,7 @@ export default function Contact() {
 
             {/* Right Side: Form */}
             <motion.div
-              className="lg:col-span-7"
+              className="lg:col-span-8"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -148,33 +149,64 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 className="bg-card p-8 md:p-12 rounded-sm border border-border/50 shadow-2xl shadow-black/5"
               >
+                {/* Full Name & Phone Number Row */}
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Full Name</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Full Name *</label>
                     <input type="text" name="name" required placeholder="John Doe" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Phone Number *</label>
                     <input type="tel" name="phone" required placeholder="+91 ..." className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
                 </div>
 
+                {/* Property Location & Property Size Row */}
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Email</label>
-                    <input type="email" name="email" placeholder="john@example.com" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Property Location</label>
+                    <input type="text" name="property_location" placeholder="e.g. DLF Phase 5, Gurugram" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">City</label>
-                    <input type="text" name="city" placeholder="Gurugram" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Property Size (sq ft)</label>
+                    <input type="text" name="property_size" placeholder="e.g. 1500" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
                 </div>
 
-                <div className="space-y-2 mb-10">
-                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Message</label>
-                  <textarea name="message" rows={3} placeholder="Tell us about your project..." className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg resize-none placeholder:text-muted-foreground/30 font-serif" />
+                {/* Budget Range & Timeline Select Box Row */}
+                <div className="grid md:grid-cols-2 gap-8 mb-12">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Budget Range</label>
+                    <div className="relative">
+                      <select name="budget_range" defaultValue="" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg font-serif appearance-none cursor-pointer text-foreground/80 pr-8">
+                        <option value="" disabled className="bg-card text-muted-foreground/40">Select Budget</option>
+                        <option value="5-15-lakhs" className="bg-card">₹5– 15 Lakhs</option>
+                        <option value="15-45-lakhs" className="bg-card">₹15 – 45 Lakhs</option>
+                        <option value="45-1cr-plus" className="bg-card">₹45 - 1cr+</option>
+                      </select>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-1 text-muted-foreground/60 text-xs">
+                        ▼
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Timeline</label>
+                    <div className="relative">
+                      <select name="timeline" defaultValue="" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg font-serif appearance-none cursor-pointer text-foreground/80 pr-8">
+                        <option value="" disabled className="bg-card text-muted-foreground/40">Select Timeline</option>
+                        <option value="0-3-months" className="bg-card">0 – 3 Months</option>
+                        <option value="3-6-months" className="bg-card">3 – 6 Months</option>
+                        <option value="6-months-plus" className="bg-card">6+ Months</option>
+                      </select>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-1 text-muted-foreground/60 text-xs">
+                        ▼
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
+                {/* Action Row */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="flex items-center gap-2 text-muted-foreground/70">
                     <Shield className="w-4 h-4" />
@@ -186,7 +218,7 @@ export default function Contact() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
-                    className="px-10 py-4 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest hover:bg-primary/90 transition-all disabled:opacity-70 flex items-center gap-3"
+                    className="px-10 py-4 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest hover:bg-primary/90 transition-all disabled:opacity-70 flex items-center gap-3 w-full md:w-auto justify-center"
                   >
                     {isSubmitting ? "Sending..." : "Send Request"}
                     {!isSubmitting && <ArrowRight className="w-4 h-4" />}
@@ -199,7 +231,7 @@ export default function Contact() {
       </section>
 
       {/* --- 3. GOOGLE MAPS SECTION --- */}
-      <section className="w-full h-[500px]  transition-all duration-700 ease-in-out border-t border-border/30">
+      <section className="w-full h-[500px] transition-all duration-700 ease-in-out border-t border-border/30">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.2916795570836!2d77.0116869!3d28.4406225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x62a0565d15a0e467%3A0x58a0c2c1fce2a77c!2sStudia%20Saga!5e0!3m2!1sen!2sin!4v1780297215125!5m2!1sen!2sin"
           width="100%"
@@ -216,7 +248,3 @@ export default function Contact() {
     </main>
   );
 }
-
-
-
-
