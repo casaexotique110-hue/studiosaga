@@ -15,8 +15,10 @@ import Contact from "./pages/Contact";
 import FullHomeInteriors from "./pages/FullHomeInteriors";
 import LuxuryInteriors from "./pages/LuxuryInteriors";
 import ModularInteriors from "./pages/ModularInteriors";
-import Blogs from "./pages/Blogs";
 
+// BLOG COMPONENTS IMPORT (Sahi path structure ke sath)
+import BlogList from './pages/BlogList';
+import BlogDetails from './pages/BlogDetails';
 
 const queryClient = new QueryClient();
 
@@ -30,34 +32,33 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/our-saga" element={<OurSaga />} />
 
-
           <Route path="/Contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/style-palette" element={<StylePalette />} />
-          <Route path="/blogs" element={<Blogs />} />
 
+          <Route
+            path="/services/full-home-interiors"
+            element={<FullHomeInteriors />}
+          />
 
-  <Route
-    path="/services/full-home-interiors"
-    element={<FullHomeInteriors />}
-  />
+          <Route
+            path="/services/luxury-interiors"
+            element={<LuxuryInteriors />}
+          />
 
-  <Route
-    path="/services/luxury-interiors"
-    element={<LuxuryInteriors />}
-  />
-
-  <Route
-    path="/services/modular-interiors"
-    element={<ModularInteriors />}
-  />
-
-
-
+          <Route
+            path="/services/modular-interiors"
+            element={<ModularInteriors />}
+          />
 
           <Route path="/interior-kit/base/:size" element={<InteriorKitBase />} />
           <Route path="/interior-kit/standard/:size" element={<InteriorKitStandard />} />
           <Route path="/interior-kit/premium/:size" element={<InteriorKitPremium />} />
+
+          {/* DYNAMIC BLOG ROUTES */}
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogDetails />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

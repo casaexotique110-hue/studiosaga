@@ -224,7 +224,7 @@ const Header: React.FC = () => {
        {/* BLOGS */}
 <NavigationMenuItem>
   <Link
-    to="/blogs"
+    to="/blog"
     className={navLinkClass}
   >
     Blogs
