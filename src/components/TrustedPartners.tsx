@@ -10,6 +10,34 @@ import partner4 from "../assets/patterns/4.avif";
 import partner5 from "../assets/patterns/5.avif";
 import partner6 from "../assets/patterns/6.avif";
 import partner7 from "../assets/patterns/7.avif";
+import partner8 from "../assets/patterns/8.png";
+import partner9 from "../assets/patterns/9.png";
+import partner10 from "../assets/patterns/10.png";
+import partner11 from "../assets/patterns/11.png";
+import partner12 from "../assets/patterns/12.png";
+import partner13 from "../assets/patterns/13.png";
+import partner14 from "../assets/patterns/14.png";
+import partner15 from "../assets/patterns/15.png";
+import partner16 from "../assets/patterns/16.png";
+import partner17 from "../assets/patterns/17.png";
+import partner18 from "../assets/patterns/18.png";
+import partner19 from "../assets/patterns/19.png";
+import partner20 from "../assets/patterns/20.png";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const partners: string[] = [
   partner1,
@@ -19,6 +47,19 @@ const partners: string[] = [
   partner5,
   partner6,
   partner7,
+  partner8,
+  partner9,
+  partner10,
+  partner11,
+  partner12,
+  partner13,
+  partner14,
+  partner15,
+  partner16,
+  partner17,
+  partner18,
+  partner19,
+  partner20,
 ];
 
 const TrustedPartners: React.FC = () => {
