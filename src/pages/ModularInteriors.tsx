@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
 import ModularInteriorsPricing from "@/components/ModularInteriorsPricing";
+import { Link } from 'react-router-dom';
 
 const ModularInteriors = () => {
   return (
@@ -36,9 +37,13 @@ const ModularInteriors = () => {
             for modern living.
           </p>
 
-          <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
-            Book Consultation
-          </Button>
+<Link to="/Contact">
+  <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
+    Book Consultation
+  </Button>
+</Link>
+
+
         </div>
       </section>
 

@@ -6,8 +6,7 @@ import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
 import Newcomponentui from "@/components/Newcomponentui";
 import LuxuryInteriorsPricing from "@/components/LuxuryInteriorsPricing";
-
-
+import { Link } from 'react-router-dom';
 
 const LuxuryInteriors = () => {
   return (
@@ -39,9 +38,11 @@ const LuxuryInteriors = () => {
             for luxurious modern living.
           </p>
 
-          <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
-            Book Design Consultation
-          </Button>
+<Link to="/Contact">
+  <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
+    Book Design Consultation
+  </Button>
+</Link>
         </div>
       </section>
 
@@ -162,7 +163,6 @@ const LuxuryInteriors = () => {
         </div>
       </section>
 
-      <PremiumServices />
       {/* <Newcomponentui /> */}
           <LuxuryInteriorsPricing />
 

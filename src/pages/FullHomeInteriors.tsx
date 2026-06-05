@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
 import FullHomeInteriorsPricing from "@/components/FullHomeInteriorsPricing";
+import { Link } from 'react-router-dom';
+
+
 
 const FullHomeInteriors = () => {
   return (
@@ -35,9 +38,11 @@ const FullHomeInteriors = () => {
             lifestyle, elegance, and personality.
           </p>
 
-          <Button className="mt-8 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
-            Book a Design Consultation
-          </Button>
+<Link to="/Contact">
+  <Button className="mt-8 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
+    Book a Design Consultation
+  </Button>
+</Link>
         </div>
       </section>
 

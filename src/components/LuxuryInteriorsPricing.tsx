@@ -17,7 +17,7 @@ const packages: PackageItem[] = [
     name: "45 - 60 Lakh Interior",
     tagline: "Bespoke Premium Living",
     priceLabel: "Elite Elegance",
-    image: "/pricing/luxury-basic.jpeg", // maps to public/pricing/luxury-basic.jpeg
+    image: "/pricing/luxury/1.jpeg", // maps to public/pricing/luxury-basic.jpeg
     isPopular: false,
     ctaText: "Start Your Project",
     features: [
@@ -32,7 +32,7 @@ const packages: PackageItem[] = [
     name: "60 - 80 Lakh Interior",
     tagline: "Ultra Luxury Masterpieces",
     priceLabel: "Most Preferred",
-    image: "/pricing/luxury-mid.jpeg",
+    image: "/pricing/luxury/2.jpeg", // maps to public/pricing/luxury-basic.jpeg
     isPopular: true,
     ctaText: "Start Your Project",
     features: [
@@ -48,7 +48,7 @@ const packages: PackageItem[] = [
     name: "80 Lakh - 1 Cr+ Interior",
     tagline: "Grand Imperial Residences & Villas",
     priceLabel: "Signature Ultra Luxury",
-    image: "/pricing/luxury-elite.jpeg",
+    image: "/pricing/luxury/3.jpeg", // maps to public/pricing/luxury-basic.jpeg
     isPopular: false,
     ctaText: "Start Your Project",
     features: [
