@@ -56,7 +56,7 @@ const App = () => (
           <Route path="/interior-kit/premium/:size" element={<InteriorKitPremium />} />
 
           {/* DYNAMIC BLOG ROUTES */}
-          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
