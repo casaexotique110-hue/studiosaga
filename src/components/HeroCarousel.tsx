@@ -207,7 +207,7 @@ const [whatsappUpdates, setWhatsappUpdates] =
 
         {/* EMAIL FORM */}
         <form
-          action="https://formspree.io/f/xyzrpyza"
+          action="https://formspree.io/f/mgobvdla"
           method="POST"
           className="mt-6 space-y-5"
         >
@@ -319,7 +319,7 @@ const [whatsappUpdates, setWhatsappUpdates] =
           </p>
 
           <form
-            action="https://formspree.io/f/xyzrpyza"
+            action="https://formspree.io/f/mgobvdla"
             method="POST"
             className="mt-6 space-y-4"
           >
