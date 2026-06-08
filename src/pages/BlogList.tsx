@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Menu, X } from 'lucide-react'; // Menu aur X icons responsive toggle ke liye
+import Footer from "@/components/Footer";
+import logo from "@/assets/logo111.png";
 
 // AAPKA BLOGS DATA YAHAN HAI
 export const blogsData = [
@@ -53,72 +55,126 @@ export const blogsData = [
 ];
 
 const BlogList: React.FC = () => {
+  // Mobile drawer state
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section className="bg-[#F8F6F2] py-32 min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        {/* HEADER */}
-        <div className="text-center mb-24">
-          <span className="text-[#B08B57] uppercase tracking-[0.35em] text-xs font-bold">
-            Studia Saga Magazine
-          </span>
-          <h1 className="text-5xl md:text-7xl font-light text-[#1f1f1f] mt-6 font-serif">
-            Design <span className="italic text-[#B08B57]">Insights</span>
-          </h1>
-          <p className="text-[#666] text-lg mt-6 max-w-2xl mx-auto font-light">
-            Expert advice, trend forecasts, and budget-friendly interior guides curated by our studio team.
-          </p>
+    <main className="min-h-screen bg-[#F8F6F2] flex flex-col justify-between relative overflow-hidden">
+      
+      {/* FULLY RESPONSIVE INLINE HEADER */}
+      <header className="absolute top-0 left-0 w-full z-50 bg-transparent py-6 border-b border-stone-200/50">
+        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+          {/* LOGO */}
+          <Link
+            to="/"
+            className="flex items-center"
+          >
+            <img
+              src={logo}
+              alt="Studia Saga"
+              className="h-10 md:h-16 w-auto object-contain"
+            />
+          </Link>
+          
+          {/* DESKTOP NAVIGATION */}
+          <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.2em] font-medium text-stone-600">
+            <Link to="/" className="hover:text-[#B08B57] transition-colors">Home</Link>
+            <Link to="/our-saga" className="hover:text-[#B08B57] transition-colors">Our Saga</Link>
+            <Link to="/style-palette" className="text-[#B08B57] font-bold">Style Palette</Link>
+            <Link to="/contact" className="hover:text-[#B08B57] transition-colors">Contact</Link>
+          </nav>
+
+          {/* MOBILE TOGGLE BUTTON (Ab Yeh Dikhega) */}
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-[#1f1f1f] p-2 focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
-        {/* GRID LAYOUT */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {blogsData.map((blog, idx) => (
-            <motion.div
-              key={blog.slug}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-white rounded-[28px] overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-all duration-500 flex flex-col h-full border border-stone-100"
+        {/* MOBILE DRAWER OVERLAY */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-full left-0 w-full bg-white border-b border-stone-200 shadow-xl z-40 md:hidden py-8 px-6 flex flex-col gap-6 text-center text-sm font-medium uppercase tracking-widest text-stone-800"
             >
-              {/* Image Container */}
-              <div className="h-[240px] overflow-hidden relative">
-                <img 
-                  src={blog.image} 
-                  alt={blog.title} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1500ms]"
-                />
-                <span className="absolute top-4 left-4 bg-[#1d1d1d] text-white text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full font-semibold">
-                  {blog.category}
-                </span>
-              </div>
+              <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-[#B08B57]">Home</Link>
+              <Link to="/portfolio" onClick={() => setIsOpen(false)} className="hover:text-[#B08B57]">Portfolio</Link>
+              <Link to="/blogs" onClick={() => setIsOpen(false)} className="text-[#B08B57] font-bold">Magazine</Link>
+              <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-[#B08B57]">Contact</Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
 
-              {/* Text Body */}
-              <div className="p-8 flex flex-col flex-1 justify-between">
-                <div>
-                  <p className="text-stone-400 text-xs font-medium mb-3">{blog.date}</p>
-                  <h2 className="text-xl font-normal text-[#1f1f1f] leading-snug mb-4 hover:text-[#B08B57] transition-colors duration-300">
-                    {blog.title}
-                  </h2>
-                  <p className="text-stone-500 text-sm font-light leading-relaxed mb-6 line-clamp-3">
-                    {blog.excerpt}
-                  </p>
+      {/* BLOG BODY CONTENT */}
+      <section className="py-32 flex-grow">
+        <div className="max-w-7xl mx-auto px-6">
+          
+          {/* TITLE HEADER */}
+          <div className="text-center mb-24 mt-12">
+            <span className="text-[#B08B57] uppercase tracking-[0.35em] text-xs font-bold">
+              Studia Saga Magazine
+            </span>
+            <h1 className="text-5xl md:text-7xl font-light text-[#1f1f1f] mt-6 font-serif">
+              Design <span className="italic text-[#B08B57]">Insights</span>
+            </h1>
+            <p className="text-[#666] text-lg mt-6 max-w-2xl mx-auto font-light">
+              Expert advice, trend forecasts, and budget-friendly interior guides curated by our studio team.
+            </p>
+          </div>
+
+          {/* GRID LAYOUT */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {blogsData.map((blog, idx) => (
+              <motion.div
+                key={blog.slug}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="bg-white rounded-[28px] overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-all duration-500 flex flex-col h-full border border-stone-100"
+              >
+                <div className="h-[240px] overflow-hidden relative">
+                  <img src={blog.image} alt={blog.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1500ms]" />
+                  <span className="absolute top-4 left-4 bg-[#1d1d1d] text-white text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full font-semibold">
+                    {blog.category}
+                  </span>
                 </div>
 
-                {/* React Router Link */}
-                <Link 
-                  to={`/blog/${blog.slug}`} 
-                  className="text-[#B08B57] uppercase tracking-wider text-xs font-bold flex items-center gap-2 hover:text-[#1d1d1d] transition-colors duration-300 w-fit"
-                >
-                  Read Article <ArrowRight size={14} />
-                </Link>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                <div className="p-8 flex flex-col flex-1 justify-between">
+                  <div>
+                    <p className="text-stone-400 text-xs font-medium mb-3">{blog.date}</p>
+                    <h2 className="text-xl font-normal text-[#1f1f1f] leading-snug mb-4 hover:text-[#B08B57] transition-colors duration-300">
+                      {blog.title}
+                    </h2>
+                    <p className="text-stone-500 text-sm font-light leading-relaxed mb-6 line-clamp-3">
+                      {blog.excerpt}
+                    </p>
+                  </div>
 
-      </div>
-    </section>
+                  <Link 
+                    to={`/blog/${blog.slug}`} 
+                    className="text-[#B08B57] uppercase tracking-wider text-xs font-bold flex items-center gap-2 hover:text-[#1d1d1d] transition-colors duration-300 w-fit"
+                  >
+                    Read Article <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 };
 
