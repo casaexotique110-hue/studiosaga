@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { Layout, Palette, Lamp, Sofa, PenTool, Star } from "lucide-react";
 import Newcomponentui from "@/components/Newcomponentui";
 
-const videoSources = ["/images/2.mp4"];
+const videoSources = ["/images/222.mp4"];
 
 // --- DATA FROM YOUR PDF ---
 const philosophies = [
