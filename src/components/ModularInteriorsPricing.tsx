@@ -14,7 +14,7 @@ interface PackageItem {
 
 const packages: PackageItem[] = [
   {
-    name: "2 - 5 Lakh Interior",
+    name: "3 - 5 Lakh Interior",
     tagline: "Essential Modular Solutions",
     priceLabel: "Smart Budget",
     image: "/pricing/modular/1.png", // maps to public/pricing/modular-basic.jpeg

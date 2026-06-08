@@ -8,52 +8,208 @@ import logo from "@/assets/logo111.png";
 // AAPKA BLOGS DATA YAHAN HAI
 export const blogsData = [
   {
-    slug: "top-affordable-interior-design-ideas",
-    category: "Affordable Interiors",
-    title: "Top Affordable Interior Design Ideas for Modern Homes",
-    date: "May 2026",
+    slug: "2-bhk-interior-design-cost-gurgaon",
+    category: "Interior Cost Guide",
+    title: "How Much Does a 2 BHK Interior Design Cost in Gurgaon? | 2026 Price Guide",
+    date: "June 2026",
     image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800",
-    excerpt: "Discover smart hacks and modular ideas to style your modern home beautifully without burning a hole in your pocket.",
-    content: "Creating a magnificent modern home does not require a massive investment if you plan with strategic structural awareness. The secret lies in balancing cost-effective engineering with high-end aesthetic choices, allowing you to maximize every single square foot of your carpet area without compromising on look or durability.\n\nFirst, shift your focus entirely towards smart modular layouts. Instead of traditional on-site carpentry which involves heavy labor charges and material wastage, modular factory-finished units offer superior machine-edge cutting and clean aesthetics at almost half the overall delivery time. Choosing high-quality laminates with matte or anti-fingerprint finishes over expensive acrylics can save you up to 30% while retaining the exact same premium modern appearance.\n\nSecond, architectural lighting plays a massive role in simulating luxury. You can easily elevate the mood of your entire living space by adding hidden LED strip setups under kitchen cabinets, floating shelves, or false ceilings. Profile lighting creates dramatic geometric focal points that immediately mask simple wall finishes. By choosing multi-functional elements like hidden shoe racks or drop-down utility counters, you save spatial footprint and raw material expenditures simultaneously."
+    excerpt: "Know the complete 2 BHK interior design cost in Gurgaon for 2026. Explore pricing, material costs, modular kitchen costs, wardrobe costs, and budgeting tips.",
+    content: `Buying a new home is exciting, but planning the interiors can quickly become overwhelming. One of the most common questions homeowners ask is: "How much does a 2 BHK interior design cost in Gurgaon?" The answer depends on several factors including the size of the apartment, material selection, scope of work, modular furniture requirements, and the level of customization.
+
+For most Gurgaon homeowners, a complete 2 BHK interior project typically falls between ₹5 lakh and ₹15 lakh, while premium projects can exceed this range depending on materials and finishes.
+
+### Average 2 BHK Interior Design Cost in Gurgaon
+• Basic Interiors: ₹5 – ₹7 Lakhs
+• Mid-Range Interiors: ₹8 – ₹12 Lakhs
+• Premium Interiors: ₹12 – ₹18 Lakhs
+• Luxury Interiors: ₹18 Lakhs+
+
+### What Is Included in a 2 BHK Interior Project?
+• Living Room: TV Unit, Wall Panelling, False Ceiling, Decorative Lighting, Storage Units
+• Modular Kitchen: Base Cabinets, Wall Cabinets, Countertops, Hardware, Accessories (Often ranges from ₹1 lakh to ₹4 lakh)
+• Master Bedroom: Wardrobe, Bed Back Panel, Side Tables, Lighting
+• Second Bedroom: Wardrobe, Study Unit, Storage Solutions
+• Additional Elements: False Ceiling, Electrical Work, Painting, Decorative Features
+
+### Cost Breakdown of a 2 BHK Interior Project
+
+1. Modular Kitchen Cost (Consumes 25–35% of budget)
+• Basic Laminate Kitchen: ₹1 – ₹2 Lakhs
+• Mid-Range Modular Kitchen: ₹2 – ₹4 Lakhs
+• Premium Acrylic Kitchen: ₹4 – ₹6 Lakhs
+
+2. Wardrobe Cost
+• Laminate Wardrobe: ₹70,000 – ₹1.5 Lakhs
+• Sliding Wardrobe: ₹1.5 – ₹3 Lakhs
+• Premium Wardrobe: ₹3 Lakhs+
+
+3. False Ceiling Cost
+• Basic Gypsum Ceiling: ₹80 – ₹120 Per Sq Ft
+• Premium Ceiling Design: ₹150 – ₹300 Per Sq Ft
+
+4. TV Unit Cost
+• Basic TV Unit: ₹25,000 – ₹50,000
+• Custom TV Unit: ₹60,000 – ₹1.5 Lakhs
+
+### Interior Design Cost Per Square Foot in Gurgaon
+• Basic: ₹1,200 – ₹1,800
+• Mid-Range: ₹1,800 – ₹3,000
+• Premium: ₹3,000 – ₹5,000+
+
+### Factors That Affect Interior Design Cost
+• Material Selection: Choice between MDF, HDHMR, Commercial Plywood, or Marine Plywood.
+• Hardware Quality: Premium fittings from brands like Hettich, Hafele, and Blum affect budgets.
+• Customization Level: Customized furniture costs more than standardized modular solutions.
+• Home Size: Larger apartments require more storage and finishing materials.
+
+### How to Reduce Your Interior Design Cost
+• Prioritize Essentials: Start with Kitchen, Wardrobes, and TV Unit before decorative elements.
+• Choose Durable Materials: Investing in quality materials reduces maintenance costs over time.
+• Avoid Over-Customization: Simple, functional designs provide better value.
+
+### Frequently Asked Questions
+• How much does a 2 BHK interior cost in Gurgaon? Most projects fall between ₹5 lakh and ₹15 lakh.
+• What is the average modular kitchen cost in Gurgaon? Between ₹1 lakh and ₹4 lakh, while premium can exceed ₹5 lakh.
+• What is the interior design cost per square foot in Gurgaon? Generally between ₹1,200 and ₹5,000+ per sq ft.
+• How long does a 2 BHK interior project take? 6–12 weeks depending on complexity.
+
+### Final Thoughts
+A well-planned 2 BHK interior project in Gurgaon is about creating a functional, organized, and comfortable home. For most homeowners, budgeting between ₹8 lakh and ₹12 lakh provides a strong balance of quality, durability, and design.`
   },
   {
-    slug: "luxury-living-room-designs-on-budget",
-    category: "Living Room",
-    title: "Luxury Living Room Designs on a Budget",
-    date: "May 2026",
+    slug: "3-bhk-interior-design-cost-gurgaon",
+    category: "Interior Cost Guide",
+    title: "Interior Design Cost for a 3 BHK in Gurgaon (2026): Complete Pricing Guide",
+    date: "June 2026",
     image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=800",
-    excerpt: "Make your primary hosting space look high-end. Learn the secrets of premium textures, colors, and layout configurations.",
-    content: "Your living room is the primary hosting zone of your entire home, making it the ultimate reflection of your lifestyle and personal brand. Infusing a sense of sheer luxury into this space without breaking the bank requires smart focal configurations, optical styling illusions, and highly intentional texture selection.\n\nInstead of splurging on expensive marble paneling or solid wood louvers across the entire living room, establish a single dedicated statement accent wall. Using premium metallic textures, rich architectural wallpapers, or specialized canvas finishes can simulate an elite atmosphere instantly. Pair this focal background with strategic warm lighting installations, such as low-glare COB spotlights and recessed profile lights, to wash the walls with a high-end hospitality vibe.\n\nFlooring is another zone where budgets scale rapidly. Instead of imported Italian marble, look for premium large-format vitrified tiles (such as 800x1600mm or 1200x2400mm sizes) with color-matched seamless epoxy grouting. This creates a highly uniform, expansive floor layout that mirrors luxury marble at a fraction of the structural overhead. Finish the look with clean, low-profile custom media consoles to keep wiring completely concealed and retain an ultra-sleek, premium hosting aura."
+    excerpt: "Discover the complete 3 BHK interior design cost in Gurgaon for 2026. Learn about modular kitchen pricing, wardrobe costs, false ceiling budgets, and complete home interior expenses.",
+    content: `A 3 BHK apartment offers more space, greater flexibility, and the opportunity to create a home that reflects your lifestyle. However, it also comes with a larger interior budget compared to a 2 BHK. One of the most common questions homeowners ask before moving into a new apartment is: "What is the interior design cost for a 3 BHK in Gurgaon?"
+
+In 2026, the average interior design cost for a 3 BHK apartment in Gurgaon ranges between ₹8 lakh and ₹25 lakh, depending on the size of the home, level of customization, materials used, and scope of work.
+
+### Average 3 BHK Interior Design Cost in Gurgaon
+• Basic Interiors: ₹8 – ₹12 Lakhs
+• Mid-Range Interiors: ₹12 – ₹18 Lakhs
+• Premium Interiors: ₹18 – ₹25 Lakhs
+• Luxury Interiors: ₹25 Lakhs+
+
+### What Is Included in a Complete 3 BHK Interior Package?
+• Living Room: TV Unit, Wall Panelling, Decorative Lighting, False Ceiling, Console Units
+• Modular Kitchen: Base Cabinets, Overhead Cabinets, Pantry Units, Countertops, Hardware Accessories
+• Master Bedroom: Wardrobe, Bed Back Panel, Side Tables, Dressing Unit
+• Bedroom 2: Wardrobe, Study Unit, Storage Solutions
+• Bedroom 3: Guest Room Setup, Wardrobe, Multipurpose Furniture
+• Additional Work: False Ceiling, Electrical Modifications, Painting, Decorative Elements, Storage Solutions
+
+### Cost Breakdown of a 3 BHK Interior Project
+
+1. Modular Kitchen Cost
+• Basic Modular Kitchen: ₹1.5 – ₹3 Lakhs
+• Mid-Range Kitchen: ₹3 – ₹5 Lakhs
+• Premium Kitchen: ₹5 – ₹8 Lakhs
+(Finishes like Laminate, Acrylic, PU Paint, or Veneer significantly affect pricing).
+
+2. Wardrobe Cost for a 3 BHK (Accounts for 20–30% of budget)
+• Basic Laminate Wardrobe: ₹1.5 – ₹3 Lakhs
+• Sliding Wardrobes: ₹3 – ₹5 Lakhs
+• Premium Customized Wardrobes: ₹5 Lakhs+
+
+3. False Ceiling Cost
+• Basic Gypsum Ceiling: ₹90 – ₹140 Per Sq Ft
+• Decorative Ceiling: ₹150 – ₹350 Per Sq Ft
+• Premium Customized Ceiling: ₹350+ Per Sq Ft
+
+4. TV Unit and Entertainment Wall Cost
+• Basic TV Unit: ₹40,000 – ₹80,000
+• Customized TV Unit: ₹80,000 – ₹2 Lakhs
+• Premium Feature Wall: ₹2 Lakhs+
+
+### Interior Design Cost Per Square Foot in Gurgaon
+• Basic: ₹1,200 – ₹1,800 | Mid-Range: ₹1,800 – ₹3,000
+• Premium: ₹3,000 – ₹5,000 | Luxury: ₹5,000+
+(Example: A typical 1400 Sq Ft apartment ranges from ₹16.8 Lakhs for Basic up to ₹70 Lakhs for Premium depending on the scope).
+
+### Major Factors Affecting 3 BHK Interior Cost
+• Material Quality: MDF vs HDHMR vs Commercial Plywood vs Marine Plywood.
+• Hardware Selection: Soft-close and premium accessory brands like Hettich, Hafele, Blum, or Ebco.
+• Customization Level: Walk-in wardrobes, home office setups, and entertainment walls increase pricing over standardized solutions.
+• Civil and Renovation Work: Flooring, wall demolition, electrical rewiring, and plumbing modifications.
+
+### Sample 3 BHK Interior Packages
+• Budget-Friendly (₹10–12 Lakhs): Modular kitchen, basic wardrobes, standard false ceiling, TV unit, basic lighting. (Ideal for rentals or first-time owners).
+• Mid-Range (₹15–18 Lakhs): Premium kitchen, better hardware, customized storage, decorative ceilings, designer lighting. (Best for end-use homes).
+• Premium (₹20–25 Lakhs): Fully customized interiors, premium finishes, advanced storage, designer furniture, smart home integration.
+
+### Frequently Asked Questions
+• How much does a 3 BHK interior cost in Gurgaon? Most range between ₹8 lakh and ₹25 lakh.
+• What is the cost of a modular kitchen for a 3 BHK? Typically between ₹1.5 lakh and ₹8 lakh.
+• What is the average interior design cost per square foot? ₹1,200 to ₹5,000+ per sq ft.
+• How long does a project take? 8 to 16 weeks depending on customization.
+• What is the most expensive part? Modular kitchen, wardrobes, civil work, and premium finishes.
+
+### Final Thoughts
+In Gurgaon, most homeowners should budget between ₹12 lakh and ₹18 lakh for a high-quality mid-range interior project. The key to a successful project is balancing design aspirations with practical budgeting.`
   },
   {
-    slug: "minimal-bedroom-interior-trends-2026",
-    category: "Bedroom",
-    title: "Minimal Bedroom Interior Trends in 2026",
-    date: "May 2026",
+    slug: "modular-kitchen-cost-gurgaon-2026",
+    category: "Modular Kitchen",
+    title: "Modular Kitchen Cost in Gurgaon (2026): Complete Pricing Guide",
+    date: "June 2026",
     image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=800",
-    excerpt: "Clean lines, hidden handles, and integrated lighting. Explore what is ruling bedroom designs this year.",
-    content: "The bedroom interior landscape in 2026 is moving heavily away from loud, cluttered layouts and embracing the calm philosophy of functional minimalism. A modern bedroom should act as a private sanctuary—a peaceful, distraction-free environment that maximizes mental relaxation through smart hidden storage and sophisticated subtle palettes.\n\nFloor-to-ceiling wardrobes are ruling bedroom configurations this year. To achieve a perfectly clean look, eliminate external handles entirely. Use push-to-open magnetic latches or integrated sleek finger-pull profiles that blend directly into the wardrobe shutters. This gives your storage a continuous panel look that mimics an architectural wall treatment rather than heavy bedroom furniture pieces.\n\nColor psychology is equally essential. Shift toward soft earthy tones, warm greys, and muted matte veneers paired with subtle texture details. For the headboard area, design a custom low-profile paneling setup featuring built-in warm backlighting. This subtle layer of ambient illumination eliminates the need for bulky side-table lamps, keeping your tabletops beautifully clean while radiating a five-star luxury hotel comfort every evening."
-  },
-  {
-    slug: "best-space-saving-furniture-small-apartments",
-    category: "Furniture",
-    title: "Best Space Saving Furniture for Small Apartments",
-    date: "May 2026",
-    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800",
-    excerpt: "Maximize your carpet area with highly functional modular furniture designed for compact modern living.",
-    content: "Living in a compact urban apartment demands sharp spatial engineering and highly creative furniture design. When floor space is limited, standard standalone furniture blocks free movement and makes the layout feel small. The solution lies in deploying multi-functional, adaptive furniture systems that adapt to your daily routines dynamically.\n\nStart by reclaiming your vertical vertical spaces. Wall-mounted drop-down study desks can fold completely flat against the wall when your office hours are over, opening up precious walking space. Similarly, hydraulic lift storage beds are an absolute must-have for small apartments, offering clean, dust-free hidden compartments to stash heavy suitcases, winter linen, and extra cushions without adding bulky closets.\n\nExtendable dining systems are another game-changer. These modern tables stay compact for your everyday routine but can easily slide or pull out to comfortably seat guests during weekend gatherings. By choosing slim, floating modular TV units and wall-integrated shelving, you keep the entire floor perimeter visible. This clever optical trick makes even the most compact apartment layouts feel airy, open, and fully organized."
-  },
-  {
-    slug: "how-to-make-your-home-look-expensive",
-    category: "Home Styling",
-    title: "How To Make Your Home Look Expensive",
-    date: "May 2026",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800",
-    excerpt: "Small styling details create massive impact. Uncover simple designer secrets to instantly elevate your interior aura.",
-    content: "Transforming a house into a highly sophisticated, expensive-looking residence isn't about spending millions—it's about managing small architectural visual details with extreme precision. Luxury is defined by clean lines, continuous surfaces, and the total absence of visual noise or loose wire clutter.\n\nOne of the most powerful designer secrets is maximizing vertical height through drapery. Always hang your sheer curtains directly from the ceiling level all the way down to touching the floor, rather than mounting them just above the window frame. This instantly fools the eye, making your ceilings appear dramatically taller and giving the entire room an expansive, grand villa look.\n\nNext, upgrade your basic tactile hardware. Swap out standard white plastic electrical switchboards for sleek, matte-finish modular plates. Replace generic cabinet handles with custom brushed brass, matte black, or knurled metal hardware. Finally, apply the 'Rule of Threes' when styling your tables or countertops: group premium decorative elements—like an architectural art book, a textured ceramic vase, and a minimal candle—in odd numbers. This gives the space a highly intentional, designer-curated gallery feel that screams luxury."
+    excerpt: "Planning a new kitchen? Discover the complete modular kitchen cost in Gurgaon for 2026, including laminate, acrylic, PU finish, plywood, layouts, and installation charges.",
+    content: `The kitchen is no longer just a place to cook—it's the heart of the modern home. In 2026, the average modular kitchen cost in Gurgaon ranges between ₹1.2 lakh and ₹7 lakh, while premium designer kitchens can exceed ₹10 lakh.
+
+### Average Modular Kitchen Cost in Gurgaon
+• Basic Modular Kitchen: ₹1.2 – ₹2 Lakhs
+• Mid-Range Kitchen: ₹2 – ₹4 Lakhs
+• Premium Kitchen: ₹4 – ₹7 Lakhs
+• Luxury Customized Kitchen: ₹7 Lakhs+
+
+### What Is Included in a Modular Kitchen?
+• Base Cabinets & Wall Cabinets
+• Countertops (Granite, Quartz, Marble)
+• Hardware (Hinges, Channels, Soft-close drawers, Handles)
+• Accessories (Cutlery trays, Bottle pull-outs, Corner carousels, Tall pantry units)
+
+### Modular Kitchen Cost Based on Layout
+• L-Shaped Kitchen (Best for compact spaces): Small (₹1.2–2L), Medium (₹2–3L), Large (₹3–5L)
+• Parallel Kitchen (Efficient workflow): Standard (₹2–4L), Premium (₹4–6L)
+• U-Shaped Kitchen (Maximum storage): Medium (₹3–5L), Large (₹5–7L)
+• Island Kitchen (For large spaces/villas): Basic Island (₹5L+), Premium Island (₹8L+)
+
+### Kitchen Cost Based on Finishes & Materials
+• Laminate Finish: ₹1.2 Lakh – ₹3 Lakh (Affordable, easy maintenance)
+• Acrylic Finish: ₹2.5 Lakh – ₹5 Lakh (High-gloss premium appearance, moisture resistant)
+• PU Finish: ₹4 Lakh – ₹7 Lakh (Seamless, high-end aesthetics)
+• Veneer Finish: ₹5 Lakh+ (Natural wood appearance, timeless appeal)
+• Core Materials: MDF (₹1–2L), HDHMR (₹2–3.5L), Commercial Plywood (₹2.5–4L), Marine Plywood (₹3.5–6L). Plywood remains the most recommended choice for Gurgaon's climate.
+
+### Cost of Kitchen Accessories & Hardware
+• Cutlery Tray: ₹2,000 – ₹5,000 | Bottle Pull-Out: ₹6,000 – ₹12,000
+• Tall Unit: ₹20,000 – ₹50,000 | Corner Carousel / Magic Corner: ₹15,000 – ₹45,000
+• Hardware Impact: Standard (Ebco/Ozone), Mid-Premium (Hettich/Hafele), Luxury (Blum). Hardware accounts for 15–20% of the kitchen budget.
+• Countertops: Granite (₹250–600/sq ft), Quartz (₹450–900/sq ft), Marble (₹600–2,500+/sq ft).
+
+### Hidden Costs Most Homeowners Forget
+• Electrical Work: ₹10,000 – ₹50,000
+• Plumbing Changes: ₹15,000 – ₹60,000
+• Chimney & Hob Installation: ₹20,000 – ₹80,000
+• Civil Modifications: ₹25,000 – ₹1 Lakh+
+
+### Sample Kitchen Budgets
+• Budget Kitchen (₹1.5 Lakhs): Laminate finish, MDF cabinets, standard hardware.
+• Mid-Range Kitchen (₹3 Lakhs): Plywood cabinets, acrylic finish, Hettich hardware, quartz countertop. (Best value for money).
+• Premium Kitchen (₹6 Lakhs): Marine plywood, PU finish, Blum hardware, premium accessories, designer lighting.
+
+### Frequently Asked Questions
+• How much do most homeowners spend? Between ₹2 lakh and ₹4 lakh for a good quality modular setup.
+• Which finish is better, Acrylic or Laminate? Acrylic looks premium and glossy, while laminate is easier to maintain and cheaper.
+• What is the lifespan? A well-built modular kitchen can last 15–20 years with proper maintenance.
+
+### Final Thoughts
+Instead of choosing the cheapest option, focus on the right combination of durable materials and functional layout design. For most Gurgaon homes, a budget of ₹2.5 lakh to ₹4 lakh delivers the best value.`
   }
 ];
-
 const BlogList: React.FC = () => {
   // Mobile drawer state
   const [isOpen, setIsOpen] = useState(false);
