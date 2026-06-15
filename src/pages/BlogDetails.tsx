@@ -34,6 +34,8 @@ const BlogDetails: React.FC = () => {
     <main className="bg-[#F8F6F2] py-32 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
 
+        
+
         {/* BACK BUTTON */}
         <Link to="/blogs" className="inline-flex items-center gap-2 text-stone-500 hover:text-[#B08B57] transition-colors text-xs uppercase tracking-widest mb-12 font-bold">
           <ArrowLeft size={16} /> Back to Insights
