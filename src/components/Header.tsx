@@ -4,6 +4,7 @@ import {
   Menu,
   ChevronDown,
   ChevronUp,
+  ChevronRight,
 } from "lucide-react";
 
 // LOGO
@@ -35,6 +36,12 @@ const Header: React.FC = () => {
     useState(false);
 
   const [servicesOpen, setServicesOpen] =
+    useState(false);
+
+  const [calculatorOpen, setCalculatorOpen] =
+    useState(false);
+
+  const [mobileCalculatorOpen, setMobileCalculatorOpen] =
     useState(false);
 
   useEffect(() => {
@@ -220,6 +227,70 @@ const Header: React.FC = () => {
   
 </NavigationMenuItem>
 
+              {/* ================= PRICE CALCULATOR HOVER DROPDOWN ================= */}
+              <NavigationMenuItem 
+                className="relative"
+                onMouseEnter={() => setCalculatorOpen(true)}
+                onMouseLeave={() => setCalculatorOpen(false)}
+              >
+                <button
+                  className={`flex items-center gap-1 cursor-pointer ${navLinkClass}`}
+                >
+                  Price Calculator
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      calculatorOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {calculatorOpen && (
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-5 z-50">
+                    <div className="w-[320px] rounded-3xl border border-white/20 bg-white/95 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.12)] p-4">
+                      <div className="space-y-1">
+                        <Link
+                          to="/calculator/home"
+                          className="group/item flex items-center justify-between rounded-xl p-3 hover:bg-[#f8f5f1] transition-all duration-300 text-left"
+                        >
+                          <div>
+                            <h4 className="text-sm font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
+                              Home Interior Price Calculator
+                            </h4>
+                            <p className="text-xs text-stone-500 mt-0.5">Estimate complete home spacing</p>
+                          </div>
+                          <ChevronRight className="w-3.5 h-3.5 text-stone-400 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all" />
+                        </Link>
+
+                        <Link
+                          to="/calculator/kitchen"
+                          className="group/item flex items-center justify-between rounded-xl p-3 bg-amber-50/50 hover:bg-amber-50 transition-all duration-300 text-left border border-amber-100/50"
+                        >
+                          <div>
+                            <h4 className="text-sm font-semibold text-amber-800">
+                              Kitchen Price Calculator
+                            </h4>
+                            <p className="text-xs text-amber-600/80 mt-0.5 font-light">Custom layout & tier estimates (Active)</p>
+                          </div>
+                          <ChevronRight className="w-3.5 h-3.5 text-amber-600 group-hover/item:translate-x-0.5 transition-all" />
+                        </Link>
+
+                        <Link
+                          to="/calculator/wardrobe"
+                          className="group/item flex items-center justify-between rounded-xl p-3 hover:bg-[#f8f5f1] transition-all duration-300 text-left"
+                        >
+                          <div>
+                            <h4 className="text-sm font-semibold text-stone-900 group-hover/item:text-[#BFA181] transition-colors">
+                              Wardrobe Price Calculator
+                            </h4>
+                            <p className="text-xs text-stone-500 mt-0.5">Analyze custom shelving costs</p>
+                          </div>
+                          <ChevronRight className="w-3.5 h-3.5 text-stone-400 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </NavigationMenuItem>
 
        {/* BLOGS */}
 <NavigationMenuItem>
@@ -439,6 +510,54 @@ const Header: React.FC = () => {
                               </div>
                             </Link>
 
+                          </div>
+                        )}
+                      </div>
+
+                      {/* MOBILE PRICE CALCULATORS */}
+                      <div className="space-y-3">
+                        <button
+                          onClick={() =>
+                            setMobileCalculatorOpen(!mobileCalculatorOpen)
+                          }
+                          className="flex items-center justify-between w-full"
+                        >
+                          <span className="text-lg font-serif text-stone-900">
+                            Price Calculator
+                          </span>
+
+                          {mobileCalculatorOpen ? (
+                            <ChevronUp className="w-4 h-4 text-stone-700" />
+                          ) : (
+                            <ChevronDown className="w-4 h-4 text-stone-700" />
+                          )}
+                        </button>
+
+                        {mobileCalculatorOpen && (
+                          <div className="ml-3 border-l border-stone-200 pl-4 space-y-4">
+                            <Link
+                              to="/calculator/home"
+                              className="block text-sm text-stone-600 hover:text-stone-900"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Home Interior Price Calculator
+                            </Link>
+
+                            <Link
+                              to="/calculator/kitchen"
+                              className="block text-sm font-medium text-amber-700 hover:text-amber-800"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Kitchen Price Calculator (Active)
+                            </Link>
+
+                            <Link
+                              to="/calculator/wardrobe"
+                              className="block text-sm text-stone-600 hover:text-stone-900"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Wardrobe Price Calculator
+                            </Link>
                           </div>
                         )}
                       </div>

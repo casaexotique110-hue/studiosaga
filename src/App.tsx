@@ -20,6 +20,11 @@ import ModularInteriors from "./pages/ModularInteriors";
 import BlogList from './pages/BlogList';
 import BlogDetails from './pages/BlogDetails';
 
+// CALCULATORS IMPORT
+import HomeCalculator from "./pages/HomeCalculator";
+import KitchenCalculator from "./pages/KitchenCalculator";
+import WardrobeCalculator from "./pages/WardrobeCalculator";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -58,6 +63,11 @@ const App = () => (
           {/* DYNAMIC BLOG ROUTES */}
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />
+
+          {/* ESTIMATOR ROUTES */}
+          <Route path="/calculator/home" element={<HomeCalculator />} />
+          <Route path="/calculator/kitchen" element={<KitchenCalculator />} />
+          <Route path="/calculator/wardrobe" element={<WardrobeCalculator />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
