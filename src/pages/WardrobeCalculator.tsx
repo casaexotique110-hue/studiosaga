@@ -34,7 +34,7 @@ const WardrobeCalculator: React.FC = () => {
           <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="outline"
-              onClick={() => navigate("/calculator/kitchen")}
+              onClick={() => navigate("/kitchen-price-calculator")}
               className="border-amber-600 text-amber-600 hover:bg-amber-50 hover:text-amber-700 transition-all duration-300 font-light"
             >
               Try Kitchen Price Calculator

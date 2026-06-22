@@ -65,9 +65,9 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogDetails />} />
 
           {/* ESTIMATOR ROUTES */}
-          <Route path="/calculator/home" element={<HomeCalculator />} />
-          <Route path="/calculator/kitchen" element={<KitchenCalculator />} />
-          <Route path="/calculator/wardrobe" element={<WardrobeCalculator />} />
+          <Route path="/home-interior-price-calculator" element={<HomeCalculator />} />
+          <Route path="/kitchen-price-calculator" element={<KitchenCalculator />} />
+          <Route path="/wardrobe-price-calculator" element={<WardrobeCalculator />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

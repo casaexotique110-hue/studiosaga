@@ -249,7 +249,7 @@ const Header: React.FC = () => {
                     <div className="w-[320px] rounded-3xl border border-white/20 bg-white/95 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.12)] p-4">
                       <div className="space-y-1">
                         <Link
-                          to="/calculator/home"
+                          to="/home-interior-price-calculator"
                           className="group/item flex items-center justify-between rounded-xl p-3 hover:bg-[#f8f5f1] transition-all duration-300 text-left"
                         >
                           <div>
@@ -262,7 +262,7 @@ const Header: React.FC = () => {
                         </Link>
 
                         <Link
-                          to="/calculator/kitchen"
+                          to="/kitchen-price-calculator"
                           className="group/item flex items-center justify-between rounded-xl p-3 bg-amber-50/50 hover:bg-amber-50 transition-all duration-300 text-left border border-amber-100/50"
                         >
                           <div>
@@ -275,7 +275,7 @@ const Header: React.FC = () => {
                         </Link>
 
                         <Link
-                          to="/calculator/wardrobe"
+                          to="/wardrobe-price-calculator"
                           className="group/item flex items-center justify-between rounded-xl p-3 hover:bg-[#f8f5f1] transition-all duration-300 text-left"
                         >
                           <div>
@@ -536,7 +536,7 @@ const Header: React.FC = () => {
                         {mobileCalculatorOpen && (
                           <div className="ml-3 border-l border-stone-200 pl-4 space-y-4">
                             <Link
-                              to="/calculator/home"
+                              to="/home-interior-price-calculator"
                               className="block text-sm text-stone-600 hover:text-stone-900"
                               onClick={() => setMobileMenuOpen(false)}
                             >
@@ -544,7 +544,7 @@ const Header: React.FC = () => {
                             </Link>
 
                             <Link
-                              to="/calculator/kitchen"
+                              to="/kitchen-price-calculator"
                               className="block text-sm font-medium text-amber-700 hover:text-amber-800"
                               onClick={() => setMobileMenuOpen(false)}
                             >
@@ -552,7 +552,7 @@ const Header: React.FC = () => {
                             </Link>
 
                             <Link
-                              to="/calculator/wardrobe"
+                              to="/wardrobe-price-calculator"
                               className="block text-sm text-stone-600 hover:text-stone-900"
                               onClick={() => setMobileMenuOpen(false)}
                             >
