@@ -10,6 +10,7 @@ import ChalkTVSection from '@/components/ChalkTVSection';
 import TrustedPartners from "@/components/TrustedPartners";
 import { useNavigate } from "react-router-dom";
 import FAQSection from "@/components/FAQSection";
+import SEO from "@/components/SEO";
 
 
 const Index = () => {
@@ -17,6 +18,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Studia Saga | Best Interior Designer Company in Gurgaon"
+        keywords="Best Interior Designer Company in Gurgaon"
+        description="Studia Saga is the best interior designer company in Gurgaon, creating stylish, functional, and affordable interiors tailored to your lifestyle and budget."
+        canonical="https://www.studiasaga.com/"
+      />
       <Header />
       
       <main>

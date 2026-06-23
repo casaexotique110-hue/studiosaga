@@ -6,10 +6,18 @@ import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
 import ModularInteriorsPricing from "@/components/ModularInteriorsPricing";
 import { Link } from 'react-router-dom';
+import SEO from "@/components/SEO";
+
 
 const ModularInteriors = () => {
   return (
     <div className="bg-white text-stone-800 w-full overflow-x-hidden">
+      <SEO
+        title="Modular Interior Design Company Gurgaon"
+        keywords="Interior Design Company in Gurgaon"
+        description="Looking for an interior design company in Gurgaon? Studia Saga delivers modular, customized, and affordable interiors for modern living."
+        canonical="https://www.studiasaga.com/services/modular-interiors"
+      />
       <Header />
 
       {/* HERO */}

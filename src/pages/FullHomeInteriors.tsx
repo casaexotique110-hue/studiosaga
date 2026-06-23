@@ -6,12 +6,20 @@ import PremiumServices from "@/components/PremiumServices";
 import FAQSection from "@/components/FAQSection";
 import FullHomeInteriorsPricing from "@/components/FullHomeInteriorsPricing";
 import { Link } from 'react-router-dom';
+import SEO from "@/components/SEO";
+
 
 
 
 const FullHomeInteriors = () => {
   return (
     <div className="bg-white text-stone-800 w-full overflow-x-hidden">
+      <SEO
+        title="Full Home Interior Solutions & Interior Designs | Studia Saga"
+        keywords="Full home interior design"
+        description="Studia Saga delivers complete home interior design solutions that turn your vision into beautifully designed living spaces."
+        canonical="https://www.studiasaga.com/services/full-home-interiors"
+      />
       <Header />
 
       {/* HERO SECTION - Wapas original image set kar di hai */}

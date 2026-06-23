@@ -7,10 +7,18 @@ import FAQSection from "@/components/FAQSection";
 import Newcomponentui from "@/components/Newcomponentui";
 import LuxuryInteriorsPricing from "@/components/LuxuryInteriorsPricing";
 import { Link } from 'react-router-dom';
+import SEO from "@/components/SEO";
+
 
 const LuxuryInteriors = () => {
   return (
     <div className="bg-white text-stone-800 w-full overflow-x-hidden">
+      <SEO
+        title="Modern Luxury Interior Design Ideas for Bespoke Luxury Space"
+        keywords="Luxury Modern Interior"
+        description="Explore Luxury Modern Interior design ideas with Studia Saga, creating elegant, stylish, and personalized spaces for modern living."
+        canonical="https://www.studiasaga.com/services/luxury-interiors"
+      />
       <Header />
 
       {/* HERO */}

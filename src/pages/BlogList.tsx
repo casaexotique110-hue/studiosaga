@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+
 import logo from "@/assets/logo111.png";
 import blog1 from "../assets/blogs/1.png";
 import blog2 from "../assets/blogs/2.png";
@@ -796,6 +798,13 @@ const BlogList: React.FC = () => {
 
   return (
     <main className="min-h-screen bg-[#F8F6F2] flex flex-col justify-between relative overflow-hidden">
+      <SEO
+        title="home interior design ideas & best interior solution"
+        keywords="home interior design ideas"
+        description="Home interior design ideas made easy with Studia Saga - creating elegant, functional, and personalised home spaces."
+        canonical="https://www.studiasaga.com/blogs"
+      />
+
 
       {/* HEADER */}
       <header className="absolute top-0 left-0 w-full z-50 bg-transparent py-6 border-b border-stone-200/50">

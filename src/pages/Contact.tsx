@@ -7,6 +7,8 @@ import { Shield, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+
 
 export default function Contact() {
   const ref = useRef(null);
@@ -53,6 +55,12 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Contact Us | Best Interior Designer in Gurgaon"
+        keywords="Best Interior Designer in Gurgaon"
+        description="Contact Studia Saga, the best interior designer in Gurgaon, for creative, affordable, and customized home interior solutions."
+        canonical="https://www.studiasaga.com/Contact"
+      />
       <Header />
 
       {/* --- 1. LUXURY BANNER SECTION --- */}

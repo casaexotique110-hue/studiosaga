@@ -10,6 +10,8 @@ import About3 from "@/extracomponents/About3";
 import { motion } from "framer-motion";
 import { Layout, Palette, Lamp, Sofa, PenTool, Star } from "lucide-react";
 import Newcomponentui from "@/components/Newcomponentui";
+import SEO from "@/components/SEO";
+
 
 const videoSources = ["/images/222.mp4"];
 
@@ -128,6 +130,12 @@ const OurSaga = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Top Residential Interior Design Company in Delhi NCR"
+        keywords="Residential Interior Design"
+        description="Studia Saga is a top residential interior design company in Delhi NCR, transforming homes with creative, practical, and customized interiors."
+        canonical="https://www.studiasaga.com/our-saga"
+      />
       <Header />
 
       {/* ================== HERO BANNER ================== */}

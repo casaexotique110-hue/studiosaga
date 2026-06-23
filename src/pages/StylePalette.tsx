@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import HeroCarousel2 from "@/components/HeroCarousel2";
+import SEO from "@/components/SEO";
+
 
 const stylesData = [
   {
@@ -260,6 +262,12 @@ const StylePalette = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-luxury-gold/30">
+      <SEO
+        title="Modern Interior Design Styles for Home"
+        keywords="modern interior design styles"
+        description="Modern interior design styles for home designed to create stylish, practical, and beautifully balanced living spaces."
+        canonical="https://www.studiasaga.com/style-palette"
+      />
       <Header />
       <HeroCarousel2 />
 
