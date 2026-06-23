@@ -341,7 +341,7 @@ const KitchenCalculator: React.FC = () => {
       }
     } catch (err) {
       console.warn("Backend unavailable. Saving to local simulation store.", err);
-      
+
       // Local backup simulation log
       const savedLeads = JSON.parse(localStorage.getItem("studia_saga_leads") || "[]");
       savedLeads.push(payload);
@@ -424,12 +424,12 @@ const KitchenCalculator: React.FC = () => {
             {/* Premium progress tracker */}
             <div className="mb-12 max-w-2xl mx-auto">
               <div className="flex justify-between items-center relative">
-                
+
                 {/* Background Connecting Line */}
                 <div className="absolute left-0 right-0 top-4 h-[2px] bg-slate-200 -z-10" />
-                
+
                 {/* Active Progress Filler Line */}
-                <div 
+                <div
                   className="absolute left-0 top-4 h-[2px] bg-amber-600 transition-all duration-500 -z-10"
                   style={{ width: `${getStepProgressPercentage() - 12.5}%` }}
                 />
@@ -441,11 +441,11 @@ const KitchenCalculator: React.FC = () => {
                   { id: "ESTIMATE", num: 4, label: "Estimate" }
                 ].map((s) => {
                   const isCurrent = step === s.id;
-                  const isCompleted = 
+                  const isCompleted =
                     (s.id === "LAYOUT" && (step === "PACKAGE" || step === "DIMENSIONS" || step === "ESTIMATE")) ||
                     (s.id === "PACKAGE" && (step === "DIMENSIONS" || step === "ESTIMATE")) ||
                     (s.id === "DIMENSIONS" && step === "ESTIMATE");
-                  
+
                   return (
                     <button
                       key={s.id}
@@ -461,18 +461,16 @@ const KitchenCalculator: React.FC = () => {
                       }
                       className="flex flex-col items-center gap-2 group focus:outline-none"
                     >
-                      <div className={`w-9 h-9 rounded-full flex items-center justify-center border-2 text-sm font-semibold transition-all duration-300 ${
-                        isCurrent 
-                          ? "border-amber-600 bg-amber-600 text-white scale-110 shadow-md shadow-amber-600/20" 
-                          : isCompleted 
-                            ? "border-amber-600 bg-amber-50 text-amber-600" 
-                            : "border-slate-300 bg-white text-slate-400 group-hover:border-slate-400"
-                      }`}>
+                      <div className={`w-9 h-9 rounded-full flex items-center justify-center border-2 text-sm font-semibold transition-all duration-300 ${isCurrent
+                        ? "border-amber-600 bg-amber-600 text-white scale-110 shadow-md shadow-amber-600/20"
+                        : isCompleted
+                          ? "border-amber-600 bg-amber-50 text-amber-600"
+                          : "border-slate-300 bg-white text-slate-400 group-hover:border-slate-400"
+                        }`}>
                         {isCompleted ? <Check className="w-4 h-4 stroke-[3px]" /> : s.num}
                       </div>
-                      <span className={`text-xs tracking-wider uppercase font-medium transition-colors duration-200 ${
-                        isCurrent ? "text-amber-700" : "text-slate-500 font-light"
-                      }`}>
+                      <span className={`text-xs tracking-wider uppercase font-medium transition-colors duration-200 ${isCurrent ? "text-amber-700" : "text-slate-500 font-light"
+                        }`}>
                         {s.label}
                       </span>
                     </button>
@@ -523,7 +521,7 @@ const KitchenCalculator: React.FC = () => {
                         id: "Straight" as KitchenShape,
                         name: "Straight Kitchen",
                         desc: "Compact one-wall design layout, ideal for studio rooms.",
-                        image: "https://images.unsplash.com/photo-1556909212-d5b604dadb72?auto=format&fit=crop&w=600&q=80"
+                        image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=600&q=80"
                       },
                       {
                         id: "U-Shape" as KitchenShape,
@@ -541,27 +539,25 @@ const KitchenCalculator: React.FC = () => {
                       <button
                         key={item.id}
                         onClick={() => handleShapeSelect(item.id)}
-                        className={`group flex flex-col text-left border-2 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer ${
-                          selectedShape === item.id
-                            ? "border-amber-600 bg-amber-50/10"
-                            : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/20"
-                        }`}
+                        className={`group flex flex-col text-left border-2 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer ${selectedShape === item.id
+                          ? "border-amber-600 bg-amber-50/10"
+                          : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/20"
+                          }`}
                       >
                         {/* Layout Image */}
                         <div className="h-48 w-full overflow-hidden relative">
-                          <img 
-                            src={item.image} 
-                            alt={item.name} 
+                          <img
+                            src={item.image}
+                            alt={item.name}
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
-                          
+
                           {/* Selection circle */}
-                          <div className={`absolute top-4 right-4 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
-                            selectedShape === item.id 
-                              ? "bg-amber-600 border-amber-600 text-white" 
-                              : "bg-white/80 border-slate-300 text-transparent"
-                          }`}>
+                          <div className={`absolute top-4 right-4 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${selectedShape === item.id
+                            ? "bg-amber-600 border-amber-600 text-white"
+                            : "bg-white/80 border-slate-300 text-transparent"
+                            }`}>
                             <Check className="w-3.5 h-3.5 stroke-[3px]" />
                           </div>
                         </div>
@@ -632,11 +628,10 @@ const KitchenCalculator: React.FC = () => {
                       <button
                         key={pkg.name}
                         onClick={() => handlePackageSelect(pkg.name)}
-                        className={`group p-6 text-left border-2 rounded-2xl transition-all duration-300 relative flex flex-col justify-between space-y-6 hover:shadow-md cursor-pointer ${
-                          selectedPackage === pkg.name
-                            ? "border-amber-600 bg-amber-50/10 shadow-[0_4px_20px_rgba(217,119,6,0.08)]"
-                            : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/50"
-                        }`}
+                        className={`group p-6 text-left border-2 rounded-2xl transition-all duration-300 relative flex flex-col justify-between space-y-6 hover:shadow-md cursor-pointer ${selectedPackage === pkg.name
+                          ? "border-amber-600 bg-amber-50/10 shadow-[0_4px_20px_rgba(217,119,6,0.08)]"
+                          : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/50"
+                          }`}
                       >
                         {pkg.highlight && (
                           <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-600 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full border border-white">
@@ -672,9 +667,8 @@ const KitchenCalculator: React.FC = () => {
                         </div>
 
                         <div className="w-full text-center pt-2">
-                          <span className={`inline-flex w-full justify-center text-white text-xs font-medium py-3 rounded-xl transition-colors duration-300 ${
-                            selectedPackage === pkg.name ? "bg-amber-600" : "bg-slate-900 hover:bg-amber-600"
-                          }`}>
+                          <span className={`inline-flex w-full justify-center text-white text-xs font-medium py-3 rounded-xl transition-colors duration-300 ${selectedPackage === pkg.name ? "bg-amber-600" : "bg-slate-900 hover:bg-amber-600"
+                            }`}>
                             Choose {pkg.name}
                           </span>
                         </div>
@@ -816,7 +810,7 @@ const KitchenCalculator: React.FC = () => {
                       <div className="text-4xl md:text-5xl font-bold font-serif text-amber-500">
                         {formatCurrency(basePrice)}
                       </div>
-                      
+
                       <div className="pt-2 border-t border-white/10 max-w-sm mx-auto">
                         <p className="text-xs text-slate-400 uppercase tracking-widest mb-1.5">Estimated Range (-10% to +20%)</p>
                         <div className="text-lg md:text-xl font-medium">
@@ -912,9 +906,9 @@ const KitchenCalculator: React.FC = () => {
       {isQuoteModalOpen && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-white rounded-3xl shadow-2xl border border-slate-100 max-w-lg w-full overflow-hidden relative animate-scale-in">
-            
+
             {/* Close Button */}
-            <button 
+            <button
               onClick={() => {
                 setIsQuoteModalOpen(false);
                 setQuoteStep("FORM");
@@ -1032,9 +1026,8 @@ const KitchenCalculator: React.FC = () => {
                           setProfile(prev => ({ ...prev, city: e.target.value }));
                           setProfileErrors(prev => ({ ...prev, city: undefined }));
                         }}
-                        className={`w-full pl-10 pr-4 py-3 bg-white rounded-xl border text-sm appearance-none outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 ${
-                          profileErrors.city ? "border-red-500" : "border-slate-200"
-                        }`}
+                        className={`w-full pl-10 pr-4 py-3 bg-white rounded-xl border text-sm appearance-none outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 ${profileErrors.city ? "border-red-500" : "border-slate-200"
+                          }`}
                       >
                         <option value="">Choose your city</option>
                         <option value="Delhi NCR">Delhi NCR</option>

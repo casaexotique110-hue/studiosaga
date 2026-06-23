@@ -5,6 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import Footer from "@/components/Footer";
 import logo from "@/assets/logo111.png";
+import blog1 from "../assets/blogs/1.png";
+import blog2 from "../assets/blogs/2.png";
+import blog3 from "../assets/blogs/3.png";
+
 
 // CLEAN DATA ARRAY: Line breaks proper hain taaki tables render ho sakein
 export const blogsData = [
@@ -13,7 +17,7 @@ export const blogsData = [
     category: "Interior Cost Guide",
     title: "How Much Does a 2 BHK Interior Design Cost in Gurgaon? | 2026 Price Guide",
     date: "June 2026",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800",
+    image: blog1,
     excerpt: "Know the complete 2 BHK interior design cost in Gurgaon for 2026. Explore pricing, material costs, modular kitchen costs, wardrobe costs, and budgeting tips.",
     content: `Buying a new home is exciting, but planning the interiors can quickly become overwhelming. One of the most common questions homeowners ask is: "How much does a 2 BHK interior design cost in Gurgaon?"
 
@@ -107,7 +111,7 @@ A well-planned 2 BHK interior project in Gurgaon is about creating a functional,
     category: "Interior Cost Guide",
     title: "Interior Design Cost for a 3 BHK in Gurgaon (2026): Complete Pricing Guide",
     date: "June 2026",
-    image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=800",
+    image: blog2,
     excerpt: "Discover the complete 3 BHK interior design cost in Gurgaon for 2026. Learn about modular kitchen pricing, wardrobe costs, false ceiling budgets, and complete home interior expenses.",
     content: `A 3 BHK apartment offers more space, greater flexibility, and the opportunity to create a home that reflects your lifestyle. However, it also comes with a larger interior budget compared to a 2 BHK.
 
@@ -194,7 +198,7 @@ A well-designed 3 BHK home is a long-term investment in comfort and functionalit
     category: "Kitchen Guide",
     title: "Modular Kitchen Cost in Gurgaon (2026): Complete Pricing Guide",
     date: "June 2026",
-    image: "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=800",
+    image: blog3,
     excerpt: "Planning a new kitchen? Discover the complete modular kitchen cost in Gurgaon for 2026, including laminate, acrylic, PU finish, plywood, layouts, and installation charges.",
     content: `The kitchen is no longer just a place to cook—it's the heart of the modern home. Whether you're moving into a new apartment or renovating your existing home, one of the first questions you'll ask is: "How much does a modular kitchen cost in Gurgaon?"
 
