@@ -67,7 +67,7 @@ export default function Contact() {
       <section className="relative w-full h-[50vh] min-h-[400px] lg:h-[80vh] overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
-          alt="Luxury Interior"
+          alt="	Modern Contemporary Living Room Interior"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />

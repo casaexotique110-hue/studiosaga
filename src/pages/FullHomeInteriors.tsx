@@ -26,7 +26,7 @@ const FullHomeInteriors = () => {
       <section className="relative h-[85vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
-          alt="The Complete Home Interiors Experience"
+          alt="		Modern Luxury Living Room Interior"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
@@ -46,11 +46,11 @@ const FullHomeInteriors = () => {
             lifestyle, elegance, and personality.
           </p>
 
-<Link to="/Contact">
-  <Button className="mt-8 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
-    Book a Design Consultation
-  </Button>
-</Link>
+          <Link to="/Contact">
+            <Button className="mt-8 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
+              Book a Design Consultation
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -61,69 +61,69 @@ const FullHomeInteriors = () => {
             What We Offer
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 md:mt-4 text-stone-900">
-            Full Home Interiors 
+            Full Home Interiors
           </h2>
         </div>
 
         {/* 1-column on mobile, 3-columns on desktop */}
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-  {[
-    {
-      title: "Bedroom",
-      desc: "Thoughtfully designed interiors tailored to your lifestyle and vision.",
-      img: "/images/ourr/servies-pages/full-home/Bedroom.jpeg",
-    },
-    {
-      title: "Bathroom",
-      desc: "End-to-end execution with seamless coordination and timely delivery.",
-      img: "/images/ourr/servies-pages/full-home/Bathroom.jpeg",
-    },
-    {
-      title: "Living Room",
-      desc: "Furniture, decor, lighting and styling curated exclusively for your home.",
-      img: "/images/ourr/servies-pages/full-home/Living-Room.jpeg",
-    },
-    {
-      title: "Kids Room",
-      desc: "Vibrant, safe, and imaginative spaces designed to grow with your children.",
-      img: "/images/ourr/servies-pages/full-home/kidsroom.png",
-    },
-    {
-      title: "Dining Area",
-      desc: "Elegant and welcoming dining setups crafted for memorable family gatherings.",
-      img: "/images/ourr/servies-pages/full-home/Dinningarea.jpeg",
-    },
-    {
-      title: "Lounge",
-      desc: "Bespoke immersive lounging setups blended perfectly with luxury comfort.",
-      img: "/images/ourr/servies-pages/full-home/6.jpeg",
-    },
-  ].map((item, i) => (
-    <div
-      key={i}
-      className="rounded-2xl md:rounded-3xl border border-stone-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group bg-white"
-    >
-      {/* Image Frame with responsive scaling protection */}
-      <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-stone-100">
-        <img
-          src={item.img}
-          alt={item.title}
-          className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          {[
+            {
+              title: "Bedroom",
+              desc: "Thoughtfully designed interiors tailored to your lifestyle and vision.",
+              img: "/images/ourr/servies-pages/full-home/Bedroom.jpeg",
+            },
+            {
+              title: "Bathroom",
+              desc: "End-to-end execution with seamless coordination and timely delivery.",
+              img: "/images/ourr/servies-pages/full-home/Bathroom.jpeg",
+            },
+            {
+              title: "Living Room",
+              desc: "Furniture, decor, lighting and styling curated exclusively for your home.",
+              img: "/images/ourr/servies-pages/full-home/Living-Room.jpeg",
+            },
+            {
+              title: "Kids Room",
+              desc: "Vibrant, safe, and imaginative spaces designed to grow with your children.",
+              img: "/images/ourr/servies-pages/full-home/kidsroom.png",
+            },
+            {
+              title: "Dining Area",
+              desc: "Elegant and welcoming dining setups crafted for memorable family gatherings.",
+              img: "/images/ourr/servies-pages/full-home/Dinningarea.jpeg",
+            },
+            {
+              title: "Lounge",
+              desc: "Bespoke immersive lounging setups blended perfectly with luxury comfort.",
+              img: "/images/ourr/servies-pages/full-home/6.jpeg",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="rounded-2xl md:rounded-3xl border border-stone-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group bg-white"
+            >
+              {/* Image Frame with responsive scaling protection */}
+              <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-stone-100">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
 
-      <div className="p-6 md:p-8 flex-1 flex flex-col">
-        <h3 className="text-xl md:text-2xl font-semibold mb-3 text-stone-900">
-          {item.title}
-        </h3>
-        <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light">
-          {item.desc}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
+              <div className="p-6 md:p-8 flex-1 flex flex-col">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 text-stone-900">
+                  {item.title}
+                </h3>
+                <p className="text-stone-600 text-sm md:text-base leading-relaxed font-light">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
 
 
@@ -195,9 +195,9 @@ const FullHomeInteriors = () => {
       {/* VISUAL BACKGROUND SHOWCASE BLOCK */}
       <section className="w-full px-4 sm:px-6 max-w-7xl mx-auto pb-16 md:pb-24">
         <div className="w-full aspect-[4/3] sm:aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-md">
-          <img 
-            src="/images/ourr/servies-pages/full-home/3.jpeg" 
-            alt="Studia Saga Premium Living Room Execution" 
+          <img
+            src="/images/ourr/servies-pages/full-home/3.jpeg"
+            alt="Studia Saga Premium Living Room Execution"
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -216,7 +216,7 @@ const FullHomeInteriors = () => {
         </div>
       </section>
 
-              <PremiumServices />
+      <PremiumServices />
 
 
       {/* CTA SECTION */}
@@ -234,7 +234,7 @@ const FullHomeInteriors = () => {
           Begin Your Journey
         </Button>
       </section>
-      <FAQSection page="fullhome"/>
+      <FAQSection page="fullhome" />
 
       {/* <FullHomeInteriorsPricing /> */}
 

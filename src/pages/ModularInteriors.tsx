@@ -25,7 +25,7 @@ const ModularInteriors = () => {
         {/* Local Public Folder Hero Image (1.png) */}
         <img
           src="/modular/1.jpeg"
-          alt="Premium Modular Interior"
+          alt="	Modern Modular Bedroom Interior"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
@@ -45,11 +45,11 @@ const ModularInteriors = () => {
             for modern living.
           </p>
 
-<Link to="/Contact">
-  <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
-    Book Consultation
-  </Button>
-</Link>
+          <Link to="/Contact">
+            <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
+              Book Consultation
+            </Button>
+          </Link>
 
 
         </div>
@@ -69,7 +69,7 @@ const ModularInteriors = () => {
         {/* 1-col on mobile, 3-col on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {[
-            {                                  
+            {
               title: "Modular Kitchen",
               desc: "Elegant kitchens designed with smart functionality and premium finishes.",
               img: "/modular/kitchen.jpeg" // Applied image 2
@@ -91,13 +91,13 @@ const ModularInteriors = () => {
             >
               {/* Responsive Image Wrapper for Service Cards */}
               <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/3] overflow-hidden bg-stone-100">
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
+                <img
+                  src={item.img}
+                  alt={item.title}
                   className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              
+
               <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-2xl font-semibold mb-3 text-stone-900">
@@ -184,9 +184,9 @@ const ModularInteriors = () => {
       </section>
 
       <ModularInteriorsPricing />
-      
-      
-      <FAQSection page="modular"/>
+
+
+      <FAQSection page="modular" />
 
       <Footer />
     </div>

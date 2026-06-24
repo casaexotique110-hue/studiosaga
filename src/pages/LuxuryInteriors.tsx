@@ -26,7 +26,7 @@ const LuxuryInteriors = () => {
         {/* Responsive Background Image */}
         <img
           src="/luxury-page/1.png"
-          alt="Luxury Interior Hero"
+          alt="	Modern Luxury Lounge Interior"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
@@ -46,11 +46,11 @@ const LuxuryInteriors = () => {
             for luxurious modern living.
           </p>
 
-<Link to="/Contact">
-  <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
-    Book Design Consultation
-  </Button>
-</Link>
+          <Link to="/Contact">
+            <Button className="mt-8 md:mt-10 bg-[#BFA181] hover:bg-[#a88a69] text-white px-6 py-5 md:px-8 md:py-6 rounded-full text-base md:text-lg transition-all active:scale-95">
+              Book Design Consultation
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -77,7 +77,7 @@ const LuxuryInteriors = () => {
       {/* PROCESS */}
       <section className="bg-[#f8f5f1] py-16 md:py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          
+
           {/* Responsive Process Frame - Height scales beautifully now */}
           <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[4/5] max-h-[600px] overflow-hidden rounded-2xl md:rounded-3xl shadow-sm">
             <img
@@ -139,8 +139,8 @@ const LuxuryInteriors = () => {
             "/luxury-page/3.png",
             "/luxury-page/4.png",
           ].map((img, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="w-full aspect-[4/3] sm:aspect-square md:h-[400px] overflow-hidden rounded-2xl md:rounded-3xl shadow-sm group"
             >
               <img
@@ -172,13 +172,13 @@ const LuxuryInteriors = () => {
       </section>
 
       {/* <Newcomponentui /> */}
-          <LuxuryInteriorsPricing />
+      <LuxuryInteriorsPricing />
 
 
-      
-    <FAQSection page="luxury"/>
 
-    
+      <FAQSection page="luxury" />
+
+
       <Footer />
     </div>
   );
