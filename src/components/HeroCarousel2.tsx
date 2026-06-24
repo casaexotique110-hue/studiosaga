@@ -10,18 +10,21 @@ const slides = [
     location: "GURUGRAM",
     title: "Studia Saga HOME",
     category: "RESIDENTIAL",
+    alt: "Modern Contemporary Living Room Interior",
   },
   {
     image: hero2,
     location: "DELHI",
     title: "INDUSTRIAL ELEGANCE",
     category: "COMMERCIAL",
+    alt: "Modern Bedroom",
   },
   {
     image: hero3,
     location: "GURGAON",
     title: "MINIMALIST RETREAT",
     category: "RESIDENTIAL",
+    alt: "Modern Minimalist Bedroom Interior",
   },
 ];
 
@@ -49,9 +52,8 @@ const HeroCarousel2 = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
         >
           <div className="absolute inset-0 bg-black/20 z-10" />
           <img
@@ -66,9 +68,9 @@ const HeroCarousel2 = () => {
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-center animate-fade-in">
-          <h1 className="text-xl sm:text-2xl md:text-6xl lg:text-6xl font-extralight tracking-[0.2em] uppercase leading-tight">
-  {slide.title}
-</h1>
+            <h1 className="text-xl sm:text-2xl md:text-6xl lg:text-6xl font-extralight tracking-[0.2em] uppercase leading-tight">
+              {slide.title}
+            </h1>
           </div>
 
           <div className="absolute bottom-24 right-6 md:right-12 z-20 text-white animate-fade-in">
@@ -98,9 +100,8 @@ const HeroCarousel2 = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === currentSlide ? "bg-white w-8" : "bg-white/50"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${index === currentSlide ? "bg-white w-8" : "bg-white/50"
+              }`}
           />
         ))}
       </div>

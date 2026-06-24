@@ -417,6 +417,12 @@ const KitchenCalculator: React.FC = () => {
           </div>
         )}
 
+
+
+
+
+
+
         {/* ================= ACTIVE WIZARD WRAPPER ================= */}
         {step !== "LANDING" && (
           <div className="max-w-5xl mx-auto px-6 mt-8">

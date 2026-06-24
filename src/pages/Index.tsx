@@ -3,10 +3,9 @@ import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-// import StudiaSagaDisplay from "@/components/StudiaSagaDisplay";
 import ClientSection from "@/components/clients";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import ChalkTVSection from '@/components/ChalkTVSection'; 
+import ChalkTVSection from '@/components/ChalkTVSection';
 import TrustedPartners from "@/components/TrustedPartners";
 import { useNavigate } from "react-router-dom";
 import FAQSection from "@/components/FAQSection";
@@ -25,7 +24,7 @@ const Index = () => {
         canonical="https://www.studiasaga.com/"
       />
       <Header />
-      
+
       <main>
         <HeroCarousel />
 
@@ -37,36 +36,36 @@ const Index = () => {
           </style>
 
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="mb-8 leading-relaxed">    
+            <h2 className="mb-8 leading-relaxed">
               {/* Studia Saga Interiors - Curvy Signature Style */}
-              <span 
-                className="text-2xl md:text-4xl text-foreground mr-3" 
-                style={{ 
-                  fontFamily: "'Birthstone Bounce', cursive", 
+              <span
+                className="text-2xl md:text-4xl text-foreground mr-3"
+                style={{
+                  fontFamily: "'Birthstone Bounce', cursive",
                   fontWeight: '400',
                   display: 'inline-block',
-                  transform: 'rotate(-2px)' 
+                  transform: 'rotate(-2px)'
                 }}
               >
                 Studia Saga Interiors
               </span>
-              
+
               <span className="text-base md:text-lg font-light tracking-wide text-muted-foreground">
                 Affordable Luxury Interior Design & Turnkey Solutions
                 <br />
                 Thoughtfully Designed Interiors. Seamlessly Executed Homes.
               </span>
             </h2>
-            
+
             <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
               <p>
                 At Studia Saga Interiors, we design homes that feel calm, functional, and timeless. From concept to completion, we deliver end-to-end interior solutions with clarity, care, and cost transparency.
               </p>
-              
+
               <p>
                 We specialize in affordable luxury interiors where refined aesthetics meet intelligent planning and disciplined execution.
               </p>
-              
+
               <p>
                 Our team combines research-driven design, smart space planning, and disciplined execution to create interiors that are elegant, practical, and budget-conscious.
               </p>

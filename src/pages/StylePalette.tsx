@@ -303,16 +303,15 @@ const StylePalette = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className={`flex flex-col gap-12 ${
-                  index % 2 === 0
-                    ? "md:flex-row"
-                    : "md:flex-row-reverse"
-                } items-center`}
+                className={`flex flex-col gap-12 ${index % 2 === 0
+                  ? "md:flex-row"
+                  : "md:flex-row-reverse"
+                  } items-center`}
               >
                 {/* Image Section */}
                 <div className="w-full md:w-1/2">
                   <div className="flex flex-col gap-4">
-                    
+
                     {/* Main Image */}
                     <div className="relative group overflow-hidden rounded-sm shadow-xl aspect-[4/3] sm:aspect-video md:aspect-[4/3]">
                       <img
@@ -336,11 +335,10 @@ const StylePalette = () => {
                                 [style.id]: img,
                               }))
                             }
-                            className={`overflow-hidden border rounded-sm cursor-pointer transition-all duration-300 ${
-                              (selectedImages[style.id] || style.images[0]) === img
-                                ? "border-black dark:border-white"
-                                : "border-stone-200 dark:border-stone-800"
-                            }`}
+                            className={`overflow-hidden border rounded-sm cursor-pointer transition-all duration-300 ${(selectedImages[style.id] || style.images[0]) === img
+                              ? "border-black dark:border-white"
+                              : "border-stone-200 dark:border-stone-800"
+                              }`}
                           >
                             <img
                               src={img}
