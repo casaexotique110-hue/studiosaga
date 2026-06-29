@@ -22,8 +22,11 @@ import BlogDetails from './pages/BlogDetails';
 
 // CALCULATORS IMPORT
 import HomeCalculator from "./pages/HomeCalculator";
+import HomeCalculatorWizard from "./pages/HomeCalculatorWizard";
 import KitchenCalculator from "./pages/KitchenCalculator";
+import KitchenCalculatorWizard from "./pages/KitchenCalculatorWizard";
 import WardrobeCalculator from "./pages/WardrobeCalculator";
+import WardrobeCalculatorWizard from "./pages/WardrobeCalculatorWizard";
 
 const queryClient = new QueryClient();
 
@@ -66,8 +69,11 @@ const App = () => (
 
           {/* ESTIMATOR ROUTES */}
           <Route path="/home-interior-price-calculator" element={<HomeCalculator />} />
+          <Route path="/home-interior-price-calculator/calculate" element={<HomeCalculatorWizard />} />
           <Route path="/kitchen-price-calculator" element={<KitchenCalculator />} />
+          <Route path="/kitchen-price-calculator/calculate" element={<KitchenCalculatorWizard />} />
           <Route path="/wardrobe-price-calculator" element={<WardrobeCalculator />} />
+          <Route path="/wardrobe-price-calculator/calculate" element={<WardrobeCalculatorWizard />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
