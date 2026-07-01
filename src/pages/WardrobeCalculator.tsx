@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { 
-  ArrowRight, 
-  ChevronRight, 
-  Sparkles, 
-  Scaling, 
-  Layers, 
-  Gem, 
-  Hammer, 
-  PlusSquare, 
-  ChevronDown, 
+import {
+  ArrowRight,
+  ChevronRight,
+  Sparkles,
+  Scaling,
+  Layers,
+  Gem,
+  Hammer,
+  PlusSquare,
+  ChevronDown,
   CheckCircle,
   HelpCircle
 } from "lucide-react";
@@ -98,11 +98,21 @@ const WardrobeCalculator: React.FC = () => {
     navigate("/wardrobe-price-calculator/calculate");
   };
 
+
+
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col justify-between font-sans">
-      <Header />
 
-      <main className="flex-grow pt-16">
+      {/* Header ko absolute wrapper me dala taaki yeh image ke upar overlay ho sake */}
+      <div className="relative w-full">
+        <div className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+          <Header />
+        </div>
+      </div>
+
+      {/* pt-16 ko hata diya taaki hero section seedha screen ke top se shuru ho */}
+      <main className="flex-grow">
         {/* ================= HERO SECTION ================= */}
         <section className="relative min-h-[75vh] flex items-center justify-start px-6 md:px-16 overflow-hidden">
           <div
@@ -111,7 +121,8 @@ const WardrobeCalculator: React.FC = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/60 to-transparent" />
 
-          <div className="relative z-10 max-w-3xl space-y-6 text-white pt-8">
+          {/* pt-8 ko badhakar pt-24 kiya taaki content Header ke piche na chupe */}
+          <div className="relative z-10 max-w-3xl space-y-6 text-white pt-24 pb-12">
             <span className="inline-flex items-center gap-1.5 text-amber-500 font-medium tracking-widest text-xs uppercase bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-amber-500/25">
               <Sparkles className="w-3.5 h-3.5 animate-pulse" />
               Modular Wardrobes
@@ -199,8 +210,8 @@ const WardrobeCalculator: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {wardrobeTypes.map((type, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="group flex flex-col justify-between border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white"
               >
                 <div className="h-60 w-full overflow-hidden relative">
@@ -301,7 +312,7 @@ const WardrobeCalculator: React.FC = () => {
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="border border-slate-200 rounded-2xl bg-white overflow-hidden transition-all duration-300"
               >
