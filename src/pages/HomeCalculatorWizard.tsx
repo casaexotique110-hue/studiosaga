@@ -125,7 +125,7 @@ const HomeCalculatorWizard: React.FC = () => {
   const handleBhkSelect = (bhk: BHKType) => {
     setSelectedBhk(bhk);
     setHouseSize(getBhkDefaultSize(bhk));
-    
+
     // Auto-select standard rooms for the BHK
     const standardRoomIds: string[] = ["living", "kitchen", "master_bed"];
     if (bhk === "2 BHK") {
@@ -162,7 +162,7 @@ const HomeCalculatorWizard: React.FC = () => {
 
     const rate = getPackageRate(selectedPackage);
     const standardSum = getBhkStandardSum(selectedBhk);
-    
+
     // Calculate total weights of selected rooms
     const selectedRoomsWeight = availableRooms
       .filter((r) => selectedRooms.includes(r.id))
@@ -170,7 +170,7 @@ const HomeCalculatorWizard: React.FC = () => {
 
     // Normalize room weights compared to standard BHK
     const roomScopeMultiplier = selectedRoomsWeight / standardSum;
-    
+
     // Total price estimation: Size * Rate * Scope Multiplier
     const basePrice = houseSize * rate * roomScopeMultiplier;
     const minPrice = basePrice - (basePrice * 0.10); // -10%
@@ -365,20 +365,25 @@ const HomeCalculatorWizard: React.FC = () => {
     }
   };
 
+
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col justify-between font-sans">
-      <Header />
+      {/* <Header /> */}
 
       <main className="flex-grow pb-16 pt-24">
         <div className="max-w-5xl mx-auto px-6 mt-8">
-          
+
           {/* Progress Tracker */}
-          <div className="mb-12 max-w-2xl mx-auto">
-            <div className="flex justify-between items-center relative">
-              <div className="absolute left-0 right-0 top-4 h-[2px] bg-slate-200 -z-10" />
+          <div className="mb-12 max-w-3xl mx-auto px-4 py-6 bg-white/60 backdrop-blur-md rounded-2xl border border-slate-100 shadow-sm">
+            <div className="flex justify-between items-center relative px-2">
+              {/* Gray Background Line */}
+              <div className="absolute left-6 right-6 top-[18px] h-[3px] bg-slate-100 rounded-full -z-10" />
+
+              {/* Filled Amber Progress Line */}
               <div
-                className="absolute left-0 top-4 h-[2px] bg-amber-600 transition-all duration-500 -z-10"
-                style={{ width: `${getStepProgressPercentage() - 10}%` }}
+                className="absolute left-6 top-[18px] h-[3px] bg-gradient-to-r from-amber-500 to-amber-600 transition-all duration-500 ease-out rounded-full -z-10"
+                style={{ width: `${getStepProgressPercentage() - 12}%` }}
               />
 
               {[
@@ -389,7 +394,7 @@ const HomeCalculatorWizard: React.FC = () => {
                 { id: "ESTIMATE", num: 5, label: "Estimate" }
               ].map((s) => {
                 const isCurrent = step === s.id;
-                const isCompleted = 
+                const isCompleted =
                   (s.id === "BHK_TYPE" && step !== "BHK_TYPE") ||
                   (s.id === "HOUSE_SIZE" && step !== "BHK_TYPE" && step !== "HOUSE_SIZE") ||
                   (s.id === "ROOMS_DESIGN" && step !== "BHK_TYPE" && step !== "HOUSE_SIZE" && step !== "ROOMS_DESIGN") ||
@@ -405,17 +410,29 @@ const HomeCalculatorWizard: React.FC = () => {
                       else if (s.id === "PACKAGE" && selectedBhk && houseSize > 0 && selectedRooms.length > 0) setStep("PACKAGE");
                     }}
                     disabled={s.id === "ESTIMATE"}
-                    className="flex flex-col items-center gap-2 group focus:outline-none"
+                    className="flex flex-col items-center gap-3 group focus:outline-none relative min-w-[65px]"
                   >
-                    <div className={`w-9 h-9 rounded-full flex items-center justify-center border-2 text-sm font-semibold transition-all duration-300 ${isCurrent
-                      ? "border-amber-600 bg-amber-600 text-white scale-110 shadow-md shadow-amber-600/20"
+                    {/* Step Circle */}
+                    <div className={`w-9 h-9 rounded-full flex items-center justify-center border-2 text-xs font-bold transition-all duration-300 ${isCurrent
+                      ? "border-amber-600 bg-amber-600 text-white scale-115 shadow-lg shadow-amber-600/30 ring-4 ring-amber-50"
                       : isCompleted
-                        ? "border-amber-600 bg-amber-50 text-amber-600"
-                        : "border-slate-300 bg-white text-slate-400 group-hover:border-slate-400"
+                        ? "border-amber-500 bg-amber-50 text-amber-600 shadow-sm"
+                        : "border-slate-200 bg-white text-slate-400 group-hover:border-slate-300 group-hover:text-slate-600"
                       }`}>
-                      {isCompleted ? <Check className="w-4 h-4 stroke-[3px]" /> : s.num}
+                      {isCompleted ? (
+                        <Check className="w-4 h-4 stroke-[3px] animate-fade-in" />
+                      ) : (
+                        <span>{s.num}</span>
+                      )}
                     </div>
-                    <span className={`text-xs tracking-wider uppercase font-medium transition-colors duration-200 ${isCurrent ? "text-amber-700" : "text-slate-500 font-light"}`}>
+
+                    {/* Step Label */}
+                    <span className={`text-[11px] tracking-wider uppercase font-semibold transition-colors duration-200 ${isCurrent
+                      ? "text-amber-600 font-bold"
+                      : isCompleted
+                        ? "text-slate-700 font-medium"
+                        : "text-slate-400 font-medium group-hover:text-slate-500"
+                      }`}>
                       {s.label}
                     </span>
                   </button>
@@ -442,7 +459,7 @@ const HomeCalculatorWizard: React.FC = () => {
 
           {/* Main Wizard Form Body Card */}
           <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden transition-all duration-300">
-            
+
             {/* Step 1: BHK Type */}
             {step === "BHK_TYPE" && (
               <div className="p-8 md:p-12 space-y-8 animate-fade-in">
@@ -463,7 +480,7 @@ const HomeCalculatorWizard: React.FC = () => {
                       className={`group p-8 text-center border-2 rounded-2xl transition-all duration-300 hover:shadow-lg flex flex-col items-center justify-center space-y-3 cursor-pointer ${selectedBhk === bhk
                         ? "border-amber-600 bg-amber-50/10"
                         : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/20"
-                      }`}
+                        }`}
                     >
                       <Home className={`w-8 h-8 ${selectedBhk === bhk ? "text-amber-600 animate-pulse" : "text-slate-400 group-hover:text-amber-500"}`} />
                       <span className="text-lg font-medium text-slate-800">{bhk} Layout</span>
@@ -541,7 +558,7 @@ const HomeCalculatorWizard: React.FC = () => {
                         className={`group flex items-center justify-between p-5 border-2 rounded-2xl text-left transition-all duration-200 hover:shadow-sm cursor-pointer ${isSelected
                           ? "border-amber-600 bg-amber-50/10"
                           : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/55"
-                        }`}
+                          }`}
                       >
                         <span className={`text-sm font-medium ${isSelected ? "text-amber-800" : "text-slate-700"}`}>
                           {room.name}
@@ -549,7 +566,7 @@ const HomeCalculatorWizard: React.FC = () => {
                         <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${isSelected
                           ? "bg-amber-600 border-amber-600 text-white"
                           : "bg-white border-slate-350"
-                        }`}>
+                          }`}>
                           {isSelected && <Check className="w-3.5 h-3.5 stroke-[3px]" />}
                         </div>
                       </button>
@@ -624,7 +641,7 @@ const HomeCalculatorWizard: React.FC = () => {
                       className={`group p-6 text-left border-2 rounded-2xl transition-all duration-300 relative flex flex-col justify-between space-y-6 hover:shadow-md cursor-pointer ${selectedPackage === pkg.name
                         ? "border-amber-600 bg-amber-50/10 shadow-[0_4px_20px_rgba(217,119,6,0.08)]"
                         : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/50"
-                      }`}
+                        }`}
                     >
                       {pkg.highlight && (
                         <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-600 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full border border-white">
@@ -947,7 +964,7 @@ const HomeCalculatorWizard: React.FC = () => {
         </div>
       )}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
