@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { 
-  ArrowRight, 
-  ChevronRight, 
-  Sparkles, 
-  Home, 
-  Scaling, 
-  LayoutList, 
-  Paintbrush, 
-  ChevronDown, 
+import {
+  ArrowRight,
+  ChevronRight,
+  Sparkles,
+  Home,
+  Scaling,
+  LayoutList,
+  Paintbrush,
+  ChevronDown,
   CheckCircle,
   HelpCircle
 } from "lucide-react";
@@ -112,18 +112,26 @@ const HomeCalculator: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col justify-between font-sans">
-      <Header />
+      {/* Wrapper to overlay header on top of the hero section */}
+      <div className="relative w-full">
+        <div className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+          <Header />
+        </div>
+      </div>
 
-      <main className="flex-grow pt-16">
+      {/* Removed pt-16 so the hero image goes right to the top */}
+      <main className="flex-grow">
         {/* ================= HERO SECTION ================= */}
-        <section className="relative min-h-[75vh] flex items-center justify-start px-6 md:px-16 overflow-hidden">
+        {/* Changed pt-8 to pt-32 to push the text down below the transparent header */}
+        <section className="relative min-h-[85vh] flex items-center justify-start px-6 md:px-16 overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105"
             style={{ backgroundImage: `url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/60 to-transparent" />
 
-          <div className="relative z-10 max-w-3xl space-y-6 text-white pt-8">
+          {/* Added pt-24 to ensure content doesn't collide with the absolute header text */}
+          <div className="relative z-10 max-w-3xl space-y-6 text-white pt-24 pb-12">
             <span className="inline-flex items-center gap-1.5 text-amber-500 font-medium tracking-widest text-xs uppercase bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-amber-500/25">
               <Sparkles className="w-3.5 h-3.5 animate-pulse" />
               Full Home Interiors
@@ -255,8 +263,8 @@ const HomeCalculator: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {bhkTypes.map((bhk, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="group flex flex-col justify-between border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-white"
               >
                 <div className="h-48 w-full overflow-hidden relative">
@@ -351,7 +359,7 @@ const HomeCalculator: React.FC = () => {
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="border border-slate-200 rounded-2xl bg-white overflow-hidden transition-all duration-300"
               >
@@ -396,3 +404,4 @@ const HomeCalculator: React.FC = () => {
 };
 
 export default HomeCalculator;
+
