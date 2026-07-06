@@ -28,6 +28,10 @@ import KitchenCalculatorWizard from "./pages/KitchenCalculatorWizard";
 import WardrobeCalculator from "./pages/WardrobeCalculator";
 import WardrobeCalculatorWizard from "./pages/WardrobeCalculatorWizard";
 
+// PRIVACY POLICY & TERMS CONDITIONS
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -74,6 +78,10 @@ const App = () => (
           <Route path="/kitchen-price-calculator/calculate" element={<KitchenCalculatorWizard />} />
           <Route path="/wardrobe-price-calculator" element={<WardrobeCalculator />} />
           <Route path="/wardrobe-price-calculator/calculate" element={<WardrobeCalculatorWizard />} />
+
+          {/* PRIVACY POLICY & TERMS CONDITIONS */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
