@@ -110,154 +110,228 @@ export default function TermsConditions() {
                 transition={{ delay: 0.2, duration: 0.8 }}
                 className="prose prose-stone dark:prose-invert max-w-none text-muted-foreground font-light leading-relaxed space-y-6"
               >
+                <div className="space-y-2">
+                  <h1 className="font-serif text-3xl text-foreground font-normal">Terms & Conditions</h1>
+                  <p className="text-sm text-muted-foreground/80"><strong>Effective Date:</strong> [Insert Date]</p>
+                </div>
+
                 <p className="text-lg leading-relaxed text-foreground/80">
-                  Welcome to <strong className="text-foreground font-semibold">Studia Saga</strong>. By accessing or using our website, services, or communicating with us, you agree to comply with these Terms & Conditions. If you do not agree with any part of these terms, please discontinue the use of our website and services.
+                  Welcome to <strong className="text-foreground font-semibold">Studia Saga</strong>. These Terms & Conditions govern your use of our website, consultations, and services. By accessing our website or engaging with us, you agree to comply with and be bound by these Terms & Conditions. If you do not agree with these terms, please refrain from using our website or services.
                 </p>
 
                 <hr className="border-border/60 my-8" />
 
                 {/* Section 1 */}
-                <div id="acceptance" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">1. Acceptance of Terms</h2>
+                <div id="about" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">1. About Studia Saga</h2>
                   <p>
-                    By accessing this website, submitting an inquiry, booking a consultation, or using any of our services, you acknowledge that you have read, understood, and agreed to be bound by these Terms & Conditions and our Privacy Policy.
+                    Studia Saga is an interior design and turnkey solutions studio offering thoughtfully designed residential and commercial interiors, modular kitchens, wardrobes, furniture, renovation, space planning, styling, project execution, and related design services.
                   </p>
                 </div>
 
                 {/* Section 2 */}
-                <div id="services" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">2. Services</h2>
+                <div id="acceptance" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">2. Acceptance of Terms</h2>
                   <p>
-                    Studia Saga provides interior design, modular furniture solutions, home renovation consultation, space planning, and related design services. All services are subject to availability and may be modified or discontinued without prior notice.
+                    By using this website, submitting an enquiry, or availing any of our services, you acknowledge that you have read, understood, and accepted these Terms & Conditions.
                   </p>
                 </div>
 
                 {/* Section 3 */}
-                <div id="responsibilities" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">3. User Responsibilities</h2>
-                  <p>By using our website, you agree that:</p>
-                  <ul className="list-disc list-inside pl-4 space-y-2">
-                    <li>The information provided by you is accurate and complete.</li>
-                    <li>You will not misuse the website or attempt to disrupt its functionality.</li>
-                    <li>You will not upload any unlawful, offensive, misleading, or copyrighted material without proper authorization.</li>
-                    <li>You are responsible for maintaining the confidentiality of any information shared with us during the project.</li>
+                <div id="scope-of-services" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">3. Scope of Services</h2>
+                  <p>Our services may include, but are not limited to:</p>
+                  <ul className="list-disc list-inside pl-4 space-y-1">
+                    <li>Interior Design Consultation</li>
+                    <li>Space Planning</li>
+                    <li>Modular Kitchen Design</li>
+                    <li>Wardrobe Design</li>
+                    <li>Turnkey Interior Solutions</li>
+                    <li>Furniture & Décor Selection</li>
+                    <li>Renovation Services</li>
+                    <li>Material Selection</li>
+                    <li>Site Supervision</li>
+                    <li>Project Management</li>
                   </ul>
+                  <p>
+                    The final scope of work will be detailed in the quotation, proposal, or agreement shared with the client.
+                  </p>
                 </div>
 
                 {/* Section 4 */}
-                <div id="consultation" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">4. Design Consultation & Estimates</h2>
+                <div id="consultations" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">4. Consultations</h2>
                   <p>
-                    Any quotation, estimate, pricing, or project timeline shared through our website or during consultation is indicative in nature and may change based on:
-                  </p>
-                  <ul className="list-disc list-inside pl-4 space-y-1">
-                    <li>Site measurements</li>
-                    <li>Material selection</li>
-                    <li>Design revisions</li>
-                    <li>Project scope</li>
-                    <li>Market availability</li>
-                    <li>Client requirements</li>
-                  </ul>
-                  <p>
-                    Final pricing and timelines will be confirmed through a formal proposal or agreement.
+                    Consultations may be conducted online, at our studio, or at the project site. Any consultation fees, if applicable, will be communicated before the appointment.
                   </p>
                 </div>
 
                 {/* Section 5 */}
-                <div id="ip" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">5. Intellectual Property</h2>
+                <div id="quotations-pricing" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">5. Quotations & Pricing</h2>
                   <p>
-                    All content available on this website, including but not limited to text, graphics, images, layouts, logos, icons, designs, videos, and other materials, is the intellectual property of Studia Saga unless otherwise stated.
+                    All quotations are prepared based on the information available at the time of estimation. Prices may change due to:
                   </p>
+                  <ul className="list-disc list-inside pl-4 space-y-1">
+                    <li>Design revisions</li>
+                    <li>Material upgrades</li>
+                    <li>Changes in project scope</li>
+                    <li>Site conditions</li>
+                    <li>Vendor pricing fluctuations</li>
+                    <li>Client-requested modifications</li>
+                  </ul>
                   <p>
-                    No content may be copied, reproduced, modified, distributed, or used without prior written permission.
+                    A revised quotation may be issued whenever necessary.
                   </p>
                 </div>
 
                 {/* Section 6 */}
-                <div id="user-content" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">6. User Submitted Content</h2>
+                <div id="payments" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">6. Payments</h2>
                   <p>
-                    By submitting floor plans, photographs, design references, project details, testimonials, or any other materials, you grant Studia Saga a non-exclusive, royalty-free license to use such content for:
+                    Project work will commence only after the agreed advance payment has been received. The remaining payments shall be made according to the payment schedule mentioned in the project agreement.
                   </p>
-                  <ul className="list-disc list-inside pl-4 space-y-1">
-                    <li>Project execution</li>
-                    <li>Customer communication</li>
-                    <li>Portfolio display</li>
-                    <li>Marketing campaigns</li>
-                    <li>Website galleries</li>
-                    <li>Social media promotions</li>
-                  </ul>
                   <p>
-                    Where applicable, sensitive information will be handled in accordance with our Privacy Policy.
+                    Delayed payments may result in work being paused and may affect the committed project timeline. Applicable taxes will be charged as per prevailing laws.
                   </p>
                 </div>
 
                 {/* Section 7 */}
-                <div id="payments" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">7. Payments</h2>
+                <div id="design-approval" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">7. Design Approval</h2>
                   <p>
-                    Payment terms, milestones, cancellation charges, taxes, and applicable fees will be communicated separately through project proposals or service agreements.
-                  </p>
-                  <p>
-                    Studia Saga reserves the right to suspend or discontinue services in case of delayed or incomplete payments.
+                    Clients are responsible for reviewing and approving all drawings, layouts, finishes, materials, colors, and furniture designs before execution. Any changes requested after approval may result in additional charges and revised timelines.
                   </p>
                 </div>
 
                 {/* Section 8 */}
-                <div id="liability" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">8. Limitation of Liability</h2>
+                <div id="project-timelines" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">8. Project Timelines</h2>
                   <p>
-                    While Studia Saga makes every effort to provide accurate information and high-quality services, we do not guarantee that the website will always be error-free or uninterrupted.
+                    Project timelines are estimates based on the approved scope of work. Delays may occur due to:
                   </p>
+                  <ul className="list-disc list-inside pl-4 space-y-1">
+                    <li>Material availability</li>
+                    <li>Vendor or supplier delays</li>
+                    <li>Site readiness</li>
+                    <li>Delayed client approvals</li>
+                    <li>Changes requested during execution</li>
+                    <li>Payment delays</li>
+                    <li>Circumstances beyond our reasonable control</li>
+                  </ul>
                   <p>
-                    Studia Saga shall not be liable for any indirect, incidental, consequential, or special damages arising from the use of this website or our services.
+                    Studia Saga shall not be held liable for delays arising from these factors.
                   </p>
                 </div>
 
                 {/* Section 9 */}
-                <div id="third-party" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">9. Third-Party Links</h2>
+                <div id="site-conditions" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">9. Site Conditions</h2>
                   <p>
-                    Our website may contain links to third-party websites for your convenience. Studia Saga does not control or endorse these external websites and is not responsible for their content, privacy practices, or services.
+                    Clients are responsible for ensuring that the project site is accessible and ready for execution. Any delays caused by civil work, third-party contractors, permissions, or restricted site access may impact project schedules.
                   </p>
                 </div>
 
                 {/* Section 10 */}
-                <div id="privacy" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">10. Privacy</h2>
+                <div id="third-party-products" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">10. Third-Party Products</h2>
                   <p>
-                    Your use of this website is also governed by our Privacy Policy. By using our website, you consent to the collection and processing of your personal information as described in our Privacy Policy.
+                    Certain products, appliances, hardware, lighting, accessories, or materials may be supplied by third-party manufacturers. Manufacturer warranties shall apply directly to such products.
+                  </p>
+                  <p>
+                    Studia Saga is not responsible for manufacturing defects covered under the manufacturer's warranty.
                   </p>
                 </div>
 
                 {/* Section 11 */}
-                <div id="termination" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">11. Termination</h2>
+                <div id="intellectual-property" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">11. Intellectual Property</h2>
                   <p>
-                    Studia Saga reserves the right to suspend or terminate access to our website or services at any time if these Terms & Conditions are violated or if such action is necessary to protect our business interests.
+                    All concepts, layouts, drawings, renders, presentations, visual designs, graphics, website content, branding elements, and other creative materials produced by Studia Saga remain our intellectual property unless otherwise agreed in writing. They may not be copied, reproduced, distributed, modified, or used without prior written permission.
                   </p>
                 </div>
 
                 {/* Section 12 */}
-                <div id="changes" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">12. Changes to Terms</h2>
+                <div id="ai-content" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">12. AI-Generated Content & Visuals</h2>
                   <p>
-                    We may update these Terms & Conditions from time to time without prior notice. The updated version will be published on this page, and continued use of the website constitutes acceptance of the revised terms.
+                    To enhance the presentation of design concepts and improve the user experience, this website may feature images, illustrations, renderings, mood boards, visual concepts, and written content that are created or enhanced using Artificial Intelligence (AI).
+                  </p>
+                  <p>
+                    These materials are provided for inspiration, conceptual representation, and marketing purposes only. Actual designs, layouts, materials, finishes, colours, furniture, dimensions, and completed projects may vary based on site conditions, client requirements, material availability, technical feasibility, and final approvals.
                   </p>
                 </div>
 
                 {/* Section 13 */}
-                <div id="governing-law" className="scroll-mt-32 space-y-4">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">13. Governing Law</h2>
-                  <p>
-                    These Terms & Conditions shall be governed by and interpreted in accordance with the laws of India. Any disputes arising out of the use of this website or our services shall be subject to the jurisdiction of the competent courts in Gurugram, Haryana.
-                  </p>
+                <div id="website-usage" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">13. Website Usage</h2>
+                  <p>By using this website, you agree not to:</p>
+                  <ul className="list-disc list-inside pl-4 space-y-1">
+                    <li>Attempt unauthorized access to our systems</li>
+                    <li>Upload malicious software or harmful code</li>
+                    <li>Copy, reproduce, or misuse website content</li>
+                    <li>Use the website for unlawful purposes</li>
+                    <li>Interfere with the website's functionality or security</li>
+                  </ul>
                 </div>
 
                 {/* Section 14 */}
+                <div id="portfolio-photography" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">14. Portfolio & Project Photography</h2>
+                  <p>
+                    Unless otherwise agreed in writing, Studia Saga reserves the right to photograph completed projects and use project images for portfolio, website, social media, marketing materials, digital advertising, design awards and publications.
+                  </p>
+                  <p>
+                    Client identities and confidential information will not be disclosed without prior consent unless required by law.
+                  </p>
+                </div>
+
+                {/* Section 15 */}
+                <div id="liability" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">15. Limitation of Liability</h2>
+                  <p>
+                    Studia Saga shall not be liable for any indirect, incidental, consequential, or special damages arising from the use of this website or our services.
+                  </p>
+                  <p>
+                    Our maximum liability, if any, shall be limited to the amount paid by the client for the specific services related to the claim.
+                  </p>
+                </div>
+
+                {/* Section 16 */}
+                <div id="privacy" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">16. Privacy</h2>
+                  <p>
+                    Your use of this website is also governed by our Privacy Policy. By using our website, you consent to the collection and use of your information as described in our Privacy Policy.
+                  </p>
+                </div>
+
+                {/* Section 17 */}
+                <div id="force-majeure" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">17. Force Majeure</h2>
+                  <p>
+                    Studia Saga shall not be responsible for delays or failure to perform obligations due to events beyond our reasonable control, including natural disasters, government restrictions, pandemics, labour disputes, supply chain disruptions, or other unforeseen circumstances.
+                  </p>
+                </div>
+
+                {/* Section 18 */}
+                <div id="changes" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">18. Changes to These Terms</h2>
+                  <p>
+                    We reserve the right to modify or update these Terms & Conditions at any time without prior notice. The latest version published on this website shall supersede all previous versions.
+                  </p>
+                </div>
+
+                {/* Section 19 */}
+                <div id="governing-law" className="scroll-mt-32 space-y-4">
+                  <h2 className="font-serif text-2xl text-foreground font-normal">19. Governing Law</h2>
+                  <p>
+                    These Terms & Conditions shall be governed by and interpreted in accordance with the laws of India. Any disputes arising from the use of this website or our services shall be subject to the exclusive jurisdiction of the courts located in Gurugram, Haryana.
+                  </p>
+                </div>
+
+                {/* Section 20 */}
                 <div id="contact" className="scroll-mt-32 space-y-6">
-                  <h2 className="font-serif text-2xl text-foreground font-normal">14. Contact Us</h2>
+                  <h2 className="font-serif text-2xl text-foreground font-normal">20. Contact Us</h2>
                   <p>
                     If you have any questions regarding these Terms & Conditions, please contact us:
                   </p>
@@ -284,6 +358,9 @@ export default function TermsConditions() {
                         </a>
                       </div>
                     </div>
+                    <p className="text-xs text-muted-foreground pt-2 border-t border-border/20 font-serif">
+                      <strong>Business Hours:</strong> Monday – Saturday | 09:00 AM – 05:00 PM
+                    </p>
                   </div>
                 </div>
 
