@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-            
+
             {/* Left: Sticky Outline Index */}
             <aside className="lg:col-span-4 hidden lg:block">
               <div className="sticky top-32 bg-card border border-border/50 p-8 rounded-sm shadow-sm">
@@ -127,7 +127,7 @@ export default function PrivacyPolicy() {
                 <div id="collection" className="scroll-mt-32 space-y-6">
                   <h2 className="font-serif text-2xl text-foreground font-normal">2. Information We Collect</h2>
                   <p>We may collect the following categories of information:</p>
-                  
+
                   <div className="space-y-4 pl-4 border-l border-luxury-gold/30">
                     <div>
                       <h3 className="font-serif text-lg text-foreground font-normal mb-1">Personal Information</h3>
@@ -174,7 +174,7 @@ export default function PrivacyPolicy() {
                 <div id="legal-basis" className="scroll-mt-32 space-y-6">
                   <h2 className="font-serif text-2xl text-foreground font-normal">3. Legal Basis for Data Processing</h2>
                   <p>Studia Saga processes personal data on the following lawful grounds:</p>
-                  
+
                   <div className="grid gap-4 md:grid-cols-3">
                     <div className="bg-card p-5 border border-border/40 rounded-sm">
                       <h4 className="font-serif text-base text-foreground font-semibold mb-2">Consent</h4>
@@ -195,7 +195,7 @@ export default function PrivacyPolicy() {
                 <div id="purpose" className="scroll-mt-32 space-y-6">
                   <h2 className="font-serif text-2xl text-foreground font-normal">4. Purpose of Data Collection and Usage</h2>
                   <p>Studia Saga collects and uses personal data for the following purposes:</p>
-                  
+
                   <ul className="space-y-4">
                     <li>
                       <strong className="text-foreground font-medium">Service Delivery & Project Execution:</strong> To respond to inquiries, conduct consultations, deliver interior design services, coordinate project execution, and provide customer support.
@@ -279,8 +279,8 @@ export default function PrivacyPolicy() {
                       </div>
                       <div>
                         <p className="text-xs uppercase tracking-wider text-muted-foreground">Email Us</p>
-                        <a href="mailto:info@studiasaga.com" className="text-sm font-semibold text-foreground hover:text-luxury-gold transition-colors font-serif">
-                          info@studiasaga.com
+                        <a href="mailto:studiasagaa@gmail.com" className="text-sm font-semibold text-foreground hover:text-luxury-gold transition-colors font-serif">
+                          studiasagaa@gmail.com
                         </a>
                       </div>
                     </div>
@@ -291,8 +291,8 @@ export default function PrivacyPolicy() {
                       </div>
                       <div>
                         <p className="text-xs uppercase tracking-wider text-muted-foreground">Call Us</p>
-                        <a href="tel:+919667733382" className="text-sm font-semibold text-foreground hover:text-luxury-gold transition-colors font-serif">
-                          +91 XXXXX XXXXX
+                        <a href="tel:+91 9667733382" className="text-sm font-semibold text-foreground hover:text-luxury-gold transition-colors font-serif">
+                          +91  96677 33382
                         </a>
                       </div>
                     </div>

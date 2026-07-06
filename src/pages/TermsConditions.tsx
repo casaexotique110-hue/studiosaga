@@ -267,14 +267,14 @@ export default function TermsConditions() {
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="flex items-center gap-3">
                         <Mail className="w-5 h-5 text-luxury-gold" />
-                        <a href="mailto:info@studiasaga.com" className="text-sm hover:text-luxury-gold transition-colors font-serif">
-                          info@studiasaga.com
+                        <a href="mailto:studiasagaa@gmail.com" className="text-sm hover:text-luxury-gold transition-colors font-serif">
+                          studiasagaa@gmail.com
                         </a>
                       </div>
                       <div className="flex items-center gap-3">
                         <Phone className="w-5 h-5 text-luxury-gold" />
                         <a href="tel:+919667733382" className="text-sm hover:text-luxury-gold transition-colors font-serif font-semibold">
-                          +91 XXXXX XXXXX
+                          +91 96677 33382
                         </a>
                       </div>
                       <div className="flex items-center gap-3 sm:col-span-2">
