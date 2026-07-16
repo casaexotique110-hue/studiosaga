@@ -114,9 +114,9 @@ const HomeCalculatorWizard: React.FC = () => {
   // Pricing constants (INR per sq ft)
   const getPackageRate = (pkg: MaterialPackage): number => {
     switch (pkg) {
-      case "Essential": return 350;
-      case "Premium": return 600;
-      case "Luxury": return 950;
+      case "Essential": return 950;
+      case "Premium": return 1250;
+      case "Luxury": return 1500;
       default: return 600;
     }
   };
