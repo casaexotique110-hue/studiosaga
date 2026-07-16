@@ -602,7 +602,7 @@ const HomeCalculatorWizard: React.FC = () => {
                   {[
                     {
                       name: "Essential" as MaterialPackage,
-                      rate: 350,
+                      rate: 950,
                       sub: "Modern & Cost-Effective",
                       specs: [
                         "Commercial Ply & MDF grids",
@@ -613,7 +613,7 @@ const HomeCalculatorWizard: React.FC = () => {
                     },
                     {
                       name: "Premium" as MaterialPackage,
-                      rate: 600,
+                      rate: 1250,
                       sub: "Elegant & Hardwearing",
                       specs: [
                         "Water-resistant HDHMR substrates",
@@ -625,7 +625,7 @@ const HomeCalculatorWizard: React.FC = () => {
                     },
                     {
                       name: "Luxury" as MaterialPackage,
-                      rate: 950,
+                      rate: 1500,
                       sub: "Bespoke Opulence",
                       specs: [
                         "Boiling waterproof Ply substrates",
