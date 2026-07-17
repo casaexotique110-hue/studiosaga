@@ -27,9 +27,9 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-type CalculatorStep = "LENGTH" | "TYPE" | "FINISH" | "CORE_MATERIAL" | "ACCESSORIES" | "ESTIMATE";
+type CalculatorStep = "LENGTH" | "TYPE" | "FINISH" | "CORE_MATERIAL" | "INTERNAL_FINISH" | "ACCESSORIES" | "SHUTTER_SELECTION" | "ESTIMATE";
 type WardrobeType = "Swing Door" | "Sliding Door";
-type FinishType = "Laminate" | "Acrylic" | "PU Paint" | "Glass/Tinted Profile";
+type FinishType = "Laminate" | "Premium - Membrane" | "Acrylic" | "PU Paint" | "Glass/Tinted Profile";
 type CoreMaterial = "Commercial Plywood" | "HDHMR" | "MDF";
 
 interface LeadProfile {
@@ -54,7 +54,25 @@ const WardrobeCalculatorWizard: React.FC = () => {
   const [wardrobeType, setWardrobeType] = useState<WardrobeType | null>(null);
   const [selectedFinish, setSelectedFinish] = useState<FinishType | null>(null);
   const [selectedMaterial, setSelectedMaterial] = useState<CoreMaterial | null>(null);
+  const [selectedInternalFinishes, setSelectedInternalFinishes] = useState<string[]>([]);
   const [selectedAccessories, setSelectedAccessories] = useState<string[]>([]);
+  const [selectedShutters, setSelectedShutters] = useState<string[]>([]);
+
+  const toggleInternalFinish = (color: string) => {
+    if (selectedInternalFinishes.includes(color)) {
+      setSelectedInternalFinishes(selectedInternalFinishes.filter(c => c !== color));
+    } else {
+      setSelectedInternalFinishes([...selectedInternalFinishes, color]);
+    }
+  };
+
+  const toggleShutter = (shutter: string) => {
+    if (selectedShutters.includes(shutter)) {
+      setSelectedShutters(selectedShutters.filter(s => s !== shutter));
+    } else {
+      setSelectedShutters([...selectedShutters, shutter]);
+    }
+  };
 
   // Quote Modal state
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState<boolean>(false);
@@ -109,6 +127,7 @@ const WardrobeCalculatorWizard: React.FC = () => {
   const getFinishRatePerRft = (finish: FinishType): number => {
     switch (finish) {
       case "Laminate": return 0;
+      case "Premium - Membrane": return 1000;
       case "Acrylic": return 1500;
       case "PU Paint": return 2500;
       case "Glass/Tinted Profile": return 3500;
@@ -166,7 +185,9 @@ const WardrobeCalculatorWizard: React.FC = () => {
     setWardrobeType(null);
     setSelectedFinish(null);
     setSelectedMaterial(null);
+    setSelectedInternalFinishes([]);
     setSelectedAccessories([]);
+    setSelectedShutters([]);
     setProfile({ name: "", email: "", phone: "", city: "" });
     setGeneratedOtp("");
     setEnteredOtp("");
@@ -202,11 +223,11 @@ const WardrobeCalculatorWizard: React.FC = () => {
 
   const handleMaterialSelect = (material: CoreMaterial) => {
     setSelectedMaterial(material);
-    setStep("ACCESSORIES");
+    setStep("INTERNAL_FINISH");
   };
 
   const handleAccessoriesNext = () => {
-    setStep("ESTIMATE");
+    setStep("SHUTTER_SELECTION");
   };
 
   // Form submission / lead verification
@@ -282,7 +303,9 @@ const WardrobeCalculatorWizard: React.FC = () => {
         length: length,
         finish: selectedFinish,
         material: selectedMaterial,
-        accessories: availableAccessories.filter(a => selectedAccessories.includes(a.id)).map(a => a.name)
+        internalFinishes: selectedInternalFinishes,
+        accessories: availableAccessories.filter(a => selectedAccessories.includes(a.id)).map(a => a.name),
+        shutters: selectedShutters
       },
       pricingEstimate: {
         basePrice,
@@ -326,13 +349,26 @@ const WardrobeCalculatorWizard: React.FC = () => {
     }).format(val);
   };
 
+  const stepsOrder: CalculatorStep[] = [
+    "LENGTH",
+    "TYPE",
+    "FINISH",
+    "CORE_MATERIAL",
+    "INTERNAL_FINISH",
+    "ACCESSORIES",
+    "SHUTTER_SELECTION",
+    "ESTIMATE"
+  ];
+
   const getStepProgressPercentage = () => {
     switch (step) {
-      case "LENGTH": return 16.6;
-      case "TYPE": return 33.3;
-      case "FINISH": return 50;
-      case "CORE_MATERIAL": return 66.6;
-      case "ACCESSORIES": return 83.3;
+      case "LENGTH": return 12.5;
+      case "TYPE": return 25;
+      case "FINISH": return 37.5;
+      case "CORE_MATERIAL": return 50;
+      case "INTERNAL_FINISH": return 62.5;
+      case "ACCESSORIES": return 75;
+      case "SHUTTER_SELECTION": return 87.5;
       case "ESTIMATE": return 100;
       default: return 0;
     }
@@ -359,24 +395,23 @@ const WardrobeCalculatorWizard: React.FC = () => {
               <div className="absolute left-0 right-0 top-4 h-[2px] bg-slate-200 -z-10" />
               <div
                 className="absolute left-0 top-4 h-[2px] bg-amber-600 transition-all duration-500 -z-10"
-                style={{ width: `${getStepProgressPercentage() - 8.3}%` }}
+                style={{ width: `${getStepProgressPercentage() - 6.25}%` }}
               />
 
               {[
-                { id: "LENGTH", num: 1, label: "Length" },
-                { id: "TYPE", num: 2, label: "Type" },
-                { id: "FINISH", num: 3, label: "Finish" },
-                { id: "CORE_MATERIAL", num: 4, label: "Core" },
-                { id: "ACCESSORIES", num: 5, label: "Add-ons" },
-                { id: "ESTIMATE", num: 6, label: "Estimate" }
+                { id: "LENGTH" as CalculatorStep, num: 1, label: "Length" },
+                { id: "TYPE" as CalculatorStep, num: 2, label: "Type" },
+                { id: "FINISH" as CalculatorStep, num: 3, label: "Finish" },
+                { id: "CORE_MATERIAL" as CalculatorStep, num: 4, label: "Core" },
+                { id: "INTERNAL_FINISH" as CalculatorStep, num: 5, label: "Int Finish" },
+                { id: "ACCESSORIES" as CalculatorStep, num: 6, label: "Add-ons" },
+                { id: "SHUTTER_SELECTION" as CalculatorStep, num: 7, label: "Shutters" },
+                { id: "ESTIMATE" as CalculatorStep, num: 8, label: "Estimate" }
               ].map((s) => {
+                const currentIndex = stepsOrder.indexOf(step);
+                const stepIndex = stepsOrder.indexOf(s.id);
                 const isCurrent = step === s.id;
-                const isCompleted =
-                  (s.id === "LENGTH" && step !== "LENGTH") ||
-                  (s.id === "TYPE" && step !== "LENGTH" && step !== "TYPE") ||
-                  (s.id === "FINISH" && step !== "LENGTH" && step !== "TYPE" && step !== "FINISH") ||
-                  (s.id === "CORE_MATERIAL" && step !== "LENGTH" && step !== "TYPE" && step !== "FINISH" && step !== "CORE_MATERIAL") ||
-                  (s.id === "ACCESSORIES" && step === "ESTIMATE");
+                const isCompleted = stepIndex < currentIndex;
 
                 return (
                   <button
@@ -386,7 +421,9 @@ const WardrobeCalculatorWizard: React.FC = () => {
                       else if (s.id === "TYPE" && length > 0) setStep("TYPE");
                       else if (s.id === "FINISH" && length > 0 && wardrobeType) setStep("FINISH");
                       else if (s.id === "CORE_MATERIAL" && length > 0 && wardrobeType && selectedFinish) setStep("CORE_MATERIAL");
+                      else if (s.id === "INTERNAL_FINISH" && length > 0 && wardrobeType && selectedFinish && selectedMaterial) setStep("INTERNAL_FINISH");
                       else if (s.id === "ACCESSORIES" && length > 0 && wardrobeType && selectedFinish && selectedMaterial) setStep("ACCESSORIES");
+                      else if (s.id === "SHUTTER_SELECTION" && length > 0 && wardrobeType && selectedFinish && selectedMaterial) setStep("SHUTTER_SELECTION");
                     }}
                     disabled={s.id === "ESTIMATE"}
                     className="flex flex-col items-center gap-2 group focus:outline-none"
@@ -416,7 +453,9 @@ const WardrobeCalculatorWizard: React.FC = () => {
                 else if (step === "TYPE") setStep("LENGTH");
                 else if (step === "FINISH") setStep("TYPE");
                 else if (step === "CORE_MATERIAL") setStep("FINISH");
-                else if (step === "ACCESSORIES") setStep("CORE_MATERIAL");
+                else if (step === "INTERNAL_FINISH") setStep("CORE_MATERIAL");
+                else if (step === "ACCESSORIES") setStep("INTERNAL_FINISH");
+                else if (step === "SHUTTER_SELECTION") setStep("ACCESSORIES");
               }}
               className="inline-flex items-center gap-1.5 text-slate-500 hover:text-slate-800 text-sm font-light mb-8 transition-colors duration-200 group"
             >
@@ -520,9 +559,10 @@ const WardrobeCalculatorWizard: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 pt-2">
                   {[
                     { id: "Laminate" as FinishType, desc: "Budget-friendly, highly scratch-resistant and functional." },
+                    { id: "Premium - Membrane" as FinishType, desc: "Seamless elegant polymer foil membrane pressed over substrate." },
                     { id: "Acrylic" as FinishType, desc: "High gloss mirror sheen, premium reflective visual texture." },
                     { id: "PU Paint" as FinishType, desc: "Sleek, seamless hand-painted matte or gloss luxury lacquer finish." },
                     { id: "Glass/Tinted Profile" as FinishType, desc: "Tinted translucent profile safety glass with metal framing." }
@@ -579,12 +619,63 @@ const WardrobeCalculatorWizard: React.FC = () => {
               </div>
             )}
 
-            {/* Step 5: Accessories */}
+            {/* Step 5: Internal Finish */}
+            {step === "INTERNAL_FINISH" && (
+              <div className="p-8 md:p-12 space-y-8 animate-fade-in">
+                <div className="space-y-2">
+                  <h2 className="text-2xl md:text-3xl font-serif text-slate-900 font-light">
+                    Step 5: Select internal finish
+                  </h2>
+                  <p className="text-slate-500 font-light text-sm">
+                    Select internal finish colors from the options below. Multi-selection is supported.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                  {["Red", "Blue", "Green", "Yellow", "Pink", "Gray"].map((color) => {
+                    const isSelected = selectedInternalFinishes.includes(color);
+                    return (
+                      <button
+                        key={color}
+                        type="button"
+                        onClick={() => toggleInternalFinish(color)}
+                        className={`group flex items-center justify-between p-5 border-2 rounded-2xl text-left transition-all duration-200 hover:shadow-sm cursor-pointer ${isSelected
+                          ? "border-amber-600 bg-amber-50/10"
+                          : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/55"
+                        }`}
+                      >
+                        <span className={`text-sm font-medium ${isSelected ? "text-amber-800 font-semibold" : "text-slate-700"}`}>
+                          {color}
+                        </span>
+                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${isSelected
+                          ? "bg-amber-600 border-amber-600 text-white"
+                          : "bg-white border-slate-350"
+                        }`}>
+                          {isSelected && <Check className="w-3.5 h-3.5 stroke-[3px]" />}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="flex justify-end pt-4">
+                  <Button
+                    onClick={() => setStep("ACCESSORIES")}
+                    className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-5 rounded-xl shadow-md transition-all duration-300 flex items-center gap-1.5"
+                  >
+                    <span>Proceed to Add-ons</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {/* Step 6: Accessories */}
             {step === "ACCESSORIES" && (
               <div className="p-8 md:p-12 space-y-8 animate-fade-in">
                 <div className="space-y-2">
                   <h2 className="text-2xl md:text-3xl font-serif text-slate-900 font-light">
-                    Step 5: Pick organizer accessories
+                    Step 6: Pick organizer accessories
                   </h2>
                   <p className="text-slate-500 font-light text-sm">
                     Select wardrobe add-ons and space layout accessories to include in your estimate.
@@ -597,6 +688,7 @@ const WardrobeCalculatorWizard: React.FC = () => {
                     return (
                       <button
                         key={acc.id}
+                        type="button"
                         onClick={() => toggleAccessory(acc.id)}
                         className={`group flex items-center justify-between p-5 border-2 rounded-2xl text-left transition-all duration-200 hover:shadow-sm cursor-pointer ${isSelected
                           ? "border-amber-600 bg-amber-50/10"
@@ -607,7 +699,6 @@ const WardrobeCalculatorWizard: React.FC = () => {
                           <span className={`text-sm font-medium block ${isSelected ? "text-amber-800" : "text-slate-700"}`}>
                             {acc.name}
                           </span>
-                          <span className="text-xs text-slate-400 font-light block">+ {formatCurrency(acc.cost)}</span>
                         </div>
                         <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${isSelected
                           ? "bg-amber-600 border-amber-600 text-white"
@@ -623,6 +714,57 @@ const WardrobeCalculatorWizard: React.FC = () => {
                 <div className="flex justify-end pt-4">
                   <Button
                     onClick={handleAccessoriesNext}
+                    className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-5 rounded-xl shadow-md transition-all duration-300 flex items-center gap-1.5"
+                  >
+                    <span>Proceed to Shutters</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {/* Step 7: Shutter Selection */}
+            {step === "SHUTTER_SELECTION" && (
+              <div className="p-8 md:p-12 space-y-8 animate-fade-in">
+                <div className="space-y-2">
+                  <h2 className="text-2xl md:text-3xl font-serif text-slate-900 font-light">
+                    Step 7: Shutter Selection
+                  </h2>
+                  <p className="text-slate-500 font-light text-sm">
+                    Select shutter designs/profiles. Multi-selection is supported.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                  {["A", "B", "C", "D"].map((shutter) => {
+                    const isSelected = selectedShutters.includes(shutter);
+                    return (
+                      <button
+                        key={shutter}
+                        type="button"
+                        onClick={() => toggleShutter(shutter)}
+                        className={`group flex items-center justify-between p-5 border-2 rounded-2xl text-left transition-all duration-200 hover:shadow-sm cursor-pointer ${isSelected
+                          ? "border-amber-600 bg-amber-50/10"
+                          : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/55"
+                        }`}
+                      >
+                        <span className={`text-sm font-medium ${isSelected ? "text-amber-800 font-semibold" : "text-slate-700"}`}>
+                          Shutter {shutter}
+                        </span>
+                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${isSelected
+                          ? "bg-amber-600 border-amber-600 text-white"
+                          : "bg-white border-slate-350"
+                        }`}>
+                          {isSelected && <Check className="w-3.5 h-3.5 stroke-[3px]" />}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="flex justify-end pt-4">
+                  <Button
+                    onClick={() => setStep("ESTIMATE")}
                     className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-5 rounded-xl shadow-md transition-all duration-300 flex items-center gap-1.5"
                   >
                     <span>Proceed to Estimate</span>
@@ -659,7 +801,7 @@ const WardrobeCalculatorWizard: React.FC = () => {
                   <div className="p-8 space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
                       <div className="space-y-1">
-                        <span className="text-slate-400 font-light block">Wardrobe Width / Length:</span>
+                        <span className="text-slate-400 font-light block">Wardrobe Length:</span>
                         <span className="font-semibold text-slate-800 text-base">{length} ft</span>
                       </div>
                       <div className="space-y-1">
@@ -673,6 +815,18 @@ const WardrobeCalculatorWizard: React.FC = () => {
                       <div className="space-y-1">
                         <span className="text-slate-400 font-light block">Core Wood substrate:</span>
                         <span className="font-semibold text-slate-800 text-base">{selectedMaterial}</span>
+                      </div>
+                      <div className="space-y-1">
+                        <span className="text-slate-400 font-light block">Internal Finishes:</span>
+                        <span className="font-semibold text-slate-800 text-base">
+                          {selectedInternalFinishes.length > 0 ? selectedInternalFinishes.join(", ") : "None"}
+                        </span>
+                      </div>
+                      <div className="space-y-1">
+                        <span className="text-slate-400 font-light block">Shutter Selection:</span>
+                        <span className="font-semibold text-slate-800 text-base">
+                          {selectedShutters.length > 0 ? selectedShutters.join(", ") : "None"}
+                        </span>
                       </div>
                     </div>
 

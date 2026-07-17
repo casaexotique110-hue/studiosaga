@@ -50,8 +50,21 @@ const HomeCalculatorWizard: React.FC = () => {
   const [step, setStep] = useState<CalculatorStep>("BHK_TYPE");
   const [selectedBhk, setSelectedBhk] = useState<BHKType | null>(null);
   const [houseSize, setHouseSize] = useState<number>(0);
-  const [selectedRooms, setSelectedRooms] = useState<string[]>([]);
+  const [roomQuantities, setRoomQuantities] = useState<Record<string, number>>({
+    living: 0,
+    kitchen: 0,
+    master_bed: 0,
+    kids_bed: 0,
+    guest_bed: 0,
+    dining: 0,
+    bathrooms: 0,
+    balcony: 0,
+    pooja: 0,
+  });
   const [selectedPackage, setSelectedPackage] = useState<MaterialPackage | null>(null);
+
+  // Derived selectedRooms array for compatibility
+  const selectedRooms = Object.keys(roomQuantities).filter((id) => roomQuantities[id] > 0);
 
   // Form profile state
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState<boolean>(false);
@@ -121,13 +134,32 @@ const HomeCalculatorWizard: React.FC = () => {
     }
   };
 
-  // Auto-fill default size on BHK selection
-  const handleBhkSelect = (bhk: BHKType) => {
-    setSelectedBhk(bhk);
-    setHouseSize(getBhkDefaultSize(bhk));
+  const getMaxQuantityForBhk = (bhk: BHKType | null): number => {
+    if (!bhk) return 0;
+    switch (bhk) {
+      case "1 BHK": return 1;
+      case "2 BHK": return 2;
+      case "3 BHK": return 3;
+      case "4 BHK": return 4;
+      case "5 BHK+": return 10;
+      default: return 0;
+    }
+  };
 
-    // Auto-select standard rooms for the BHK
-    const standardRoomIds: string[] = ["living", "kitchen", "master_bed"];
+  const getDefaultQuantities = (bhk: BHKType): Record<string, number> => {
+    const defaults: Record<string, number> = {
+      living: 0,
+      kitchen: 0,
+      master_bed: 0,
+      kids_bed: 0,
+      guest_bed: 0,
+      dining: 0,
+      bathrooms: 0,
+      balcony: 0,
+      pooja: 0,
+    };
+
+    const standardRoomIds = ["living", "kitchen", "master_bed"];
     if (bhk === "2 BHK") {
       standardRoomIds.push("guest_bed", "bathrooms");
     } else if (bhk === "3 BHK") {
@@ -135,7 +167,34 @@ const HomeCalculatorWizard: React.FC = () => {
     } else if (bhk === "4 BHK" || bhk === "5 BHK+") {
       standardRoomIds.push("kids_bed", "guest_bed", "dining", "bathrooms", "balcony", "pooja");
     }
-    setSelectedRooms(standardRoomIds);
+
+    standardRoomIds.forEach(id => {
+      defaults[id] = 1;
+    });
+
+    return defaults;
+  };
+
+  // Auto-fill default size on BHK selection
+  const handleBhkSelect = (bhk: BHKType) => {
+    setSelectedBhk(bhk);
+    setHouseSize(getBhkDefaultSize(bhk));
+
+    const maxQty = getMaxQuantityForBhk(bhk);
+    setRoomQuantities(prev => {
+      const totalCurrent = Object.values(prev).reduce((a, b) => a + b, 0);
+      if (totalCurrent === 0) {
+        return getDefaultQuantities(bhk);
+      }
+      const updated = { ...prev };
+      Object.keys(updated).forEach(key => {
+        if (updated[key] > maxQty) {
+          updated[key] = maxQty;
+        }
+      });
+      return updated;
+    });
+
     setStep("HOUSE_SIZE");
   };
 
@@ -157,40 +216,40 @@ const HomeCalculatorWizard: React.FC = () => {
   // MATH PRICING CALCULATIONS
   const computePrices = () => {
     if (!selectedBhk || !selectedPackage || houseSize <= 0) {
-      return { basePrice: 0, minPrice: 0, maxPrice: 0, roomScopeMultiplier: 0 };
+      return { basePrice: 0, minPrice: 0, maxPrice: 0 };
     }
 
     const rate = getPackageRate(selectedPackage);
-    const standardSum = getBhkStandardSum(selectedBhk);
 
-    // Calculate total weights of selected rooms
-    const selectedRoomsWeight = availableRooms
-      .filter((r) => selectedRooms.includes(r.id))
-      .reduce((sum, r) => sum + r.weight, 0);
-
-    // Normalize room weights compared to standard BHK
-    const roomScopeMultiplier = selectedRoomsWeight / standardSum;
-
-    // Total price estimation: Size * Rate * Scope Multiplier
-    const basePrice = houseSize * rate * roomScopeMultiplier;
+    // Total price estimation: Size * Rate (no Design Scope Factor)
+    const basePrice = houseSize * rate;
     const minPrice = basePrice - (basePrice * 0.10); // -10%
     const maxPrice = basePrice + (basePrice * 0.20); // +20%
 
     return {
       basePrice,
       minPrice,
-      maxPrice,
-      roomScopeMultiplier
+      maxPrice
     };
   };
 
-  const { basePrice, minPrice, maxPrice, roomScopeMultiplier } = computePrices();
+  const { basePrice, minPrice, maxPrice } = computePrices();
 
   // Reset calculator wizard
   const handleRecalculate = () => {
     setSelectedBhk(null);
     setHouseSize(0);
-    setSelectedRooms([]);
+    setRoomQuantities({
+      living: 0,
+      kitchen: 0,
+      master_bed: 0,
+      kids_bed: 0,
+      guest_bed: 0,
+      dining: 0,
+      bathrooms: 0,
+      balcony: 0,
+      pooja: 0,
+    });
     setSelectedPackage(null);
     setProfile({ name: "", email: "", phone: "", city: "" });
     setGeneratedOtp("");
@@ -300,7 +359,7 @@ const HomeCalculatorWizard: React.FC = () => {
         type: "Full Home Interior",
         bhkType: selectedBhk,
         houseSize: houseSize,
-        selectedRooms: availableRooms.filter(r => selectedRooms.includes(r.id)).map(r => r.name),
+        selectedRooms: availableRooms.filter(r => roomQuantities[r.id] > 0).map(r => `${r.name} (${roomQuantities[r.id]})`),
         packageType: selectedPackage
       },
       pricingEstimate: {
@@ -357,13 +416,7 @@ const HomeCalculatorWizard: React.FC = () => {
     }
   };
 
-  const toggleRoomSelection = (roomId: string) => {
-    if (selectedRooms.includes(roomId)) {
-      setSelectedRooms(selectedRooms.filter((id) => id !== roomId));
-    } else {
-      setSelectedRooms([...selectedRooms, roomId]);
-    }
-  };
+  // Room toggle helper removed in favor of direct quantity updates
 
 
 
@@ -550,38 +603,76 @@ const HomeCalculatorWizard: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
                   {availableRooms.map((room) => {
-                    const isSelected = selectedRooms.includes(room.id);
+                    const qty = roomQuantities[room.id] || 0;
+                    const maxLimit = getMaxQuantityForBhk(selectedBhk);
+                    const isSelected = qty > 0;
+
                     return (
-                      <button
+                      <div
                         key={room.id}
-                        onClick={() => toggleRoomSelection(room.id)}
-                        className={`group flex items-center justify-between p-5 border-2 rounded-2xl text-left transition-all duration-200 hover:shadow-sm cursor-pointer ${isSelected
+                        className={`flex items-center justify-between p-5 border-2 rounded-2xl text-left transition-all duration-200 hover:shadow-sm ${isSelected
                           ? "border-amber-600 bg-amber-50/10"
-                          : "border-slate-200 hover:border-amber-400 hover:bg-slate-50/55"
+                          : "border-slate-200 hover:bg-slate-50/10"
                           }`}
                       >
-                        <span className={`text-sm font-medium ${isSelected ? "text-amber-800" : "text-slate-700"}`}>
+                        <span className={`text-sm font-medium ${isSelected ? "text-amber-800 font-semibold" : "text-slate-700"}`}>
                           {room.name}
                         </span>
-                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${isSelected
-                          ? "bg-amber-600 border-amber-600 text-white"
-                          : "bg-white border-slate-350"
-                          }`}>
-                          {isSelected && <Check className="w-3.5 h-3.5 stroke-[3px]" />}
+                        
+                        <div className="flex items-center gap-3">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setRoomQuantities(prev => ({
+                                ...prev,
+                                [room.id]: Math.max(0, qty - 1)
+                              }));
+                            }}
+                            disabled={qty === 0}
+                            className={`w-7 h-7 rounded-full flex items-center justify-center border text-sm font-semibold transition-all duration-200 ${qty === 0
+                              ? "border-slate-200 text-slate-300 cursor-not-allowed"
+                              : "border-slate-300 text-slate-700 hover:border-amber-600 hover:text-amber-600"
+                              }`}
+                          >
+                            -
+                          </button>
+                          
+                          <span className={`w-4 text-center text-sm font-semibold ${isSelected ? "text-amber-800" : "text-slate-500"}`}>
+                            {qty}
+                          </span>
+                          
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setRoomQuantities(prev => ({
+                                ...prev,
+                                [room.id]: Math.min(maxLimit, qty + 1)
+                              }));
+                            }}
+                            disabled={qty >= maxLimit}
+                            className={`w-7 h-7 rounded-full flex items-center justify-center border text-sm font-semibold transition-all duration-200 ${qty >= maxLimit
+                              ? "border-slate-200 text-slate-300 cursor-not-allowed"
+                              : "border-slate-300 text-slate-700 hover:border-amber-600 hover:text-amber-600"
+                              }`}
+                          >
+                            +
+                          </button>
                         </div>
-                      </button>
+                      </div>
                     );
                   })}
                 </div>
 
                 <div className="flex justify-end pt-4">
-                  <Button
-                    onClick={handleRoomsNext}
-                    className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-5 rounded-xl shadow-md transition-all duration-300 flex items-center gap-1.5"
-                  >
-                    <span>Proceed to Packages</span>
-                    <ChevronRight className="w-4 h-4" />
-                  </Button>
+                  {selectedRooms.length > 0 && (
+                    <Button
+                      onClick={handleRoomsNext}
+                      className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-5 rounded-xl shadow-md transition-all duration-300 flex items-center gap-1.5"
+                    >
+                      <span>Proceed to Packages</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </Button>
+                  )}
                 </div>
               </div>
             )}
@@ -736,8 +827,7 @@ const HomeCalculatorWizard: React.FC = () => {
                       <div className="text-xs font-light text-slate-500 space-y-1.5">
                         <span className="font-medium text-slate-700 block mb-1">Pricing Formula detail:</span>
                         <div>Base rate for {selectedPackage}: <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">INR {getPackageRate(selectedPackage || "Premium")} / sq ft</code></div>
-                        <div>Design Scope factor: <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">{roomScopeMultiplier.toFixed(2)}x (Adjusted by Room Selection weights)</code></div>
-                        <div>Calculation: <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">{houseSize} sq ft × {formatCurrency(getPackageRate(selectedPackage || "Premium"))} × {roomScopeMultiplier.toFixed(2)} = {formatCurrency(basePrice)}</code></div>
+                        <div>Calculation: <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">{houseSize} sq ft × {formatCurrency(getPackageRate(selectedPackage || "Premium"))} = {formatCurrency(basePrice)}</code></div>
                       </div>
                     </div>
 

@@ -13,7 +13,9 @@ import {
   PlusSquare,
   ChevronDown,
   CheckCircle,
-  HelpCircle
+  HelpCircle,
+  Paintbrush,
+  Sliders
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -55,7 +57,7 @@ const WardrobeCalculator: React.FC = () => {
       number: "3",
       icon: <Gem className="w-6 h-6 text-amber-600" />,
       title: "Pick preferred finish",
-      desc: "Finishing matters (Laminate, Acrylic, Glass finishes), especially when calculating wardrobe cost."
+      desc: "Finishing matters (Laminate, Membrane, Acrylic, PU, Glass finishes), especially when calculating wardrobe cost."
     },
     {
       number: "4",
@@ -65,9 +67,21 @@ const WardrobeCalculator: React.FC = () => {
     },
     {
       number: "5",
+      icon: <Paintbrush className="w-6 h-6 text-amber-600" />,
+      title: "Select internal finish",
+      desc: "Choose interior laminate colors from our selection of premium options to style your wardrobe cabinet."
+    },
+    {
+      number: "6",
       icon: <PlusSquare className="w-6 h-6 text-amber-600" />,
       title: "Select smart accessories",
       desc: "Choose add-ons (LED strip lighting, internal drawers, shoe racks, trouser racks) to include in the estimate."
+    },
+    {
+      number: "7",
+      icon: <Sliders className="w-6 h-6 text-amber-600" />,
+      title: "Choose shutter designs",
+      desc: "Select door shutter profiles and configurations for the final styling touch."
     }
   ];
 
@@ -131,7 +145,7 @@ const WardrobeCalculator: React.FC = () => {
               What is the Wardrobe Price Calculator?
             </h1>
             <p className="text-base md:text-lg text-slate-300 font-light max-w-xl leading-relaxed">
-              The wardrobe price calculator lets you skip the hassle of guesswork and get an accurate price estimate for your modular wardrobe. Answer five simple questions, and let us do the math for you!
+              The wardrobe price calculator lets you skip the hassle of guesswork and get an accurate price estimate for your modular wardrobe. Answer simple questions, and let us do the math for you!
             </p>
 
             <div className="pt-4 flex flex-wrap gap-4">
@@ -155,19 +169,19 @@ const WardrobeCalculator: React.FC = () => {
           </div>
         </section>
 
-        {/* ================= 5 STEPS CARDS ================= */}
+        {/* ================= 7 STEPS CARDS ================= */}
         <section className="bg-slate-100/50 py-20 px-6 border-b border-slate-200/50">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-3 max-w-xl mx-auto">
               <h2 className="text-3xl font-serif text-slate-900 font-light">
-                5 steps to get a quote
+                7 steps to get a quote
               </h2>
               <p className="text-slate-500 font-light text-sm">
                 It's simple, it's quick, it's convenient. Follow these parameters for an instant wardrobe calculation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6">
               {steps.map((s, idx) => (
                 <div key={idx} className="bg-white rounded-2xl border border-slate-200/60 p-6 space-y-4 hover:shadow-md transition-shadow duration-300 relative group">
                   <div className="absolute top-4 right-6 text-slate-100 font-extrabold text-6xl group-hover:text-amber-500/10 transition-colors pointer-events-none select-none">
